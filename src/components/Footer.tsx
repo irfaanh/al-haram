@@ -25,14 +25,14 @@ export default function Footer() {
         {/* LOGO + ABOUT (UNCHANGED POSITION) */}
         <div className="md:col-span-1">
           <Image
-            src="/images/logo.png"
+            src="/images/log.png"
             alt="Momentor logo"
-            width={140}
-            height={50}
-            className="mb-6 object-contain"
+            width={210}
+            height={110}
+            className="mb-0 object-contain"
           />
 
-          <p className="text-sm leading-relaxed max-w-xs">
+          <p className="text-sm leading-relaxed max-w-xs mt-2 px-1 text-justify">
             Momentor is India’s first education journalism + future-skills
             mentorship platform guiding youth with clarity, skills, and global
             career opportunities.
@@ -76,11 +76,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link
-                href="/services"
-                className="hover:text-[#BE5103] transition"
-              >
-                Services
+              <Link href="/courses" className="hover:text-[#BE5103] transition">
+                Courses
               </Link>
             </li>
             <li>

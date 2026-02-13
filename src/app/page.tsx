@@ -1,144 +1,318 @@
-import { Atom, Server, Code2, Layers, PenTool } from "lucide-react";
+import Image from "next/image";
 import Footer from "@/components/Footer";
+import Link from "next/link";
+
+import {
+  Globe,
+  ShieldCheck,
+  GraduationCap,
+  Users,
+  Briefcase,
+  Landmark,
+  BookOpen,
+  Building2,
+  Map,
+  University,
+} from "lucide-react";
 
 export default function Home() {
   return (
     <main className="bg-black text-white">
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative h-screen w-full">
+      {/* ================= HERO ================= */}
+      <section className="relative h-screen flex items-center justify-center text-center px-6">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/home.jpg')",
-          }}
+          style={{ backgroundImage: "url('/images/home.jpg')" }}
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-widest text-center">
-            BEYOND <br /> EDUCATION
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="relative z-10 max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-light leading-tight mb-6">
+            Study Beyond Borders. <br />
+            Build a{" "}
+            <span className="italic font-serif text-[#BE5103]">
+              Global Future
+            </span>
           </h1>
+
+          <p className="text-gray-300 max-w-2xl mx-auto mb-10">
+            We guide ambitious students toward internationally recognized
+            universities with structured preparation, transparent processes, and
+            long-term career readiness support.
+          </p>
+
+          <button className="px-8 py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1">
+            Book Free Consultation →
+          </button>
         </div>
       </section>
 
-      {/* ================= ABOUT THE PROJECT ================= */}
-      <section className="py-32 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-center gap-6 mb-8">
-            <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-            <p className="text-[11px] tracking-[0.35em] text-white uppercase font-semibold">
-              About the project
-            </p>
-            <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+      {/* ================= ABOUT US ================= */}
+      <section className="py-32 px-6">
+        <div className="flex items-center justify-center gap-6 mb-16">
+          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+            ABOUT US
+          </p>
+          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+        </div>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-light mb-8">
+              A Trusted Partner in{" "}
+              <span className="italic font-serif text-[#BE5103]">
+                International Education
+              </span>
+            </h2>
+
+            {/* CONTENT */}
+            <div className="text-justify">
+              <p>
+                We are a dedicated study abroad consultancy committed to helping
+                ambitious students access world-class education opportunities.
+                From university selection to visa approval, we provide
+                structured, transparent, and personalized guidance at every step
+                of the journey.
+              </p>
+
+              <p>
+                Our team works closely with students to understand their
+                academic background, career aspirations, and financial
+                considerations — ensuring that every application is strategic,
+                well-prepared, and aligned with long-term goals.
+              </p>
+
+              <p>
+                Beyond admissions, we focus on global readiness — preparing
+                students for international academic environments, cultural
+                transitions, and professional success in competitive global
+                markets.
+              </p>
+
+              <p>
+                With strong university partnerships and a student-first
+                approach, we don’t just help you study abroad —
+                <span className="text-[#B08D55] font-medium">
+                  {" "}
+                  we prepare you to succeed abroad.
+                </span>
+              </p>
+            </div>
           </div>
 
-          <h2 className="text-center text-3xl md:text-4xl font-light leading-relaxed mb-24">
-            GUIDING STUDENTS TOWARD SUCCESSFUL ADMISSION TO TOP-RANKED{" "}
-            <span className="text-[#B8860B]">NEW ZEALAND UNIVERSITIES</span>{" "}
-            THROUGH EXPERT CONSULTANCY SUPPORT.
+          <div>
+            <Image
+              src="/images/counseling.jpg"
+              alt="Counselling"
+              width={600}
+              height={500}
+              className="rounded-3xl border border-white/10"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ================= COURSES ================= */}
+      <section className="py-32 px-6 bg-[#0f0f0f]">
+        <div className="flex items-center justify-center gap-6 mb-5">
+          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+            OUR COURSES
+          </p>
+          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+        </div>
+        <div>
+          <p className="text-gray-400 text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-15">
+            Our courses prepare students for international education and global
+            careers. We focus on academic excellence and professional readiness.
+            Every program builds confidence and competitive advantage. Step
+            forward with clarity. Study globally.
+          </p>
+        </div>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+          {[
+            {
+              title: "Global Student Readiness",
+              desc: "Prepares students for international life with civic discipline, cultural awareness, and responsible global conduct.",
+              image: "/images/teams.jpg",
+            },
+            {
+              title: "Global Career Readiness",
+              desc: "Develops professional skills and offers international internship exposure for global employability.",
+              image: "/images/graduation.jpg",
+            },
+            {
+              title: "Global Holistic Readiness Training (GHRT)",
+              desc: "Holistic training focused on leadership, discipline, ethical conduct, and global performance readiness.",
+              image: "/images/admission.jpg",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="group bg-[#111] rounded-3xl overflow-hidden border border-white/10 
+                 hover:border-[#BE5103] transition-all duration-500 
+                 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(190,81,3,0.25)]"
+            >
+              {/* Top Image */}
+              <div className="h-64 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover 
+                     group-hover:scale-110 transition duration-700"
+                />
+              </div>
+
+              {/* Bottom Content */}
+              <div className="p-8">
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-[#BE5103] transition">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* View More Button */}
+        <div className="max-w-6xl mx-auto mt-12 flex justify-end">
+          <Link href="/courses">
+            <button
+              className="px-8 py-3 rounded-full border border-[#BE5103] text-[#BE5103] 
+                 hover:bg-[#BE5103] hover:text-white
+                 transition-all duration-300 font-medium"
+            >
+              View More →
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      {/* ================= WHY CHOOSE US ================= */}
+      <section className="py-32 px-6">
+        <div className="flex items-center justify-center gap-6 mb-5">
+          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+            WHY CHOOSE US
+          </p>
+          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+        </div>
+        <div>
+          <p className="text-gray-400 text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-15">
+            We combine structured global readiness training with transparent
+            consultancy support to ensure every student is fully prepared for
+            international success. From ethical guidance and academic compliance
+            to professional skill development, our approach goes beyond
+            admissions. We focus on discipline, responsibility, and long-term
+            career confidence — building not just students, but future global
+            professionals.
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+          {[
+            {
+              icon: Globe,
+              title: "Global Network",
+              desc: "Partnerships with internationally recognized universities.",
+            },
+            {
+              icon: ShieldCheck,
+              title: "Transparent Process",
+              desc: "Clear communication and ethical consultancy support.",
+            },
+            {
+              icon: GraduationCap,
+              title: "Expert Guidance",
+              desc: "Experienced counsellors with proven success records.",
+            },
+            {
+              icon: Users,
+              title: "Personalized Support",
+              desc: "One-on-one mentoring tailored to individual goals.",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-[#111] border border-white/10 rounded-2xl p-8 
+                   hover:border-[#BE5103] transition-all duration-500 
+                   hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(190,81,3,0.2)]"
+            >
+              <div className="flex justify-center mb-6">
+                <div
+                  className="w-14 h-14 rounded-full border border-[#BE5103] 
+                          flex items-center justify-center text-[#BE5103]"
+                >
+                  <item.icon size={24} />
+                </div>
+              </div>
+
+              <h4 className="text-white font-semibold mb-3 text-center">
+                {item.title}
+              </h4>
+
+              <p className="text-gray-400 text-sm text-center leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= TRUSTED PARTNERS ================= */}
+      <section className="py-32 px-6 bg-[#0f0f0f]">
+        <div className="max-w-6xl mx-auto text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-light">
+            Our{" "}
+            <span className="italic font-serif text-[#BE5103]">
+              Trusted Partners
+            </span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-16 text-sm text-gray-300">
-            {/* Left */}
-            <div className="space-y-6">
-              <div>
-                <p className="text-[#B8860B] uppercase mb-1">
-                  Project Development
-                </p>
-                <p>[Next.js, React]</p>
-              </div>
-              <div>
-                <p className="text-[#B8860B] uppercase mb-1">
-                  Design & Prototyping
-                </p>
-                <p>[Figma]</p>
-              </div>
-              <div>
-                <p className="text-[#B8860B] uppercase mb-1">Assets Refined</p>
-                <p>[Illustrator, Photoshop]</p>
-              </div>
-            </div>
+          <p className="text-gray-400 max-w-2xl mx-auto mt-6 text-[15px] leading-relaxed">
+            We collaborate with international academic institutions and global
+            industry networks to ensure structured academic and professional
+            pathways.
+          </p>
+        </div>
 
-            {/* Middle */}
-            <div className="space-y-4">
-              <p className="text-[#B8860B] uppercase">Key Challenges</p>
-              <p>
-                Presenting detailed admission information in a simple and
-                visually engaging website structure.
-              </p>
-              <p>
-                Building trust through a modern interface that highlights
-                professionalism and transparency.
-              </p>
-            </div>
-
-            {/* Right */}
-            <div className="space-y-4">
-              <p className="text-[#B8860B] uppercase">The Goal</p>
-              <p>
-                Create a clean, responsive platform showcasing study
-                opportunities and consultancy expertise.
-              </p>
-              <p>
-                Strengthen brand credibility with an informative, accessible,
-                and visually consistent web experience.
-              </p>
-            </div>
-          </div>
-
-          {/* Tech Icons */}
-          <div className="flex justify-center gap-8 mt-24">
-            {[Atom, Layers, Code2, Server, PenTool].map((Icon, i) => (
-              <div
-                key={i}
-                className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white/70"
-              >
-                <Icon size={18} strokeWidth={1.2} />
+        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+          {[
+            { icon: University, title: "UK Academic Institutions" },
+            { icon: GraduationCap, title: "Canadian University Network" },
+            { icon: Landmark, title: "Australian Education Partners" },
+            { icon: Globe, title: "New Zealand Institutions" },
+            { icon: Map, title: "European Study Pathways" },
+            { icon: Briefcase, title: "Global Internship Network" },
+            { icon: BookOpen, title: "Language & Foundation Programs" },
+            { icon: Building2, title: "Industry Placement Partners" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-[#111] border border-white/10 rounded-2xl p-8 text-center
+                 hover:border-[#BE5103] hover:-translate-y-2
+                 hover:shadow-[0_15px_40px_rgba(190,81,3,0.2)]
+                 transition-all duration-500"
+            >
+              <div className="flex justify-center mb-5">
+                <div
+                  className="w-14 h-14 rounded-full border border-[#BE5103]
+                        flex items-center justify-center text-[#BE5103]"
+                >
+                  <item.icon size={24} />
+                </div>
               </div>
-            ))}
-          </div>
+
+              <h4 className="text-white font-medium text-sm leading-relaxed">
+                {item.title}
+              </h4>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ================= DESIGN PROCESS ================= */}
-      <section className="relative bg-gradient-to-r from-[#7A3300] to-[#BE5103] pt-24 pb-32">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* 🔹 TOP-CENTER HEADING */}
-          <div className="flex items-center justify-center gap-6 mb-16">
-            <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-            <p className="text-[11px] tracking-[0.35em] text-white uppercase font-semibold">
-              Design Process
-            </p>
-            <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
-          </div>
-
-          {/* 🔹 MAIN CONTENT */}
-          <div className="grid md:grid-cols-2 gap-20 items-start">
-            {/* LEFT IMAGE */}
-            <div className="-mt-100">
-              <img
-                src="/images/students.png"
-                alt="Design process"
-                className="rounded-3xl w-full object-cover"
-              />
-            </div>
-
-            {/* RIGHT TEXT */}
-            <div className="space-y-10">
-              <h2 className="text-4xl md:text-5xl font-semibold leading-tight">
-                Creative, <br /> impactful, and <br /> user-friendly
-              </h2>
-
-              <div className="relative border border-[#B8860B]/40 rounded-full p-10 max-w-md">
-                <p className="text-sm text-gray-200">
-                  A clear, step-by-step process guided our project—ensuring
-                  research-driven insights, strategic planning, creative
-                  concepts, and validated visual design.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <Footer />
     </main>
   );

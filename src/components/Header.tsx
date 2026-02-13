@@ -13,7 +13,7 @@ export default function Header() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
+    { name: "Courses", href: "/courses" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
   ];
@@ -24,10 +24,10 @@ export default function Header() {
         {/* LOGO (LEFT ONLY) */}
         <Link href="/" className="absolute left-6 flex items-center">
           <Image
-            src="/images/logo.png"
+            src="/images/logos.png"
             alt="Logo"
-            width={130}
-            height={50}
+            width={200}
+            height={100}
             priority
           />
         </Link>
