@@ -46,10 +46,7 @@ export default function ContactPage() {
                     <Check size={18} className="text-[#BE5103]" />
                     <p>We will respond within 12 hours</p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Check size={18} className="text-[#BE5103]" />
-                    <p>We’ll sign an NDA if requested</p>
-                  </div>
+
                   <div className="flex items-center gap-3">
                     <Check size={18} className="text-[#BE5103]" />
                     <p>Access to dedicated consultants</p>
@@ -96,26 +93,6 @@ export default function ContactPage() {
                         {item}
                       </button>
                     ))}
-                  </div>
-                </div>
-
-                {/* Budget */}
-                <div>
-                  <p className="mb-3 text-sm text-gray-400 font-semibold">
-                    Budget
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    {["Less than ₹1L", "₹1L - ₹5L", "More than ₹5L"].map(
-                      (item, i) => (
-                        <button
-                          key={i}
-                          className="px-4 py-2 rounded-full border border-[#BE5103]/50 text-sm hover:border-[#BE5103] transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-                        >
-                          {item}
-                        </button>
-                      ),
-                    )}
                   </div>
                 </div>
 
