@@ -120,10 +120,15 @@ export default function ContactPage() {
                 </div>
 
                 {/* Inputs */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-3 gap-6">
                   <input
                     type="text"
                     placeholder="Full name*"
+                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone number*"
                     className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
                   />
                   <input
@@ -138,14 +143,6 @@ export default function ContactPage() {
                   rows={4}
                   className="w-full bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
                 />
-
-                {/* File Upload */}
-                <div className="border border-dashed border-white/20 rounded-xl p-6 text-center text-gray-400 text-sm">
-                  Attach a file (optional)
-                  <div className="mt-2 text-white/50">
-                    Choose a file or drag & drop here
-                  </div>
-                </div>
 
                 {/* Submit */}
                 <button
