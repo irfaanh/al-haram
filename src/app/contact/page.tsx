@@ -199,7 +199,9 @@ export default function ContactPage() {
             <p className="text-gray-400 text-sm">
               Send your queries and we’ll respond quickly.
             </p>
-            <p className="text-[#BE5103] font-medium mt-4">info@momentor.com</p>
+            <p className="text-[#BE5103] font-medium mt-4">
+              hello@momentor.com
+            </p>
           </div>
 
           {/* CARD 3 */}
@@ -217,7 +219,7 @@ export default function ContactPage() {
               Meet our experts for personalised counselling.
             </p>
             <p className="text-[#BE5103] font-medium mt-4">
-              Kochi, Kerala, India
+              Hilite business Park,Calicut,Kerala
             </p>
           </div>
         </div>
