@@ -120,20 +120,27 @@ export default function ContactPage() {
                 </div>
 
                 {/* Inputs */}
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   <input
                     type="text"
-                    placeholder="Full name*"
+                    placeholder="First name*"
+                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name*"
+                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
+                  />
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <input
+                    type="email"
+                    placeholder="Email*"
                     className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
                   />
                   <input
                     type="tel"
                     placeholder="Phone number*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email*"
                     className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
                   />
                 </div>
