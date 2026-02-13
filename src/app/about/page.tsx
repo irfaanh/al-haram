@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import { GraduationCap, Handshake, Zap, BadgeCheck } from "lucide-react";
 import Footer from "@/components/Footer";
+import { CircleCheck } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -43,7 +44,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= IMAGE CARD ================= */}
-      <section className="flex justify-center px-6">
+      <section className="flex justify-center px-6 hover">
         <div className="relative w-full max-w-5xl rounded-3xl overflow-hidden">
           <Image
             src="/images/teams.jpg"
@@ -54,33 +55,150 @@ export default function AboutPage() {
           />
         </div>
       </section>
-
-      {/* ================= MISSION / VISION ================= */}
-      <section className="bg-black py-32">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Mission Card */}
-            <div className="bg-[#111] border border-white/10 rounded-3xl p-10 hover:border-[#BE5103]/40 transition">
-              <h3 className="text-2xl font-semibold mb-4 text-[#BE5103]">
-                Our Mission
-              </h3>
-              <p className="text-gray-100 leading-relaxed ">
-                To guide students with honest advice, personalized counselling,
-                and end-to-end support—helping them access quality international
-                education and build successful global careers.
+      <section className="bg-black text-white py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+            {/* Stat 1 */}
+            <div className="group transition-all duration-500 hover:-translate-y-3">
+              <h2 className="text-5xl md:text-5xl font-bold tracking-tight">
+                28,000+
+              </h2>
+              <p className="mt-6 text-lg text-gray-500">
+                Youth Reached <br />
+                across Kerala and beyond
               </p>
             </div>
 
-            {/* Vision Card */}
-            <div className="bg-[#111] border border-white/10 rounded-3xl p-10 hover:border-[#BE5103]/40 transition">
-              <h3 className="text-2xl font-semibold mb-4 text-[#BE5103]">
-                Our Vision
-              </h3>
-              <p className="text-gery-100 leading-relaxed text-justif">
-                To become a trusted global education consultancy, empowering
-                students worldwide through expertise, transparency, and lifelong
-                educational guidance.
+            {/* Stat 2 */}
+            <div className="group transition-all duration-500 hover:-translate-y-3">
+              <h2 className="text-5xl md:text-5xl font-bold tracking-tight">
+                35,000+
+              </h2>
+              <p className="mt-6 text-lg text-gray-500">
+                Hours of Learning Content <br />
+                skills, mindset & communication
               </p>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="group transition-all duration-500 hover:-translate-y-3">
+              <h2 className="text-5xl md:text-5xl font-bold tracking-tight">
+                120+
+              </h2>
+              <p className="mt-6 text-lg text-gray-500">
+                Training & Mentorship Programs <br />
+                designed for real employability
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= MISSION / VISION ================= */}
+      <section className="bg-black py-24">
+        <div className="max-w-7xl mx-auto px-6 space-y-32">
+          {/* ================= OUR VISION ================= */}
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Text Side */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6">
+                Our Mission
+              </h2>
+
+              <p className="text-gray-300 leading-relaxed mb-8">
+                Our mission is to empower youth with clarity, mindset, and
+                future-ready skills — by exposing the truth about careers,
+                building real awareness, and opening global opportunities that
+                transform confidence, employability, and purpose. We exist to
+                fix the core problem students face today: lack of direction,
+                lack of exposure, and lack of understanding about how the world
+                of work is changing.
+              </p>
+
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-gray-200">
+                  <span className="text-green-500 mt-1">
+                    <CircleCheck />
+                  </span>
+                  Provide clarity and direction by telling the truth about
+                  careers and industries.
+                </li>
+                <li className="flex items-start gap-3 text-gray-200">
+                  <span className="text-green-500 mt-1">
+                    <CircleCheck />
+                  </span>
+                  Equip youth with future skills that make them confident and
+                  employable.
+                </li>
+                <li className="flex items-start gap-3 text-gray-200">
+                  <span className="text-green-500 mt-1">
+                    <CircleCheck />
+                  </span>
+                  Create pathways for global exposure, mentorship, and real
+                  opportunities.
+                </li>
+              </ul>
+            </div>
+
+            {/* Image Side */}
+            <div>
+              <img
+                src="/images/counseling.jpg"
+                alt="Vision"
+                className="rounded-3xl w-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* ================= OUR MISSION ================= */}
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Image Side */}
+            <div className="order-2 md:order-1">
+              <img
+                src="/images/teams.jpg"
+                alt="Mission"
+                className="rounded-3xl w-full object-cover"
+              />
+            </div>
+
+            {/* Text Side */}
+            <div className="order-1 md:order-2">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6">
+                Our Vision
+              </h2>
+
+              <p className="text-gray-300 leading-relaxed mb-8">
+                Our vision is to build a generation that is confident,
+                aspirational, globally competitive, and deeply aware of their
+                career possibilities. We aim to reshape the education-to-career
+                journey in India — so that every young person knows who they
+                are, what they want, and how to succeed in the world of
+                tomorrow.
+              </p>
+
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-gray-200">
+                  <span className="text-green-500 mt-1">
+                    <CircleCheck />
+                  </span>
+                  Create an India where youth discover careers through awareness
+                  — not guesswork.
+                </li>
+                <li className="flex items-start gap-3 text-gray-200">
+                  <span className="text-green-500 mt-1">
+                    <CircleCheck />
+                  </span>
+                  Redefine employability with mindset, skill, exposure, and
+                  real-world readiness.
+                </li>
+                <li className="flex items-start gap-3 text-gray-200">
+                  <span className="text-green-500 mt-1">
+                    <CircleCheck />
+                  </span>
+                  Build the world’s most trusted education journalism and
+                  future-skills platform.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
