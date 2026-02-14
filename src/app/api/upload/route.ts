@@ -16,13 +16,12 @@ export async function POST(request: Request): Promise<Response> {
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    const response = await new Promise<Response>((resolve) => {
+    return await new Promise<Response>((resolve) => {
       cloudinary.uploader
         .upload_stream(
           { resource_type: "auto", folder: "momentor" },
           (error, result) => {
-            if (error) {
-              console.error("Cloudinary upload error:", error);
+            if (error || !result) {
               resolve(
                 NextResponse.json(
                   { error: "Upload failed" },
@@ -32,7 +31,7 @@ export async function POST(request: Request): Promise<Response> {
             } else {
               resolve(
                 NextResponse.json({
-                  url: result?.secure_url,
+                  url: result.secure_url,
                 })
               );
             }
@@ -41,9 +40,7 @@ export async function POST(request: Request): Promise<Response> {
         .end(buffer);
     });
 
-    return response;
   } catch (error) {
-    console.error("Internal upload error:", error);
     return NextResponse.json(
       { error: "Upload failed" },
       { status: 500 }
