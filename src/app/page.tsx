@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { prisma } from "@/lib/prisma";
 
 import {
   Globe,
@@ -15,7 +16,22 @@ import {
   University,
 } from "lucide-react";
 
-export default function Home() {
+interface Course {
+  id: string;
+  title: string;
+  description: string | null;
+  image: string;
+  modules: any;
+}
+
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const courses = await prisma.course.findMany({
+    take: 3,
+    orderBy: { createdAt: "desc" },
+  }) as unknown as Course[];
+
   return (
     <main className="bg-black text-white">
       {/* ================= HERO ================= */}
@@ -130,47 +146,32 @@ export default function Home() {
           </p>
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-10">
-          {[
-            {
-              title: "Global Student Readiness",
-              desc: "Prepares students for international life with civic discipline, cultural awareness, and responsible global conduct.",
-              image: "/images/teams.jpg",
-            },
-            {
-              title: "Global Career Readiness",
-              desc: "Develops professional skills and offers international internship exposure for global employability.",
-              image: "/images/graduation.jpg",
-            },
-            {
-              title: "Global Holistic Readiness Training (GHRT)",
-              desc: "Holistic training focused on leadership, discipline, ethical conduct, and global performance readiness.",
-              image: "/images/admission.jpg",
-            },
-          ].map((item, i) => (
+          {courses.slice(0, 3).map((course, i) => (
             <div
-              key={i}
+              key={course.id}
               className="group bg-[#111] rounded-3xl overflow-hidden border border-white/10 
                  hover:border-[#BE5103] transition-all duration-500 
-                 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(190,81,3,0.25)]"
+                 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(190,81,3,0.25)] flex flex-col"
             >
               {/* Top Image */}
-              <div className="h-48 md:h-64 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
+              <div className="h-48 md:h-64 overflow-hidden relative">
+                <Image
+                  src={course.image}
+                  alt={course.title}
+                  fill
                   className="w-full h-full object-cover 
                      group-hover:scale-110 transition duration-700"
                 />
               </div>
 
               {/* Bottom Content */}
-              <div className="p-6 md:p-8">
+              <div className="p-6 md:p-8 flex-1 flex flex-col">
                 <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 group-hover:text-[#BE5103] transition">
-                  {item.title}
+                  {course.title}
                 </h3>
 
-                <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
-                  {item.desc}
+                <p className="text-gray-400 text-xs md:text-sm leading-relaxed line-clamp-3">
+                  {course.description}
                 </p>
               </div>
             </div>
