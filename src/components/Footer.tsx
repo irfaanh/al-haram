@@ -27,8 +27,8 @@ export default function Footer() {
           <Image
             src="/images/log.png"
             alt="Momentor logo"
-            width={180}
-            height={90}
+            width={200}
+            height={100}
             className="mb-4 object-contain"
           />
 
@@ -61,55 +61,40 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* NAVIGATION */}
-        <div className="md:px-10 text-center md:text-left">
-          <h4 className="text-white font-semibold mb-4">Navigation</h4>
-          <ul className="space-y-3 text-sm">
-            <li>
-              <Link href="/" className="hover:text-[#BE5103] transition">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-[#BE5103] transition">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/courses" className="hover:text-[#BE5103] transition">
-                Courses
-              </Link>
-            </li>
-            <li>
-              <Link href="/gallery" className="hover:text-[#BE5103] transition">
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-[#BE5103] transition">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
+        {/* NAV + SOCIAL WRAPPER */}
+        <div className="grid grid-cols-2 gap-10 md:contents">
+          {/* NAVIGATION */}
+          <div className="md:px-10 text-center md:text-left">
+            <h4 className="text-white font-semibold mb-4">Navigation</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/courses">Courses</Link>
+              </li>
+              <li>
+                <Link href="/gallery">Gallery</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
 
-        {/* SOCIAL */}
-        <div className="text-center md:text-left">
-          <h4 className="text-white font-semibold mb-5">Social</h4>
-          <ul className="space-y-3 text-sm">
-            <li className="hover:text-[#BE5103] cursor-pointer transition">
-              Twitter
-            </li>
-            <li className="hover:text-[#BE5103] cursor-pointer transition">
-              LinkedIn
-            </li>
-            <li className="hover:text-[#BE5103] cursor-pointer transition">
-              Facebook
-            </li>
-            <li className="hover:text-[#BE5103] cursor-pointer transition">
-              Instagram
-            </li>
-          </ul>
+          {/* SOCIAL */}
+          <div className="text-center md:text-left">
+            <h4 className="text-white font-semibold mb-5">Social</h4>
+            <ul className="space-y-3 text-sm">
+              <li>Twitter</li>
+              <li>LinkedIn</li>
+              <li>Facebook</li>
+              <li>Instagram</li>
+            </ul>
+          </div>
         </div>
 
         {/* LEGAL */}
