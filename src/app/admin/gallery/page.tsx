@@ -91,7 +91,7 @@ export default function GalleryPage() {
                 </div>
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="flex items-center gap-2 rounded-lg bg-[#BE5103] px-4 py-2 font-medium text-white hover:bg-[#BE5103]/90 transition-colors"
+                    className="flex items-center gap-2 rounded-lg bg-[#BE5103] px-4 py-2 font-medium text-white hover:bg-[#BE5103]/90 transition-colors cursor-pointer"
                 >
                     <Upload className="h-4 w-4" />
                     Upload Images
@@ -160,7 +160,7 @@ export default function GalleryPage() {
                             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                                 <button
                                     onClick={() => handleDelete(img.id)}
-                                    className="p-2 bg-red-500/80 rounded-full hover:bg-red-500 text-white transition-colors"
+                                    className="p-2 bg-red-500/80 rounded-full hover:bg-red-500 text-white transition-colors cursor-pointer"
                                 >
                                     <Trash2 className="h-4 w-4" />
                                 </button>
