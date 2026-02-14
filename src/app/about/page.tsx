@@ -11,15 +11,15 @@ export default function AboutPage() {
       <Header />
 
       {/* ================= HERO ================= */}
-      <section className="pt-40 pb-24 text-center px-6 py-24">
-        <div className="flex items-center justify-center gap-6 mb-16">
-          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+      <section className="pt-28 md:pt-40 pb-16 md:pb-24 text-center px-6 py-24">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-10 md:mb-16">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
             ABOUT US
           </p>
-          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
-        <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+        <h1 className="text-3xl md:text-6xl font-semibold leading-tight">
           Shaping Global <br />
           Futures Through{" "}
           <span className="text-[#BE5103] italic font-serif">Education</span>
@@ -51,19 +51,19 @@ export default function AboutPage() {
             alt="Team"
             width={1200}
             height={600}
-            className="object-cover"
+            className="object-cover w-full h-auto"
           />
         </div>
       </section>
-      <section className="bg-black text-white py-24 px-6">
+      <section className="bg-black text-white py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 text-center">
             {/* Stat 1 */}
             <div className="group transition-all duration-500 hover:-translate-y-3">
-              <h2 className="text-5xl md:text-5xl font-bold tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                 28,000+
               </h2>
-              <p className="mt-6 text-lg text-gray-500">
+              <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-500">
                 Youth Reached <br />
                 across Kerala and beyond
               </p>
@@ -71,10 +71,10 @@ export default function AboutPage() {
 
             {/* Stat 2 */}
             <div className="group transition-all duration-500 hover:-translate-y-3">
-              <h2 className="text-5xl md:text-5xl font-bold tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                 35,000+
               </h2>
-              <p className="mt-6 text-lg text-gray-500">
+              <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-500">
                 Hours of Learning Content <br />
                 skills, mindset & communication
               </p>
@@ -82,10 +82,10 @@ export default function AboutPage() {
 
             {/* Stat 3 */}
             <div className="group transition-all duration-500 hover:-translate-y-3">
-              <h2 className="text-5xl md:text-5xl font-bold tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                 120+
               </h2>
-              <p className="mt-6 text-lg text-gray-500">
+              <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-500">
                 Training & Mentorship Programs <br />
                 designed for real employability
               </p>
@@ -95,17 +95,17 @@ export default function AboutPage() {
       </section>
 
       {/* ================= MISSION / VISION ================= */}
-      <section className="bg-black py-24">
-        <div className="max-w-7xl mx-auto px-6 space-y-32">
+      <section className="bg-black py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 space-y-20 md:space-y-32">
           {/* ================= OUR VISION ================= */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Text Side */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6 text-center md:text-left">
                 Our Mission
               </h2>
 
-              <p className="text-gray-300 leading-relaxed mb-8">
+              <p className="text-gray-300 leading-relaxed mb-8 text-sm md:text-base text-justify md:text-left">
                 Our mission is to empower youth with clarity, mindset, and
                 future-ready skills — by exposing the truth about careers,
                 building real awareness, and opening global opportunities that
@@ -115,24 +115,24 @@ export default function AboutPage() {
                 of work is changing.
               </p>
 
-              <ul className="space-y-4">
+              <ul className="space-y-4 text-sm md:text-base">
                 <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1">
-                    <CircleCheck />
+                  <span className="text-green-500 mt-1 min-w-[20px]">
+                    <CircleCheck size={20} />
                   </span>
                   Provide clarity and direction by telling the truth about
                   careers and industries.
                 </li>
                 <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1">
-                    <CircleCheck />
+                  <span className="text-green-500 mt-1 min-w-[20px]">
+                    <CircleCheck size={20} />
                   </span>
                   Equip youth with future skills that make them confident and
                   employable.
                 </li>
                 <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1">
-                    <CircleCheck />
+                  <span className="text-green-500 mt-1 min-w-[20px]">
+                    <CircleCheck size={20} />
                   </span>
                   Create pathways for global exposure, mentorship, and real
                   opportunities.
@@ -151,9 +151,9 @@ export default function AboutPage() {
           </div>
 
           {/* ================= OUR MISSION ================= */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Image Side */}
-            <div className="order-2 md:order-1">
+            <div className="order-first md:order-first">
               <img
                 src="/images/teams.jpg"
                 alt="Mission"
@@ -162,12 +162,12 @@ export default function AboutPage() {
             </div>
 
             {/* Text Side */}
-            <div className="order-1 md:order-2">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6">
+            <div className="order-last md:order-last">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6 text-center md:text-left">
                 Our Vision
               </h2>
 
-              <p className="text-gray-300 leading-relaxed mb-8">
+              <p className="text-gray-300 leading-relaxed mb-8 text-sm md:text-base text-justify md:text-left">
                 Our vision is to build a generation that is confident,
                 aspirational, globally competitive, and deeply aware of their
                 career possibilities. We aim to reshape the education-to-career
@@ -176,24 +176,24 @@ export default function AboutPage() {
                 tomorrow.
               </p>
 
-              <ul className="space-y-4">
+              <ul className="space-y-4 text-sm md:text-base">
                 <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1">
-                    <CircleCheck />
+                  <span className="text-green-500 mt-1 min-w-[20px]">
+                    <CircleCheck size={20} />
                   </span>
                   Create an India where youth discover careers through awareness
                   — not guesswork.
                 </li>
                 <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1">
-                    <CircleCheck />
+                  <span className="text-green-500 mt-1 min-w-[20px]">
+                    <CircleCheck size={20} />
                   </span>
                   Redefine employability with mindset, skill, exposure, and
                   real-world readiness.
                 </li>
                 <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1">
-                    <CircleCheck />
+                  <span className="text-green-500 mt-1 min-w-[20px]">
+                    <CircleCheck size={20} />
                   </span>
                   Build the world’s most trusted education journalism and
                   future-skills platform.
@@ -205,39 +205,39 @@ export default function AboutPage() {
       </section>
 
       {/* ================= TEAM SECTION ================= */}
-      <section className="max-w-6xl mx-auto px-6 pb-40">
-        <h2 className="text-3xl md:text-4xl font-light mb-16">
+      <section className="max-w-6xl mx-auto px-6 pb-20 md:pb-40">
+        <h2 className="text-2xl md:text-4xl font-light mb-10 md:mb-16 text-center md:text-left">
           Let’s get to know{" "}
           <span className="text-[#BE5103] italic font-serif">each other</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Card 1 */}
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-red-600/80 to-black">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-red-600/80 to-black h-96 md:h-auto">
             <Image
               src="/images/member1.jpg"
               alt="Team member"
               width={500}
               height={600}
-              className="object-cover"
+              className="object-cover w-full h-full opacity-60 mix-blend-overlay"
             />
-            <div className="absolute bottom-6 left-6">
-              <p className="font-semibold">Abu Sayeed</p>
+            <div className="absolute bottom-6 left-6 z-10">
+              <p className="font-semibold text-xl">Abu Sayeed</p>
               <p className="text-xs text-gray-200">Founder & CEO</p>
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-600/80 to-black">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-600/80 to-black h-96 md:h-auto">
             <Image
               src="/images/member1.jpg"
               alt="Team member"
               width={500}
               height={600}
-              className="object-cover"
+              className="object-cover w-full h-full opacity-60 mix-blend-overlay"
             />
-            <div className="absolute bottom-6 left-6">
-              <p className="font-semibold">Abu Sayeed</p>
+            <div className="absolute bottom-6 left-6 z-10">
+              <p className="font-semibold text-xl">Abu Sayeed</p>
               <p className="text-xs text-gray-200">Co-Founder & COO</p>
             </div>
           </div>
@@ -247,7 +247,7 @@ export default function AboutPage() {
       {/* ================= OUR APPROACH (REF STYLE) ================= */}
       <section className="max-w-6xl mx-auto px-6 pb-20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-4xl font-medium leading-tight">
+          <h2 className="text-3xl md:text-4xl font-medium leading-tight text-center md:text-left mb-10">
             <span className="text-white">
               Our custom approach <br /> ensures students{" "}
             </span>
@@ -256,10 +256,10 @@ export default function AboutPage() {
             </span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 items-center py-15">
+          <div className="grid md:grid-cols-3 gap-8 items-center py-5 md:py-15">
             {/* LEFT CARD */}
             <div
-              className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-8 hover:border-[#BE5103]  transition-transform duration-200 ease-out
+              className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#BE5103]  transition-transform duration-200 ease-out
     hover:-translate-y-2"
             >
               <h3 className="text-lg font-semibold mb-3">
@@ -271,7 +271,7 @@ export default function AboutPage() {
                 and future goals.
               </p>
 
-              <div className="flex gap-2 mt-4 text-xs text-gray-500">
+              <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-500">
                 <span>Counselling</span>
                 <span>•</span>
                 <span>Course Selection</span>
@@ -279,19 +279,19 @@ export default function AboutPage() {
             </div>
 
             {/* CENTER IMAGE CARD */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 h-64 md:h-auto">
               <Image
                 src="/images/globe.jpg"
                 alt="Student counselling"
                 width={500}
                 height={500}
-                className="object-cover"
+                className="object-cover w-full h-full"
               />
             </div>
 
             {/* RIGHT CARD */}
             <div
-              className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-8 hover:border-[#BE5103]  transition-transform duration-200 ease-out
+              className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#BE5103]  transition-transform duration-200 ease-out
     hover:-translate-y-2"
             >
               <h3 className="text-lg font-semibold mb-3">End-to-End Support</h3>
@@ -300,7 +300,7 @@ export default function AboutPage() {
                 guidance — we handle the complete study abroad journey.
               </p>
 
-              <div className="flex gap-2 mt-4 text-xs text-gray-500">
+              <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-500">
                 <span>Applications</span>
                 <span>•</span>
                 <span>Visa Support</span>
@@ -312,7 +312,7 @@ export default function AboutPage() {
 
       {/* ================= TRUST CARDS ================= */}
       <section className="bg-black pb-5 px-6 ">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {/* Card 1 */}
           <div
             className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 hover:border-[#BE5103]  transition-transform duration-200 ease-out
@@ -369,14 +369,14 @@ export default function AboutPage() {
       </section>
 
       {/* ================= SUCCESSFUL ADMISSIONS ================= */}
-      <section className="bg-black py-24 px-6">
+      <section className="bg-black py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-light mb-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-light mb-10 md:mb-16 text-center">
             Explore our winning{" "}
             <span className="text-[#BE5103] italic font-serif">admissions</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* LEFT ACCORDION */}
             <div className="space-y-4">
               {[
@@ -399,15 +399,15 @@ export default function AboutPage() {
             {/* RIGHT TABLE */}
             <div
               className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-xl p-6 text-sm hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
+    hover:-translate-y-2 overflow-x-auto"
             >
-              <table className="w-full text-left text-gray-400">
+              <table className="w-full text-left text-gray-400 min-w-[300px]">
                 <thead className="text-gray-300">
                   <tr>
-                    <th className="pb-3">Country</th>
-                    <th className="pb-3">University</th>
-                    <th className="pb-3">Intake</th>
-                    <th className="pb-3">Scholarship</th>
+                    <th className="pb-3 text-xs md:text-sm">Country</th>
+                    <th className="pb-3 text-xs md:text-sm">University</th>
+                    <th className="pb-3 text-xs md:text-sm">Intake</th>
+                    <th className="pb-3 text-xs md:text-sm">Scholarship</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -423,7 +423,7 @@ export default function AboutPage() {
     hover:-translate-y-2"
                     >
                       {row.map((cell, j) => (
-                        <td key={j} className="py-3">
+                        <td key={j} className="py-3 text-xs md:text-sm">
                           {cell}
                         </td>
                       ))}
@@ -436,10 +436,10 @@ export default function AboutPage() {
         </div>
       </section>
       {/* ================= CTA ================= */}
-      <section className="bg-black pb-40 px-6">
+      <section className="bg-black pb-20 md:pb-40 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-3xl bg-gradient-to-br from-[#BE5103] via-[#BE5103]/20 to-black p-16 flex flex-col items-center text-center">
-            <h3 className="text-3xl md:text-4xl font-light max-w-2xl mb-6 text-center">
+          <div className="rounded-3xl bg-gradient-to-br from-[#BE5103] via-[#BE5103]/20 to-black p-8 md:p-16 flex flex-col items-center text-center">
+            <h3 className="text-2xl md:text-4xl font-light max-w-2xl mb-6 text-center">
               Get a reliable education partner that provides solutions to your{" "}
               <span className="text-[#BE5103] italic font-serif">
                 global study goals
@@ -461,15 +461,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-black py-0 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+      <section className="bg-black py-0 px-6 pb-20">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           {/* LEFT CONTENT */}
           <div>
-            <p className="text-gray-100 text-sm mb-4 font-semibold px-35">
+            <p className="text-gray-100 text-sm mb-4 font-semibold md:px-35">
               WHY STUDENTS CHOOSE US
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-light leading-tight mb-8">
+            <h2 className="text-3xl md:text-5xl font-light leading-tight mb-8">
               A guidance partner for your
               <span className="text-[#BE5103] italic font-serif">
                 {" "}
@@ -477,7 +477,7 @@ export default function AboutPage() {
               </span>
             </h2>
 
-            <p className="text-gray-400 max-w-xl leading-relaxed mb-10">
+            <p className="text-gray-400 max-w-xl leading-relaxed mb-10 text-sm md:text-base">
               We don’t just process applications — we mentor students through
               life-changing decisions. Our focus is long-term success,
               transparent advice, and helping students confidently step into

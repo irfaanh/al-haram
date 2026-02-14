@@ -6,42 +6,42 @@ import Footer from "@/components/Footer";
 export default function ContactPage() {
   return (
     <>
-      <section className="min-h-screen bg-black text-white py-32 px-6 relative overflow-hidden">
-        <div className="flex items-center justify-center gap-6 mb-16">
-          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+      <section className="min-h-screen bg-black text-white py-24 md:py-32 px-6 relative overflow-hidden">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-10 md:mb-16">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
             CONTACT US
           </p>
-          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
-        <h1 className="text-4xl md:text-5xl font-light mb-4 px-45">
+        <h1 className="text-3xl md:text-5xl font-light mb-4 px-4 md:px-45 text-center">
           Let’s Start Your{" "}
           <span className="italic font-serif text-[#BE5103]">
             Study Abroad Journey
           </span>
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center">
+        <p className="text-gray-400 max-w-2xl mx-auto text-center text-sm md:text-base">
           Connect with our expert advisors for personalised guidance on
           university selection, applications, scholarships, and visa support.
           Your global education journey begins with the right advice.
         </p>
-        <div className="max-w-7xl mx-auto py-24">
+        <div className="max-w-7xl mx-auto py-12 md:py-24">
           {/* MAIN CARD */}
-          <div className="relative bg-[#111] rounded-[2.5rem] p-16 border border-white/10 overflow-hidden">
+          <div className="relative bg-[#111] rounded-3xl md:rounded-[2.5rem] p-6 md:p-16 border border-white/10 overflow-hidden">
             {/* LEFT GLOW EFFECT (Theme Color) */}
-            <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#BE5103] opacity-30 blur-[160px] rounded-full"></div>
+            <div className="absolute -bottom-32 -left-32 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#BE5103] opacity-30 blur-[100px] md:blur-[160px] rounded-full"></div>
 
-            <div className="grid md:grid-cols-2 gap-16 relative z-10">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 relative z-10">
               {/* ================= LEFT SIDE ================= */}
               <div>
-                <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-8">
+                <h1 className="text-3xl md:text-5xl font-semibold leading-tight mb-6 md:mb-8 text-center md:text-left">
                   Let’s Plan Your <br />{" "}
                   <span className="text-[#BE5103] italic font-serif">
                     Global Education
                   </span>
                 </h1>
 
-                <div className="space-y-4 text-gray-300 mb-10">
+                <div className="space-y-4 text-gray-300 mb-8 md:mb-10 text-sm md:text-base">
                   <div className="flex items-center gap-3">
                     <Check size={18} className="text-[#BE5103]" />
                     <p>We will respond within 12 hours</p>
@@ -53,18 +53,19 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="text-gray-400 mb-6">
+                <div className="text-gray-400 mb-6 text-center md:text-left">
                   <p className="underline mb-2">hello@momentor.com</p>
                   <p>Want to book a quick call instead?</p>
                 </div>
 
                 <button
                   className="
-    mt-8 px-6 py-3 rounded-full
+    mt-4 md:mt-8 px-6 py-3 rounded-full
     bg-[#BE5103] text-white text-sm font-semibold
     hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103]
     transition-transform duration-200 ease-out
     hover:-translate-y-2
+    w-full md:w-auto
   "
                 >
                   Book a free call
@@ -78,7 +79,7 @@ export default function ContactPage() {
                   <p className="mb-3 text-sm text-gray-400 font-semibold">
                     Service
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 md:gap-3">
                     {[
                       "Consulting",
                       "Visa Support",
@@ -87,7 +88,7 @@ export default function ContactPage() {
                     ].map((item, i) => (
                       <button
                         key={i}
-                        className="px-4 py-2 rounded-full border border-[#BE5103]/50 text-sm hover:border-[#BE5103] transition-transform duration-200 ease-out
+                        className="px-3 md:px-4 py-2 rounded-full border border-[#BE5103]/50 text-xs md:text-sm hover:border-[#BE5103] transition-transform duration-200 ease-out
     hover:-translate-y-2"
                       >
                         {item}
@@ -101,31 +102,31 @@ export default function ContactPage() {
                   <input
                     type="text"
                     placeholder="First name*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
+                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
                   />
                   <input
                     type="text"
                     placeholder="Last Name*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
+                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
                   />
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   <input
                     type="email"
                     placeholder="Email*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
+                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
                   />
                   <input
                     type="tel"
                     placeholder="Phone number*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
+                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
                   />
                 </div>
 
                 <textarea
                   placeholder="Your study preferences*"
                   rows={4}
-                  className="w-full bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103]"
+                  className="w-full bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
                 />
 
                 {/* Submit */}
@@ -134,12 +135,13 @@ export default function ContactPage() {
     w-full
     bg-[#BE5103]
     text-white
-    py-4
+    py-3 md:py-4
     rounded-full
     font-semibold
     transition-all duration-300 ease-out
     hover:bg-gradient-to-r hover:from-[#7A3300] hover:to-[#BE5103]
     hover:-translate-y-3
+    text-sm md:text-base
   "
                 >
                   Submit Your Enquiry
@@ -152,10 +154,10 @@ export default function ContactPage() {
 
       {/* BOTTOM CONTACT CARDS */}
       <section className="bg-black py-10 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-8">
           {/* CARD 1 */}
           <div
-            className="bg-[#111] border border-[#BE5103]/40 p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
+            className="bg-[#111] border border-[#BE5103]/40 p-8 md:p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
     hover:-translate-y-3 text-center"
           >
             <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#BE5103]/10">
@@ -170,7 +172,7 @@ export default function ContactPage() {
 
           {/* CARD 2 */}
           <div
-            className="bg-[#111] border border-[#BE5103]/40 p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
+            className="bg-[#111] border border-[#BE5103]/40 p-8 md:p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
     hover:-translate-y-3 text-center"
           >
             <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#BE5103]/10">
@@ -187,7 +189,7 @@ export default function ContactPage() {
 
           {/* CARD 3 */}
           <div
-            className="bg-[#111] border border-[#BE5103]/40 p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
+            className="bg-[#111] border border-[#BE5103]/40 p-8 md:p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
     hover:-translate-y-3 text-center"
           >
             <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#BE5103]/10">
@@ -206,18 +208,18 @@ export default function ContactPage() {
         </div>
       </section>
       {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-black py-18 px-6 relative overflow-hidden">
+      <section className="bg-black py-12 md:py-18 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center font-light mb-16">
+          <h2 className="text-3xl md:text-4xl text-center font-light mb-10 md:mb-16">
             Our students find countless <br />
             reasons to{" "}
             <span className="text-[#BE5103] italic font-serif">trust us</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* CARD 1 */}
             <div
-              className="bg-[#111] border border-[#BE5103]/40 rounded-3xl p-8 hover:border-[#BE5103] transition-transform duration-200 ease-out
+              className="bg-[#111] border border-[#BE5103]/40 rounded-3xl p-6 md:p-8 hover:border-[#BE5103] transition-transform duration-200 ease-out
     hover:-translate-y-3 "
             >
               <div className="flex items-center gap-4 mb-6">
@@ -243,7 +245,7 @@ export default function ContactPage() {
 
             {/* CARD 2 */}
             <div
-              className="bg-[#111] border border-[#BE5103]/40 rounded-3xl p-8 hover:border-[#BE5103] transition-transform duration-200 ease-out
+              className="bg-[#111] border border-[#BE5103]/40 rounded-3xl p-6 md:p-8 hover:border-[#BE5103] transition-transform duration-200 ease-out
     hover:-translate-y-3 "
             >
               <div className="flex items-center gap-4 mb-6">
@@ -270,9 +272,9 @@ export default function ContactPage() {
         </div>
       </section>
       {/* ================= FAQ ================= */}
-      <section className="bg-black pb-32 px-6">
+      <section className="bg-black pb-20 md:pb-32 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center font-light mb-14">
+          <h2 className="text-3xl md:text-4xl text-center font-light mb-10 md:mb-14">
             Got questions? We’ve got{" "}
             <span className="text-[#BE5103] italic font-serif">answers!</span>
           </h2>

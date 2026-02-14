@@ -7,23 +7,23 @@ export default function CoursesPage() {
   return (
     <main className="bg-black text-white">
       {/* ================= HERO ================= */}
-      <section className="py-32 px-6 text-center">
-        <div className="flex items-center justify-center gap-6 mb-16">
-          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+      <section className="py-24 md:py-32 px-6 text-center">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-10 md:mb-16">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold">
             OUR COURSES
           </p>
-          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-light mb-6">
+        <h1 className="text-3xl md:text-5xl font-light mb-6">
           Comprehensive{" "}
           <span className="italic font-serif text-[#BE5103]">
             Global Readiness Courses
           </span>
         </h1>
 
-        <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
           Our specialized courses — Global Student Readiness, Global Career
           Readiness, and Global Holistic Readiness Training — are designed to
           equip students with academic discipline, professional competence, and
@@ -33,12 +33,12 @@ export default function CoursesPage() {
       </section>
 
       {/* ================= PROGRAMS ================= */}
-      <section className="pb-40 px-6">
-        <div className="max-w-7xl mx-auto space-y-32">
+      <section className="pb-20 md:pb-40 px-6">
+        <div className="max-w-7xl mx-auto space-y-20 md:space-y-32">
           {/* ===== GSRP ===== */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             <div>
-              <h3 className="text-4xl font-semibold mb-4">
+              <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
                 Global Student Readiness Program (GSRP)
               </h3>
 
@@ -83,25 +83,25 @@ export default function CoursesPage() {
                 alt="GSRP"
                 width={600}
                 height={450}
-                className="object-cover"
+                className="object-cover w-full h-auto"
               />
             </div>
           </div>
 
           {/* ===== GCRP ===== */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1 rounded-3xl overflow-hidden border border-white/10">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div className="order-first md:order-first rounded-3xl overflow-hidden border border-white/10">
               <Image
                 src="/images/admission.jpg"
                 alt="GCRP"
                 width={600}
                 height={450}
-                className="object-cover"
+                className="object-cover w-full h-auto"
               />
             </div>
 
-            <div className="order-1 md:order-2">
-              <h3 className="text-4xl font-semibold mb-4">
+            <div className="order-last md:order-last">
+              <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
                 Global Career Readiness Program (GCRP)
               </h3>
 
@@ -140,9 +140,9 @@ export default function CoursesPage() {
           </div>
 
           {/* ===== GHRT ===== */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             <div>
-              <h3 className="text-4xl font-semibold mb-4">
+              <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
                 Global Holistic Readiness Training (GHRT)
               </h3>
 
@@ -186,7 +186,7 @@ export default function CoursesPage() {
                 alt="GHRT"
                 width={600}
                 height={450}
-                className="object-cover"
+                className="object-cover w-full h-auto"
               />
             </div>
           </div>
@@ -194,10 +194,10 @@ export default function CoursesPage() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="pb-40 px-6">
-        <div className="max-w-7xl mx-auto rounded-3xl bg-gradient-to-br from-[#BE5103] via-[#BE5103]/30 to-black p-20 relative">
+      <section className="pb-20 md:pb-40 px-6">
+        <div className="max-w-7xl mx-auto rounded-3xl bg-gradient-to-br from-[#BE5103] via-[#BE5103]/30 to-black p-10 md:p-20 relative">
           <div className="flex justify-center">
-            <h3 className="text-3xl md:text-4xl font-light max-w-2xl text-center">
+            <h3 className="text-2xl md:text-4xl font-light max-w-2xl text-center">
               Ready to take the next step toward{" "}
               <span className="italic font-serif text-[#BE5103]">
                 international success?
@@ -207,9 +207,9 @@ export default function CoursesPage() {
             </h3>
           </div>
 
-          <div className="absolute bottom-10 right-10">
+          <div className="mt-8 flex justify-center md:absolute md:bottom-10 md:right-10 md:mt-0">
             <Link href="/contact">
-              <button className="px-8 py-4 rounded-full bg-[#BE5103] text-white text-sm font-semibold hover:-translate-y-2 transition">
+              <button className="px-8 py-4 rounded-full bg-[#BE5103] text-white text-sm font-semibold hover:-translate-y-2 transition shadow-lg">
                 Contact Our Team →
               </button>
             </Link>

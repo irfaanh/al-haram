@@ -14,25 +14,25 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-gray-300 pt-28 pb-16 overflow-hidden">
+    <footer className="relative bg-black text-gray-300 pt-20 md:pt-28 pb-10 md:pb-16 overflow-hidden">
       {/* BIG BACKGROUND TEXT */}
-      <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10rem] md:text-[14rem] font-extrabold uppercase text-white/10 select-none pointer-events-none whitespace-nowrap">
+      <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[18vw] md:text-[14rem] font-extrabold uppercase text-white/5 select-none pointer-events-none whitespace-nowrap leading-none">
         momentor
       </h1>
 
       {/* FOOTER CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12">
         {/* LOGO + ABOUT (UNCHANGED POSITION) */}
-        <div className="md:col-span-1">
+        <div className="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
           <Image
             src="/images/log.png"
             alt="Momentor logo"
-            width={210}
-            height={110}
-            className="mb-0 object-contain"
+            width={180}
+            height={90}
+            className="mb-4 object-contain"
           />
 
-          <p className="text-sm leading-relaxed max-w-xs mt-2 px-1 text-justify">
+          <p className="text-sm leading-relaxed max-w-xs mt-2">
             Momentor is India’s first education journalism + future-skills
             mentorship platform guiding youth with clarity, skills, and global
             career opportunities.
@@ -40,7 +40,7 @@ export default function Footer() {
 
           <div className="mt-6">
             <h5 className="text-white font-semibold mb-3">Follow Us</h5>
-            <div className="flex items-center gap-4 text-[#BE5103]">
+            <div className="flex items-center gap-4 text-[#BE5103] justify-center md:justify-start">
               <Instagram
                 className="cursor-pointer hover:opacity-70  transition-transform duration-200 ease-out
     hover:-translate-y-2"
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         {/* NAVIGATION */}
-        <div className="px-10">
+        <div className="md:px-10 text-center md:text-left">
           <h4 className="text-white font-semibold mb-4">Navigation</h4>
           <ul className="space-y-3 text-sm">
             <li>
@@ -94,66 +94,84 @@ export default function Footer() {
         </div>
 
         {/* SOCIAL */}
-        <div>
+        <div className="text-center md:text-left">
           <h4 className="text-white font-semibold mb-5">Social</h4>
           <ul className="space-y-3 text-sm">
-            <li>Twitter</li>
-            <li>LinkedIn</li>
-            <li>Facebook</li>
-            <li>Instagram</li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">
+              Twitter
+            </li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">
+              LinkedIn
+            </li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">
+              Facebook
+            </li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">
+              Instagram
+            </li>
           </ul>
         </div>
 
         {/* LEGAL */}
-        <div>
+        <div className="text-center md:text-left">
           <h4 className="text-white font-semibold mb-5">Legal</h4>
           <ul className="space-y-3 text-sm">
-            <li>Terms</li>
-            <li>Privacy</li>
-            <li>Cookies</li>
-            <li>Contact</li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">
+              Terms
+            </li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">
+              Privacy
+            </li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">
+              Cookies
+            </li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">
+              Contact
+            </li>
           </ul>
         </div>
 
         {/* CONTACT */}
-        <div>
+        <div className="text-center md:text-left">
           <h4 className="text-white font-semibold mb-5">Contact Us</h4>
           <p className="text-sm mb-6">
             Have questions? We’re here to guide you. Reach out to our team
             anytime.
           </p>
 
-          <ul className="space-y-4 text-sm">
-            <li className="flex items-center gap-3">
-              <span className="p-2 bg-[#BE5103] text-black rounded-full">
+          <ul className="space-y-4 text-sm inline-block md:block text-left">
+            <li className="flex items-center gap-3 justify-center md:justify-start">
+              <span className="p-2 bg-[#BE5103] text-black rounded-full min-w-[32px] flex items-center justify-center">
                 <Phone size={14} />
               </span>
               +91 98765 43210
             </li>
 
-            <li className="flex items-center gap-3">
-              <span className="p-2 bg-[#BE5103] text-black rounded-full">
+            <li className="flex items-center gap-3 justify-center md:justify-start">
+              <span className="p-2 bg-[#BE5103] text-black rounded-full min-w-[32px] flex items-center justify-center">
                 <Mail size={14} />
               </span>
               hello@momentor.in
             </li>
 
-            <li className="flex items-start gap-3">
-              <span className="p-2 bg-[#BE5103] text-black rounded-full mt-1">
+            <li className="flex items-start gap-3 justify-center md:justify-start">
+              <span className="p-2 bg-[#BE5103] text-black rounded-full mt-1 min-w-[32px] flex items-center justify-center">
                 <MapPin size={14} />
               </span>
-              Hilite Business Park
-              <br />
-              Palazhi, Calicut
-              <br />
-              Kerala, India
+              <span>
+                Hilite Business Park
+                <br />
+                Palazhi, Calicut
+                <br />
+                Kerala, India
+              </span>
             </li>
           </ul>
         </div>
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="relative z-10 mt-20 border-t border-white/10 pt-6 text-center text-xs text-gray-500">
+      <div className="relative z-10 mt-16 md:mt-20 border-t border-white/10 pt-6 text-center text-xs text-gray-500 px-6">
         © 2026 Momentor — All Rights Reserved.
       </div>
     </footer>

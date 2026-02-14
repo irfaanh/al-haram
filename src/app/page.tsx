@@ -26,8 +26,8 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/70" />
 
-        <div className="relative z-10 max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-light leading-tight mb-6">
+        <div className="relative z-10 max-w-4xl pt-20">
+          <h1 className="text-4xl md:text-7xl font-light leading-tight mb-6">
             Study Beyond Borders. <br />
             Build a{" "}
             <span className="italic font-serif text-[#BE5103]">
@@ -35,30 +35,30 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="text-gray-300 max-w-2xl mx-auto mb-10">
+          <p className="text-gray-300 max-w-2xl mx-auto mb-10 text-sm md:text-base">
             We guide ambitious students toward internationally recognized
             universities with structured preparation, transparent processes, and
             long-term career readiness support.
           </p>
 
-          <button className="px-8 py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1">
+          <button className="px-8 py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1 text-sm md:text-base font-medium">
             Book Free Consultation →
           </button>
         </div>
       </section>
 
       {/* ================= ABOUT US ================= */}
-      <section className="py-32 px-6">
-        <div className="flex items-center justify-center gap-6 mb-16">
-          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+      <section className="py-20 md:py-32 px-6">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
             ABOUT US
           </p>
-          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-light mb-8">
+            <h2 className="text-3xl md:text-5xl font-light mb-6 md:mb-8 text-center md:text-left">
               A Trusted Partner in{" "}
               <span className="italic font-serif text-[#BE5103]">
                 International Education
@@ -66,7 +66,7 @@ export default function Home() {
             </h2>
 
             {/* CONTENT */}
-            <div className="text-justify">
+            <div className="text-justify text-sm md:text-base space-y-4 text-gray-300">
               <p>
                 We are a dedicated study abroad consultancy committed to helping
                 ambitious students access world-class education opportunities.
@@ -100,36 +100,36 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="order-first md:order-last">
             <Image
               src="/images/counseling.jpg"
               alt="Counselling"
               width={600}
               height={500}
-              className="rounded-3xl border border-white/10"
+              className="rounded-3xl border border-white/10 w-full h-auto"
             />
           </div>
         </div>
       </section>
 
       {/* ================= COURSES ================= */}
-      <section className="py-32 px-6 bg-[#0f0f0f]">
-        <div className="flex items-center justify-center gap-6 mb-5">
-          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+      <section className="py-20 md:py-32 px-6 bg-[#0f0f0f]">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-5">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
             OUR COURSES
           </p>
-          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
         <div>
-          <p className="text-gray-400 text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-15">
+          <p className="text-gray-400 text-sm md:text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-10 md:mb-15">
             Our courses prepare students for international education and global
             careers. We focus on academic excellence and professional readiness.
             Every program builds confidence and competitive advantage. Step
             forward with clarity. Study globally.
           </p>
         </div>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-10">
           {[
             {
               title: "Global Student Readiness",
@@ -154,7 +154,7 @@ export default function Home() {
                  hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(190,81,3,0.25)]"
             >
               {/* Top Image */}
-              <div className="h-64 overflow-hidden">
+              <div className="h-48 md:h-64 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -164,12 +164,12 @@ export default function Home() {
               </div>
 
               {/* Bottom Content */}
-              <div className="p-8">
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-[#BE5103] transition">
+              <div className="p-6 md:p-8">
+                <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 group-hover:text-[#BE5103] transition">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default function Home() {
           ))}
         </div>
         {/* View More Button */}
-        <div className="max-w-6xl mx-auto mt-12 flex justify-end">
+        <div className="max-w-6xl mx-auto mt-10 md:mt-12 flex justify-center md:justify-end">
           <Link href="/courses">
             <button
               className="px-8 py-3 rounded-full border border-[#BE5103] text-[#BE5103] 
@@ -191,16 +191,16 @@ export default function Home() {
       </section>
 
       {/* ================= WHY CHOOSE US ================= */}
-      <section className="py-32 px-6">
-        <div className="flex items-center justify-center gap-6 mb-5">
-          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+      <section className="py-20 md:py-32 px-6">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-5">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
             WHY CHOOSE US
           </p>
-          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
         <div>
-          <p className="text-gray-400 text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-15">
+          <p className="text-gray-400 text-sm md:text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-10 md:mb-15">
             We combine structured global readiness training with transparent
             consultancy support to ensure every student is fully prepared for
             international success. From ethical guidance and academic compliance
@@ -211,7 +211,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {[
             {
               icon: Globe,
@@ -236,7 +236,7 @@ export default function Home() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-[#111] border border-white/10 rounded-2xl p-8 
+              className="bg-[#111] border border-white/10 rounded-2xl p-6 md:p-8 
                    hover:border-[#BE5103] transition-all duration-500 
                    hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(190,81,3,0.2)]"
             >
@@ -262,23 +262,23 @@ export default function Home() {
       </section>
 
       {/* ================= TRUSTED PARTNERS ================= */}
-      <section className="py-32 px-6 bg-[#0f0f0f]">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light">
+      <section className="py-20 md:py-32 px-6 bg-[#0f0f0f]">
+        <div className="max-w-6xl mx-auto text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-light">
             Our{" "}
             <span className="italic font-serif text-[#BE5103]">
               Trusted Partners
             </span>
           </h2>
 
-          <p className="text-gray-400 max-w-2xl mx-auto mt-6 text-[15px] leading-relaxed">
+          <p className="text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-[15px] leading-relaxed">
             We collaborate with international academic institutions and global
             industry networks to ensure structured academic and professional
             pathways.
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
           {[
             { icon: University, title: "UK Academic Institutions" },
             { icon: GraduationCap, title: "Canadian University Network" },
@@ -291,21 +291,21 @@ export default function Home() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-[#111] border border-white/10 rounded-2xl p-8 text-center
+              className="bg-[#111] border border-white/10 rounded-2xl p-6 md:p-8 text-center
                  hover:border-[#BE5103] hover:-translate-y-2
                  hover:shadow-[0_15px_40px_rgba(190,81,3,0.2)]
-                 transition-all duration-500"
+                 transition-all duration-500 flex flex-col items-center h-full"
             >
               <div className="flex justify-center mb-5">
                 <div
-                  className="w-14 h-14 rounded-full border border-[#BE5103]
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-[#BE5103]
                         flex items-center justify-center text-[#BE5103]"
                 >
-                  <item.icon size={24} />
+                  <item.icon size={20} className="md:w-6 md:h-6" />
                 </div>
               </div>
 
-              <h4 className="text-white font-medium text-sm leading-relaxed">
+              <h4 className="text-white font-medium text-xs md:text-sm leading-relaxed">
                 {item.title}
               </h4>
             </div>

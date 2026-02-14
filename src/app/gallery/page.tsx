@@ -10,15 +10,15 @@ export default function GalleryPage() {
       <Header />
 
       {/* ================= HERO ================= */}
-      <section className="pt-40 pb-20 px-6 text-center">
-        <div className="flex items-center justify-center gap-6 mb-16">
-          <span className="w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-xl tracking-[0.35em] text-[#BE5103] uppercase font-bold">
+      <section className="pt-28 md:pt-40 pb-16 md:pb-20 px-6 text-center">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-10 md:mb-16">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold">
             GALLERY
           </p>
-          <span className="w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
-        <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+        <h1 className="text-3xl md:text-6xl font-semibold leading-tight">
           Moments of{" "}
           <span className="text-[#BE5103] italic font-serif">
             Global Success
@@ -33,7 +33,7 @@ export default function GalleryPage() {
 
       {/* ================= IMAGE GRID ================= */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {[
             "/images/graduation.jpg",
             "/images/europe.jpg",
@@ -44,14 +44,13 @@ export default function GalleryPage() {
           ].map((src, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-3xl border border-white/10"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 aspect-[4/3]"
             >
               <Image
                 src={src}
                 alt="Gallery Image"
-                width={500}
-                height={500}
-                className="object-cover w-full h-[300px] group-hover:scale-110 transition-transform duration-500"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
           ))}
