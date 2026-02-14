@@ -19,6 +19,8 @@ export default function Header() {
     { name: "Contact", href: "/contact" },
   ];
 
+  if (pathname?.startsWith("/admin")) return null;
+
   return (
     <header className="fixed top-0 left-0 right-0 z-[9999] transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 md:h-14 flex items-center justify-between bg-black/80 backdrop-blur-md shadow-lg rounded-b-3xl md:rounded-full mt-0 md:mt-2 relative border-b md:border-none border-white/10">
