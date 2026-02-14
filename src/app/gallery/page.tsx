@@ -1,10 +1,21 @@
-"use client";
-
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { prisma } from "@/lib/prisma";
 
-export default function GalleryPage() {
+export const dynamic = "force-dynamic";
+
+interface GalleryItem {
+  id: string;
+  image: string;
+  title: string | null;
+}
+
+export default async function GalleryPage() {
+  const gallery = await prisma.gallery.findMany({
+    orderBy: { createdAt: "desc" },
+  }) as unknown as GalleryItem[];
+
   return (
     <main className="bg-black text-white min-h-screen">
       <Header />
@@ -34,24 +45,22 @@ export default function GalleryPage() {
       {/* ================= IMAGE GRID ================= */}
       <section className="max-w-7xl mx-auto px-6 pb-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-          {[
-            "/images/graduation.jpg",
-            "/images/europe.jpg",
-            "/images/globe.jpg",
-            "/images/home.jpg",
-            "/images/placement.jpg",
-            "/images/teams.jpg",
-          ].map((src, i) => (
+          {gallery.map((item) => (
             <div
-              key={i}
+              key={item.id}
               className="group relative overflow-hidden rounded-3xl border border-white/10 aspect-[4/3]"
             >
               <Image
-                src={src}
-                alt="Gallery Image"
+                src={item.image}
+                alt={item.title || "Gallery Image"}
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
+              {item.title && (
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="text-white text-sm font-medium truncate">{item.title}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>

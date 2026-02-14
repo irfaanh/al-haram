@@ -1,11 +1,27 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
-import { UserCircle, Quote } from "lucide-react";
+import { prisma } from "@/lib/prisma";
 import Link from "next/link";
+// I'll create a client component for the details/accordion interaction because "details" element works without JS but if I want custom behavior...
+// Actually standard <details> works fine with SSR.
 
-export default function CoursesPage() {
+interface Course {
+  id: string;
+  title: string;
+  description: string | null;
+  image: string;
+  modules: any;
+}
+
+export const dynamic = "force-dynamic";
+
+export default async function CoursesPage() {
+  const courses = await prisma.course.findMany({
+    orderBy: { createdAt: "asc" },
+  }) as unknown as Course[];
+
   return (
-    <main className="bg-black text-white">
+    <main className="bg-black text-white px-0"> {/* Removed Main px padding if any */}
       {/* ================= HERO ================= */}
       <section className="py-24 md:py-32 px-6 text-center">
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-10 md:mb-16">
@@ -35,161 +51,48 @@ export default function CoursesPage() {
       {/* ================= PROGRAMS ================= */}
       <section className="pb-20 md:pb-40 px-6">
         <div className="max-w-7xl mx-auto space-y-20 md:space-y-32">
-          {/* ===== GSRP ===== */}
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-            <div>
-              <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
-                Global Student Readiness Program (GSRP)
-              </h3>
+          {courses.map((course, index) => {
+            const isEven = index % 2 === 0;
+            const modules = course.modules as unknown as { title: string; description: string }[];
 
-              <div className="space-y-4 text-gray-400">
-                <details className="border-b border-white/10 pb-4">
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Civic & Cultural Readiness
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Training in civic discipline, legal awareness, cultural
-                    sensitivity, and responsible global conduct before
-                    departure.
-                  </p>
-                </details>
+            return (
+              <div key={course.id} className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                {/* Text Section */}
+                <div className={`${isEven ? 'order-first' : 'order-last md:order-last'}`}>
+                  <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
+                    {course.title}
+                  </h3>
+                  {course.description && (
+                    <p className="text-gray-400 mb-6 text-sm">{course.description}</p>
+                  )}
 
-                <details className="border-b border-white/10 pb-4">
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Independent Living Preparation
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Housing etiquette, transport systems, safety awareness,
-                    daily life management, and behavioral adaptation training.
-                  </p>
-                </details>
+                  <div className="space-y-4 text-gray-400">
+                    {Array.isArray(modules) && modules.map((mod, idx) => (
+                      <details key={idx} className="group border-b border-white/10 pb-4">
+                        <summary className="cursor-pointer text-[#BE5103] font-semibold list-none flex items-center justify-between">
+                          <span>{mod.title}</span>
+                          <span className="transform group-open:rotate-180 transition-transform text-white/50 text-xs">▼</span>
+                        </summary>
+                        <p className="mt-2 text-sm">{mod.description}</p>
+                      </details>
+                    ))}
+                  </div>
+                </div>
 
-                <details>
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Destination-Specific Preparation
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Country-focused readiness covering academic systems, work
-                    culture norms, legal boundaries, and common international
-                    student mistakes.
-                  </p>
-                </details>
+                {/* Image Section */}
+                <div className={`rounded-3xl overflow-hidden border border-white/10 ${isEven ? 'order-last' : 'order-first md:order-first'}`}>
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src={course.image}
+                      alt={course.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div className="rounded-3xl overflow-hidden border border-white/10">
-              <Image
-                src="/images/counseling.jpg"
-                alt="GSRP"
-                width={600}
-                height={450}
-                className="object-cover w-full h-auto"
-              />
-            </div>
-          </div>
-
-          {/* ===== GCRP ===== */}
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-            <div className="order-first md:order-first rounded-3xl overflow-hidden border border-white/10">
-              <Image
-                src="/images/admission.jpg"
-                alt="GCRP"
-                width={600}
-                height={450}
-                className="object-cover w-full h-auto"
-              />
-            </div>
-
-            <div className="order-last md:order-last">
-              <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
-                Global Career Readiness Program (GCRP)
-              </h3>
-
-              <div className="space-y-4 text-gray-400">
-                <details className="border-b border-white/10 pb-4">
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Professional Skill Development
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Structured training in communication, interpersonal skills,
-                    networking, public speaking, and ethical persuasion.
-                  </p>
-                </details>
-
-                <details className="border-b border-white/10 pb-4">
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Applied Career Readiness
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Skill evaluation and readiness assessment before
-                    international placement to ensure professional standards.
-                  </p>
-                </details>
-
-                <details>
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Paid International Internship
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Real-world global work exposure with mentor-guided
-                    performance monitoring in international environments.
-                  </p>
-                </details>
-              </div>
-            </div>
-          </div>
-
-          {/* ===== GHRT ===== */}
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-            <div>
-              <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
-                Global Holistic Readiness Training (GHRT)
-              </h3>
-
-              <div className="space-y-4 text-gray-400">
-                <details className="border-b border-white/10 pb-4">
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Integrated Personal Development
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Structured development in character building, discipline,
-                    accountability, and global responsibility.
-                  </p>
-                </details>
-
-                <details className="border-b border-white/10 pb-4">
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Leadership & Ethical Training
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Preparation focused on leadership standards, ethical
-                    decision-making, and professional integrity in international
-                    environments.
-                  </p>
-                </details>
-
-                <details>
-                  <summary className="cursor-pointer text-[#BE5103] font-semibold">
-                    Performance-Based Certification
-                  </summary>
-                  <p className="mt-2 text-sm">
-                    Certification awarded based on demonstrated readiness,
-                    applied skills, and structured mentor evaluation.
-                  </p>
-                </details>
-              </div>
-            </div>
-
-            <div className="rounded-3xl overflow-hidden border border-white/10">
-              <Image
-                src="/images/teams.jpg"
-                alt="GHRT"
-                width={600}
-                height={450}
-                className="object-cover w-full h-auto"
-              />
-            </div>
-          </div>
+            );
+          })}
         </div>
       </section>
 
@@ -221,3 +124,4 @@ export default function CoursesPage() {
     </main>
   );
 }
+
