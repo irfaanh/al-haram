@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LayoutDashboard, BookOpen, Image as ImageIcon, Settings, Menu, X, LogOut, ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
+import { logout } from "@/app/admin/login/actions";
 
 const Sidebar = () => {
     const pathname = usePathname();
@@ -82,8 +83,8 @@ const Sidebar = () => {
                                 href={item.href}
                                 onClick={() => setIsMobileOpen(false)}
                                 className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition-all group ${isActive
-                                        ? "bg-white/10 text-white shadow-inner"
-                                        : "text-gray-400 hover:bg-white/5 hover:text-white"
+                                    ? "bg-white/10 text-white shadow-inner"
+                                    : "text-gray-400 hover:bg-white/5 hover:text-white"
                                     }`}
                             >
                                 <Icon className={`size-5 transition-colors ${isActive ? "text-[#BE5103]" : "text-gray-500 group-hover:text-gray-300"}`} />
@@ -95,6 +96,13 @@ const Sidebar = () => {
 
                 {/* Footer Actions */}
                 <div className="p-4 border-t border-white/10 bg-black/20">
+                    <button
+                        onClick={() => logout()}
+                        className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white transition-all group"
+                    >
+                        <LogOut className="size-5 text-gray-500 group-hover:text-gray-300" />
+                        Sign Out
+                    </button>
                     <Link
                         href="/"
                         className="flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white transition-all group"
