@@ -1,11 +1,46 @@
-import { DollarSign, Users, CreditCard, Activity } from "lucide-react";
+import { DollarSign, Video, Image as ImageIcon, BookOpen } from "lucide-react";
+import { prisma } from "@/lib/prisma";
+import Image from "next/image";
 
-export default function AdminDashboard() {
+export const dynamic = 'force-dynamic';
+
+export default async function AdminDashboard() {
+    // Fetch real data
+    const [
+        coursesCount,
+        galleryCount,
+        recentCourses,
+        recentGallery,
+        allCourses
+    ] = await Promise.all([
+        prisma.course.count(),
+        prisma.gallery.count(),
+        prisma.course.findMany({
+            take: 5,
+            orderBy: { createdAt: 'desc' }
+        }),
+        prisma.gallery.findMany({
+            take: 5,
+            orderBy: { createdAt: 'desc' }
+        }),
+        prisma.course.findMany({ select: { modules: true } })
+    ]);
+
+    // Calculate total modules safely
+    // Assuming modules is stored as JSON array in Prisma
+    const totalModules = allCourses.reduce((acc, course) => {
+        // Check if modules is an array
+        if (Array.isArray(course.modules)) {
+            return acc + course.modules.length;
+        }
+        return acc;
+    }, 0);
+
     const stats = [
-        { title: "Total Courses", value: "12", icon: Activity, change: "+2.5% from last month" },
-        { title: "Active Users", value: "+2350", icon: Users, change: "+180.1% from last month" },
-        { title: "Gallery Images", value: "450", icon: CreditCard, change: "+19% from last month" },
-        { title: "Revenue", value: "$45,231.89", icon: DollarSign, change: "+20.1% from last month" },
+        { title: "Total Courses", value: coursesCount.toString(), icon: BookOpen, change: "Active Courses" },
+        { title: "Total Modules", value: totalModules.toString(), icon: Video, change: "Across all courses" },
+        { title: "Gallery Images", value: galleryCount.toString(), icon: ImageIcon, change: "Portfolio Items" },
+        // { title: "Revenue", value: "$0.00", icon: DollarSign, change: "Coming Soon" }, 
     ];
 
     return (
@@ -35,36 +70,64 @@ export default function AdminDashboard() {
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                 <div className="col-span-4 rounded-xl border border-white/10 bg-white/5 p-6">
-                    <h3 className="font-semibold mb-4">Recent Sales</h3>
-                    <p className="text-sm text-gray-400 mb-4">You made 265 sales this month.</p>
+                    <h3 className="font-semibold mb-4">Recent Courses</h3>
+                    <p className="text-sm text-gray-400 mb-4">Latest additions to your course catalog.</p>
                     <div className="space-y-4">
-                        {/* Dummy list items */}
-                        {[1, 2, 3, 4, 5].map((i) => (
-                            <div key={i} className="flex items-center justify-between">
-                                <div className="flex items-center gap-4">
-                                    <div className="h-9 w-9 rounded-full bg-white/10" />
-                                    <div>
-                                        <p className="text-sm font-medium leading-none">User {i}</p>
-                                        <p className="text-xs text-gray-400">user{i}@example.com</p>
+                        {recentCourses.length === 0 ? (
+                            <p className="text-sm text-gray-500 italic">No courses added yet.</p>
+                        ) : (
+                            recentCourses.map((course) => (
+                                <div key={course.id} className="flex items-center justify-between">
+                                    <div className="flex items-center gap-4">
+                                        <div className="relative h-10 w-16 rounded overflow-hidden bg-white/10 shrink-0 border border-white/10">
+                                            {course.image ? (
+                                                <Image src={course.image} alt={course.title} fill className="object-cover" sizes="64px" />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">No Img</div>
+                                            )}
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-medium leading-none line-clamp-1">{course.title}</p>
+                                            <p className="text-xs text-gray-400 mt-1 line-clamp-1">
+                                                {Array.isArray(course.modules) ? course.modules.length : 0} Modules
+                                            </p>
+                                        </div>
                                     </div>
+                                    {/* <div className="font-medium text-sm text-gray-400">
+                        {new Date(course.createdAt).toLocaleDateString()}
+                    </div> */}
                                 </div>
-                                <div className="font-medium">+$1,999.00</div>
-                            </div>
-                        ))}
+                            ))
+                        )}
                     </div>
                 </div>
+
                 <div className="col-span-3 rounded-xl border border-white/10 bg-white/5 p-6">
-                    <h3 className="font-semibold mb-4">Recent Activity</h3>
-                    <div className="space-y-8">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="flex items-start gap-4">
-                                <div className="mt-1 h-2 w-2 rounded-full bg-blue-500" />
-                                <div>
-                                    <p className="text-sm">User updated profile settings</p>
-                                    <p className="text-xs text-gray-400">2 hours ago</p>
+                    <h3 className="font-semibold mb-4">Latest Gallery Uploads</h3>
+                    <div className="space-y-6">
+                        {recentGallery.length === 0 ? (
+                            <p className="text-sm text-gray-500 italic">No images uploaded yet.</p>
+                        ) : (
+                            recentGallery.map((item) => (
+                                <div key={item.id} className="flex items-start gap-4">
+                                    <div className="relative mt-1 h-12 w-12 rounded-lg bg-white/10 overflow-hidden shrink-0 border border-white/10">
+                                        {item.image ? (
+                                            <Image src={item.image} alt={item.title || 'Gallery Image'} fill className="object-cover" sizes="48px" />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">No Img</div>
+                                        )}
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium line-clamp-1">{item.title || "Untitled Image"}</p>
+                                        <p className="text-xs text-gray-400 mt-1">
+                                            {new Date(item.createdAt).toLocaleDateString(undefined, {
+                                                month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                                            })}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))
+                        )}
                     </div>
                 </div>
             </div>

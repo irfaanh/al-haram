@@ -26,7 +26,6 @@ const Sidebar = () => {
         { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
         { name: "Courses", href: "/admin/courses", icon: BookOpen },
         { name: "Gallery", href: "/admin/gallery", icon: ImageIcon },
-        { name: "Settings", href: "/admin/settings", icon: Settings },
     ];
 
     return (
