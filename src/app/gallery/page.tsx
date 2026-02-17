@@ -21,7 +21,7 @@ export default async function GalleryPage() {
       <Header />
 
       {/* ================= HERO BANNER ================= */}
-      <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative min-h-[45vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-bottom"
@@ -59,7 +59,7 @@ export default async function GalleryPage() {
       </section>
 
       {/* ================= IMAGE GRID ================= */}
-      <section className="max-w-7xl mx-auto px-6 pb-24">
+      <section className="max-w-7xl mx-auto px-6 pb-12 md:pb-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {gallery.map((item) => (
             <div

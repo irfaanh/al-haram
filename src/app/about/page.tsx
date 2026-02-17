@@ -12,7 +12,7 @@ export default function AboutPage() {
       <Header />
 
       {/* ================= HERO BANNER ================= */}
-      <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative min-h-[45vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 md:px-0 py-20 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -118,8 +118,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 space-y-20 md:space-y-32">
           {/* ================= OUR VISION ================= */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+            {/* Image Side */}
+            <div className="md:order-last">
+              <img
+                src="/images/counseling.jpg"
+                alt="Vision"
+                className="rounded-3xl w-full object-cover"
+              />
+            </div>
+
             {/* Text Side */}
-            <div>
+            <div className="md:order-first">
               <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6 text-center md:text-left">
                 Our Mission
               </h2>
@@ -158,21 +167,12 @@ export default function AboutPage() {
                 </li>
               </ul>
             </div>
-
-            {/* Image Side */}
-            <div>
-              <img
-                src="/images/counseling.jpg"
-                alt="Vision"
-                className="rounded-3xl w-full object-cover"
-              />
-            </div>
           </div>
 
           {/* ================= OUR MISSION ================= */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Image Side */}
-            <div className="order-first md:order-first">
+            <div className="order-first">
               <img
                 src="/images/teams.jpg"
                 alt="Mission"
@@ -181,7 +181,7 @@ export default function AboutPage() {
             </div>
 
             {/* Text Side */}
-            <div className="order-last md:order-last">
+            <div className="order-last">
               <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6 text-center md:text-left">
                 Our Vision
               </h2>

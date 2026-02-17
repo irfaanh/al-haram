@@ -7,10 +7,10 @@ export default function ContactPage() {
   return (
     <>
       {/* ================= HERO BANNER ================= */}
-      <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative min-h-[45vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-top"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/contact.jpg')" }}
         />
 

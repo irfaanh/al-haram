@@ -82,7 +82,7 @@ export default async function CoursesPage() {
       {" "}
       {/* Removed Main px padding if any */}
       {/* ================= HERO BANNER ================= */}
-      <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative min-h-[45vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-top"
@@ -139,7 +139,7 @@ export default async function CoursesPage() {
               >
                 {/* Text Section */}
                 <div
-                  className={`${isEven ? "order-first" : "order-last md:order-last"}`}
+                  className={`${isEven ? "md:order-first" : "md:order-last"} order-last`}
                 >
                   <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
                     {course.title}
@@ -171,7 +171,7 @@ export default async function CoursesPage() {
 
                 {/* Image Section */}
                 <div
-                  className={`rounded-3xl overflow-hidden border border-white/10 ${isEven ? "order-last" : "order-first md:order-first"}`}
+                  className={`rounded-3xl overflow-hidden border border-white/10 ${isEven ? "md:order-last" : "md:order-first"} order-first`}
                 >
                   <div className="relative aspect-[4/3] w-full">
                     <Image

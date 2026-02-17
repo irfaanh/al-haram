@@ -36,14 +36,14 @@ export default async function Home() {
   return (
     <main className="bg-black text-white">
       {/* ================= HERO ================= */}
-      <section className="relative h-[75vh] md:h-[85vh] flex items-center justify-center text-center px-6">
+      <section className="relative min-h-[75vh] md:min-h-[85vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/home.jpg')" }}
         />
         <div className="absolute inset-0 bg-black/70" />
 
-        <div className="relative z-10 max-w-4xl pt-20">
+        <div className="relative z-10 max-w-4xl pt-10 md:pt-20">
           <h1 className="text-4xl md:text-7xl font-light leading-tight mb-6">
             Study Beyond Borders. <br />
             Build a{" "}
