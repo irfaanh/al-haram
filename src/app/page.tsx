@@ -1,20 +1,8 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { prisma } from "@/lib/prisma";
 
-import {
-  Globe,
-  ShieldCheck,
-  GraduationCap,
-  Users,
-  Briefcase,
-  Landmark,
-  BookOpen,
-  Building2,
-  Map,
-  University,
-} from "lucide-react";
+import { Globe, ShieldCheck, GraduationCap, Users } from "lucide-react";
 
 interface Course {
   id: string;
@@ -27,10 +15,22 @@ interface Course {
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const courses = await prisma.course.findMany({
-    take: 3,
-    orderBy: { createdAt: "desc" },
-  }) as unknown as Course[];
+  const courses = [
+    {
+      id: "1",
+      title: "MBA",
+      description:
+        "Accelerate your career with a global MBA. Gain leadership skills and international business insights.",
+      image: "/images/graduation.jpg",
+    },
+    {
+      id: "2",
+      title: "MS",
+      description:
+        "Specialize in your field with a Master of Science. Access cutting-edge research and global opportunities.",
+      image: "/images/placement.jpg",
+    },
+  ];
 
   return (
     <main className="bg-black text-white">
@@ -60,6 +60,30 @@ export default async function Home() {
           <button className="px-8 py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1 text-sm md:text-base font-medium">
             Book Free Consultation →
           </button>
+        </div>
+      </section>
+
+      {/* ================= NEWS SCROLL ================= */}
+      <section className="bg-[#BE5103] py-6 overflow-hidden relative border-y border-white/10">
+        <div className="flex w-max animate-scroll hover:[animation-play-state:paused]">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="flex shrink-0 gap-16 px-8">
+              {[
+                "Admissions Open for 2025 Intake at Top UK Universities",
+                "New Scholarship Opportunities Announced for Canadian Colleges",
+                "Free Webinar on Visa Processing for USA - Register Now",
+                "Exclusive Seminar with Australian University Representatives in Mumbai",
+                "Germany Introduces New Post-Study Work Visa Rules for 2025",
+              ].map((news, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <span className="w-2 h-2 rounded-full bg-white animate-pulse shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+                  <p className="text-white text-sm md:text-base font-medium whitespace-nowrap tracking-wide">
+                    {news}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -145,7 +169,7 @@ export default async function Home() {
             forward with clarity. Study globally.
           </p>
         </div>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-10">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-10">
           {courses.slice(0, 3).map((course, i) => (
             <div
               key={course.id}
@@ -178,12 +202,12 @@ export default async function Home() {
           ))}
         </div>
         {/* View More Button */}
-        <div className="max-w-6xl mx-auto mt-10 md:mt-12 flex justify-center md:justify-end">
+        <div className="max-w-6xl mx-auto mt-10 md:mt-12 flex justify-center md:justify-center">
           <Link href="/courses">
             <button
               className="px-8 py-3 rounded-full border border-[#BE5103] text-[#BE5103] 
                  hover:bg-[#BE5103] hover:text-white
-                 transition-all duration-300 font-medium"
+                 transition-all duration-300 hover:-translate-y-2 font-medium"
             >
               View More →
             </button>
@@ -281,14 +305,14 @@ export default async function Home() {
 
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
           {[
-            { icon: University, title: "UK Academic Institutions" },
-            { icon: GraduationCap, title: "Canadian University Network" },
-            { icon: Landmark, title: "Australian Education Partners" },
-            { icon: Globe, title: "New Zealand Institutions" },
-            { icon: Map, title: "European Study Pathways" },
-            { icon: Briefcase, title: "Global Internship Network" },
-            { icon: BookOpen, title: "Language & Foundation Programs" },
-            { icon: Building2, title: "Industry Placement Partners" },
+            { name: "University of Oxford", logo: "/globe.svg" },
+            { name: "Harvard University", logo: "/globe.svg" },
+            { name: "Stanford University", logo: "/globe.svg" },
+            { name: "University of Cambridge", logo: "/globe.svg" },
+            { name: "MIT", logo: "/globe.svg" },
+            { name: "Imperial College London", logo: "/globe.svg" },
+            { name: "ETH Zurich", logo: "/globe.svg" },
+            { name: "University of Toronto", logo: "/globe.svg" },
           ].map((item, i) => (
             <div
               key={i}
@@ -300,14 +324,20 @@ export default async function Home() {
               <div className="flex justify-center mb-5">
                 <div
                   className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-[#BE5103]
-                        flex items-center justify-center text-[#BE5103]"
+                        flex items-center justify-center text-[#BE5103] overflow-hidden relative"
                 >
-                  <item.icon size={20} className="md:w-6 md:h-6" />
+                  <Image
+                    src={item.logo}
+                    alt={item.name}
+                    width={24}
+                    height={24}
+                    className="object-contain" // Simple style for the logo
+                  />
                 </div>
               </div>
 
               <h4 className="text-white font-medium text-xs md:text-sm leading-relaxed">
-                {item.title}
+                {item.name}
               </h4>
             </div>
           ))}

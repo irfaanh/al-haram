@@ -68,19 +68,44 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/">Home</Link>
+                <Link
+                  href="/"
+                  className="hover:text-[#BE5103] transition-colors duration-300"
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/about">About</Link>
+                <Link
+                  href="/about"
+                  className="hover:text-[#BE5103] transition-colors duration-300"
+                >
+                  About
+                </Link>
               </li>
               <li>
-                <Link href="/courses">Courses</Link>
+                <Link
+                  href="/courses"
+                  className="hover:text-[#BE5103] transition-colors duration-300"
+                >
+                  Courses
+                </Link>
               </li>
               <li>
-                <Link href="/gallery">Gallery</Link>
+                <Link
+                  href="/gallery"
+                  className="hover:text-[#BE5103] transition-colors duration-300"
+                >
+                  Gallery
+                </Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link
+                  href="/contact"
+                  className="hover:text-[#BE5103] transition-colors duration-300"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
