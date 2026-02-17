@@ -58,9 +58,11 @@ export default async function Home() {
             long-term career readiness support.
           </p>
 
-          <button className="px-8 py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1 text-sm md:text-base font-medium">
-            Book Free Consultation →
-          </button>
+          <Link href="/contact">
+            <button className="px-8 py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1 text-sm md:text-base font-medium">
+              Book Free Consultation →
+            </button>
+          </Link>
         </div>
       </section>
 

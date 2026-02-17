@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import { GraduationCap, Handshake, Zap, BadgeCheck } from "lucide-react";
 import Footer from "@/components/Footer";
 import { CircleCheck } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -46,18 +47,19 @@ export default function AboutPage() {
           We guide students toward world-class international education through
           expert counselling, transparent processes, and personalized support.
         </p>
-
-        <button
-          className="
+        <Link href="/courses">
+          <button
+            className="
     mt-8 px-6 py-3 rounded-full
     bg-[#BE5103] text-white text-sm font-semibold
     hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103]
     transition-transform duration-200 ease-out
     hover:-translate-y-2
   "
-        >
-          Explore Opportunities →
-        </button>
+          >
+            Explore Opportunities →
+          </button>
+        </Link>
       </section>
 
       {/* ================= IMAGE CARD ================= */}

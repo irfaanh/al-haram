@@ -85,8 +85,8 @@ export default async function CoursesPage() {
       <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/teams.jpg')" }}
+          className="absolute inset-0 bg-cover bg-top"
+          style={{ backgroundImage: "url('/images/about.jpg')" }}
         />
 
         {/* Dark Overlay (same intensity as reference) */}

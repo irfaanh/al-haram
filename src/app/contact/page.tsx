@@ -11,7 +11,7 @@ export default function ContactPage() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/images/admission.jpg')" }}
+          style={{ backgroundImage: "url('/images/contact.jpg')" }}
         />
 
         {/* Dark Overlay (same intensity as reference) */}
