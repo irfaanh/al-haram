@@ -1,5 +1,11 @@
 import "./globals.css";
 import Header from "@/components/Header";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -8,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative">
+      <body className={`${montserrat.className} relative`}>
         <Header />
         {children}
       </body>

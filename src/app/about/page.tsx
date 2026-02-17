@@ -10,15 +10,32 @@ export default function AboutPage() {
       {/* HEADER */}
       <Header />
 
-      {/* ================= HERO ================= */}
-      <section className="pt-28 md:pt-40 pb-16 md:pb-24 text-center px-6 py-24">
-        <div className="flex items-center justify-center gap-4 md:gap-6 mb-10 md:mb-16">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
-            ABOUT US
-          </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
+      {/* ================= HERO BANNER ================= */}
+      <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/teams.jpg')" }}
+        />
+
+        {/* Dark Overlay (same intensity as reference) */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl">
+          <div className="inline-block px-6 py-2 mb-6 rounded-full border border-[#BE5103]/40 bg-[#BE5103]/10 backdrop-blur-sm">
+            <p className="text-xs md:text-sm tracking-[0.35em] text-[#BE5103] font-semibold">
+              WHO ARE WE
+            </p>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+            About <span className="italic font-serif text-[#BE5103]">Us</span>
+          </h1>
         </div>
+      </section>
+
+      <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
         <h1 className="text-3xl md:text-6xl font-semibold leading-tight">
           Shaping Global <br />
           Futures Through{" "}
@@ -55,7 +72,7 @@ export default function AboutPage() {
           />
         </div>
       </section>
-      <section className="bg-black text-white py-16 md:py-24 px-6">
+      <section className="bg-black text-white py-12 md:py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 text-center">
             {/* Stat 1 */}
@@ -95,7 +112,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= MISSION / VISION ================= */}
-      <section className="bg-black py-16 md:py-24">
+      <section className="bg-black py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6 space-y-20 md:space-y-32">
           {/* ================= OUR VISION ================= */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -205,7 +222,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= TEAM SECTION ================= */}
-      <section className="max-w-6xl mx-auto px-6 pb-20 md:pb-40">
+      <section className="max-w-6xl mx-auto px-6 pb-12 md:pb-20">
         <h2 className="text-2xl md:text-4xl font-light mb-10 md:mb-16 text-center md:text-left">
           Let’s get to know{" "}
           <span className="text-[#BE5103] italic font-serif">each other</span>
@@ -245,7 +262,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= OUR APPROACH (REF STYLE) ================= */}
-      <section className="max-w-6xl mx-auto px-6 pb-20">
+      <section className="max-w-6xl mx-auto px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-medium leading-tight text-center md:text-left mb-10">
             <span className="text-white">
@@ -369,7 +386,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= SUCCESSFUL ADMISSIONS ================= */}
-      <section className="bg-black py-16 md:py-24 px-6">
+      <section className="bg-black py-12 md:py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-light mb-10 md:mb-16 text-center">
             Explore our winning{" "}
@@ -436,7 +453,7 @@ export default function AboutPage() {
         </div>
       </section>
       {/* ================= CTA ================= */}
-      <section className="bg-black pb-20 md:pb-40 px-6">
+      <section className="bg-black pb-12 md:pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="rounded-3xl bg-gradient-to-br from-[#BE5103] via-[#BE5103]/20 to-black p-8 md:p-16 flex flex-col items-center text-center">
             <h3 className="text-2xl md:text-4xl font-light max-w-2xl mb-6 text-center">

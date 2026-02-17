@@ -6,14 +6,31 @@ import Footer from "@/components/Footer";
 export default function ContactPage() {
   return (
     <>
-      <section className="min-h-screen bg-black text-white py-24 md:py-32 px-6 relative overflow-hidden">
-        <div className="flex items-center justify-center gap-4 md:gap-6 mb-10 md:mb-16">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
-            CONTACT US
-          </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
+      {/* ================= HERO BANNER ================= */}
+      <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-top"
+          style={{ backgroundImage: "url('/images/admission.jpg')" }}
+        />
+
+        {/* Dark Overlay (same intensity as reference) */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl">
+          <div className="inline-block px-6 py-2 mb-6 rounded-full border border-[#BE5103]/40 bg-[#BE5103]/10 backdrop-blur-sm">
+            <p className="text-xs md:text-sm tracking-[0.35em] text-[#BE5103] font-semibold">
+              GET IN TOUCH
+            </p>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Contact <span className="italic font-serif text-[#BE5103]">Us</span>
+          </h1>
         </div>
+      </section>
+      <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
         <h1 className="text-3xl md:text-5xl font-light mb-4 px-4 md:px-45 text-center">
           Let’s Start Your{" "}
           <span className="italic font-serif text-[#BE5103]">
@@ -25,7 +42,7 @@ export default function ContactPage() {
           university selection, applications, scholarships, and visa support.
           Your global education journey begins with the right advice.
         </p>
-        <div className="max-w-7xl mx-auto py-12 md:py-24">
+        <div className="max-w-7xl mx-auto py-12 md:py-20">
           {/* MAIN CARD */}
           <div className="relative bg-[#111] rounded-3xl md:rounded-[2.5rem] p-6 md:p-16 border border-white/10 overflow-hidden">
             {/* LEFT GLOW EFFECT (Theme Color) */}
@@ -151,7 +168,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* BOTTOM CONTACT CARDS */}
       <section className="bg-black py-10 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-8">

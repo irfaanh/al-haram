@@ -16,22 +16,97 @@ interface Course {
 export const dynamic = "force-dynamic";
 
 export default async function CoursesPage() {
-  const courses = await prisma.course.findMany({
-    orderBy: { createdAt: "asc" },
-  }) as unknown as Course[];
+  const courses = [
+    {
+      id: "gsrp",
+      title: "Global Student Readiness Program (GSRP)",
+      description:
+        "Designed to equip students with academic discipline, ethical global standards, and cultural adaptability for international education.",
+      image: "/images/graduation.jpg",
+      modules: [
+        {
+          title: "Academic Integrity & Standards",
+          description:
+            "Understanding plagiarism, citations, and global academic expectations.",
+        },
+        {
+          title: "Cultural Intelligence & Adaptation",
+          description:
+            "Navigating new cultural environments and social norms effectively.",
+        },
+        {
+          title: "Time Management & Self-Discipline",
+          description:
+            "Structuring study schedules and balancing academic life abroad.",
+        },
+        {
+          title: "Effective Communication",
+          description:
+            "Developing cross-cultural communication skills for academic success.",
+        },
+      ],
+    },
+    {
+      id: "gcrp",
+      title: "Global Career Readiness Program (GCRP)",
+      description:
+        "Focused on professional competence, resume building, and long-term career success in the global job market.",
+      image: "/images/placement.jpg",
+      modules: [
+        {
+          title: "Global Resume & Cover Letter Building",
+          description:
+            "Crafting resumes that meet international industry standards.",
+        },
+        {
+          title: "Interview Mastery & Personal Branding",
+          description:
+            "Preparing for behavioral and technical interviews with confidence.",
+        },
+        {
+          title: "Networking Strategies",
+          description:
+            "Building professional connections and leveraging LinkedIn effectively.",
+        },
+        {
+          title: "Workplace Ethics & Professionalism",
+          description:
+            "Understanding global workplace culture and professional conduct.",
+        },
+      ],
+    },
+  ];
 
   return (
-    <main className="bg-black text-white px-0"> {/* Removed Main px padding if any */}
-      {/* ================= HERO ================= */}
-      <section className="py-24 md:py-32 px-6 text-center">
-        <div className="flex items-center justify-center gap-4 md:gap-6 mb-10 md:mb-16">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold">
-            OUR COURSES
-          </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
-        </div>
+    <main className="bg-black text-white px-0">
+      {" "}
+      {/* Removed Main px padding if any */}
+      {/* ================= HERO BANNER ================= */}
+      <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/teams.jpg')" }}
+        />
 
+        {/* Dark Overlay (same intensity as reference) */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl">
+          <div className="inline-block px-6 py-2 mb-6 rounded-full border border-[#BE5103]/40 bg-[#BE5103]/10 backdrop-blur-sm">
+            <p className="text-xs md:text-sm tracking-[0.35em] text-[#BE5103] font-semibold">
+              WHAT WE PROVIDE
+            </p>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Our{" "}
+            <span className="italic font-serif text-[#BE5103]">Courses</span>
+          </h1>
+        </div>
+      </section>
+      <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
         <h1 className="text-3xl md:text-5xl font-light mb-6">
           Comprehensive{" "}
           <span className="italic font-serif text-[#BE5103]">
@@ -40,47 +115,64 @@ export default async function CoursesPage() {
         </h1>
 
         <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
-          Our specialized courses — Global Student Readiness, Global Career
-          Readiness, and Global Holistic Readiness Training — are designed to
-          equip students with academic discipline, professional competence, and
+          Our specialized courses — Global Student Readiness Program (GSRP) and
+          Global Career Readiness Program (GCRP) — are designed to equip
+          students with academic discipline, professional competence, and
           ethical global standards. Each program builds the foundation for
           confident international education and long-term career success.
         </p>
       </section>
-
       {/* ================= PROGRAMS ================= */}
       <section className="pb-20 md:pb-40 px-6">
         <div className="max-w-7xl mx-auto space-y-20 md:space-y-32">
           {courses.map((course, index) => {
             const isEven = index % 2 === 0;
-            const modules = course.modules as unknown as { title: string; description: string }[];
+            const modules = course.modules as unknown as {
+              title: string;
+              description: string;
+            }[];
 
             return (
-              <div key={course.id} className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+              <div
+                key={course.id}
+                className="grid md:grid-cols-2 gap-10 md:gap-16 items-center"
+              >
                 {/* Text Section */}
-                <div className={`${isEven ? 'order-first' : 'order-last md:order-last'}`}>
+                <div
+                  className={`${isEven ? "order-first" : "order-last md:order-last"}`}
+                >
                   <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-center md:text-left">
                     {course.title}
                   </h3>
                   {course.description && (
-                    <p className="text-gray-400 mb-6 text-sm">{course.description}</p>
+                    <p className="text-gray-400 mb-6 text-sm">
+                      {course.description}
+                    </p>
                   )}
 
                   <div className="space-y-4 text-gray-400">
-                    {Array.isArray(modules) && modules.map((mod, idx) => (
-                      <details key={idx} className="group border-b border-white/10 pb-4">
-                        <summary className="cursor-pointer text-[#BE5103] font-semibold list-none flex items-center justify-between">
-                          <span>{mod.title}</span>
-                          <span className="transform group-open:rotate-180 transition-transform text-white/50 text-xs">▼</span>
-                        </summary>
-                        <p className="mt-2 text-sm">{mod.description}</p>
-                      </details>
-                    ))}
+                    {Array.isArray(modules) &&
+                      modules.map((mod, idx) => (
+                        <details
+                          key={idx}
+                          className="group border-b border-white/10 pb-4"
+                        >
+                          <summary className="cursor-pointer text-[#BE5103] font-semibold list-none flex items-center justify-between">
+                            <span>{mod.title}</span>
+                            <span className="transform group-open:rotate-180 transition-transform text-white/50 text-xs">
+                              ▼
+                            </span>
+                          </summary>
+                          <p className="mt-2 text-sm">{mod.description}</p>
+                        </details>
+                      ))}
                   </div>
                 </div>
 
                 {/* Image Section */}
-                <div className={`rounded-3xl overflow-hidden border border-white/10 ${isEven ? 'order-last' : 'order-first md:order-first'}`}>
+                <div
+                  className={`rounded-3xl overflow-hidden border border-white/10 ${isEven ? "order-last" : "order-first md:order-first"}`}
+                >
                   <div className="relative aspect-[4/3] w-full">
                     <Image
                       src={course.image}
@@ -95,7 +187,6 @@ export default async function CoursesPage() {
           })}
         </div>
       </section>
-
       {/* ================= CTA ================= */}
       <section className="pb-20 md:pb-40 px-6">
         <div className="max-w-7xl mx-auto rounded-3xl bg-gradient-to-br from-[#BE5103] via-[#BE5103]/30 to-black p-10 md:p-20 relative">
@@ -119,9 +210,7 @@ export default async function CoursesPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </main>
   );
 }
-
