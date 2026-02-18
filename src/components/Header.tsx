@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[9999] transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 md:h-14 flex items-center justify-between bg-black/80 backdrop-blur-md shadow-lg rounded-b-3xl md:rounded-full mt-0 md:mt-2 relative border-b md:border-none border-white/10">
+      <div className="max-w-7xl mx-auto px-4 md:px-12 h-16 md:h-14 flex items-center justify-between bg-black/80 backdrop-blur-md shadow-lg rounded-b-2xl md:rounded-full mt-0 md:mt-2 relative border-b md:border-none border-white/10">
         {/* LOGO (LEFT ONLY) */}
         <Link href="/" className="flex items-center">
           <Image
@@ -83,8 +83,8 @@ export default function Header() {
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className={`px-5 py-4 rounded-xl text-center font-bold text-lg transition-all duration-200 border border-transparent ${isActive
-                    ? "bg-[#BE5103]/20 text-[#BE5103] border-[#BE5103]/30"
-                    : "text-gray-300 hover:text-white hover:bg-white/5"
+                  ? "bg-[#BE5103]/20 text-[#BE5103] border-[#BE5103]/30"
+                  : "text-gray-300 hover:text-white hover:bg-white/5"
                   }`}
               >
                 {item.name}

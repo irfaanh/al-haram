@@ -20,7 +20,7 @@ export default function GalleryPage() {
       <Header />
 
       {/* ================= HERO BANNER ================= */}
-      <section className="relative min-h-[45vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0 overflow-hidden">
+      <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-bottom"

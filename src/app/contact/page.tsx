@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <>
       {/* ================= HERO BANNER ================= */}
-      <section className="relative min-h-[45vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0 overflow-hidden">
+      <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -25,13 +25,13 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
             Contact <span className="italic font-serif text-[#BE5103]">Us</span>
           </h1>
         </div>
       </section>
       <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
-        <h1 className="text-3xl md:text-5xl font-light mb-4 px-4 md:px-45 text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-light mb-4 px-4 text-center">
           Let’s Start Your{" "}
           <span className="italic font-serif text-[#BE5103]">
             Study Abroad Journey

@@ -12,7 +12,7 @@ export default function AboutPage() {
       <Header />
 
       {/* ================= HERO BANNER ================= */}
-      <section className="relative min-h-[45vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 md:px-0 py-20 md:py-0 overflow-hidden">
+      <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 md:px-0 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -30,14 +30,14 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">
             About <span className="italic font-serif text-[#BE5103]">Us</span>
           </h1>
         </div>
       </section>
 
       <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
-        <h1 className="text-3xl md:text-6xl font-semibold leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-6xl font-semibold leading-tight px-4">
           Shaping Global <br />
           Futures Through{" "}
           <span className="text-[#BE5103] italic font-serif">Education</span>

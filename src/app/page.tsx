@@ -3,7 +3,13 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-import { Globe, ShieldCheck, GraduationCap, Users } from "lucide-react";
+import {
+  Globe,
+  ShieldCheck,
+  GraduationCap,
+  Users,
+  Newspaper,
+} from "lucide-react";
 
 interface Course {
   id: string;
@@ -38,13 +44,14 @@ export default async function Home() {
       {/* ================= HERO ================= */}
       <section className="relative min-h-[75vh] md:min-h-[85vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center opacity-70"
           style={{ backgroundImage: "url('/images/home.jpg')" }}
         />
-        <div className="absolute inset-0 bg-black/70" />
 
-        <div className="relative z-10 max-w-4xl pt-10 md:pt-20">
-          <h1 className="text-4xl md:text-7xl font-light leading-tight mb-6">
+        <div className="absolute inset-0 bg-black/30" />
+
+        <div className="relative z-10 max-w-4xl pt-10 md:pt-20 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-light leading-tight mb-6">
             Study Beyond Borders. <br />
             Build a{" "}
             <span className="italic font-serif text-[#BE5103]">
@@ -59,7 +66,7 @@ export default async function Home() {
           </p>
 
           <Link href="/contact">
-            <button className="px-8 py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1 text-sm md:text-base font-medium">
+            <button className="px-5 py-2.5 md:px-8 md:py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1 text-[13px] md:text-base font-medium">
               Book Free Consultation →
             </button>
           </Link>
@@ -90,6 +97,78 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ================= EDUCATION JOURNALISM ================= */}
+      <section className="py-16 md:py-28 px-6 bg-black relative overflow-hidden">
+        {/* Decorative Background Element */}
+        <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#BE5103] opacity-[0.03] blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+          <div className="relative group">
+            <div className="relative h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden border border-white/10 group-hover:border-[#BE5103]/50 transition-colors duration-500">
+              <Image
+                src="/images/europe.jpg"
+                alt="Education Journalism"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+            {/* Overlay Tag */}
+            <div className="absolute -bottom-6 -right-6 md:right-10 bg-[#BE5103] p-6 md:p-8 rounded-2xl shadow-2xl hidden sm:block">
+              <p className="text-white font-bold text-2xl md:text-3xl">1st</p>
+              <p className="text-white/80 text-xs md:text-sm uppercase tracking-widest">
+                In India
+              </p>
+            </div>
+          </div>
+
+          <div className="relative z-10">
+            <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[#BE5103]/30 bg-[#BE5103]/5">
+              <p className="text-[10px] md:text-xs tracking-[0.3em] text-[#BE5103] font-bold uppercase">
+                India's First Platform
+              </p>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-light leading-tight mb-8">
+              Pioneering{" "}
+              <span className="italic font-serif text-[#BE5103]">
+                Education Journalism
+              </span>
+            </h2>
+
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+              We are more than just a consultancy. Momentor is India's first
+              dedicated education journalism platform, bringing truth and
+              clarity to the complex world of global careers. We expose industry
+              trends, debunk myths, and provide raw, honest insights that help
+              students make decisions based on facts, not just marketing.
+            </p>
+
+            <ul className="space-y-4 mb-10">
+              {[
+                "Unbiased career reporting and industry analysis",
+                "Deep-dive guides on global education systems",
+                "Mentorship based on real-world professional data",
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-3 text-sm text-gray-300"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#BE5103]" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <Link href="/about">
+              <button className="text-[#BE5103] font-semibold flex items-center gap-2 group hover:gap-4 transition-all">
+                Read Our Story <span className="text-xl">→</span>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ================= ABOUT US ================= */}
       <section className="py-12 md:py-20 px-6">
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
@@ -101,7 +180,7 @@ export default async function Home() {
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-5xl font-light mb-6 md:mb-8 text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-light mb-6 md:mb-8 text-center md:text-left">
               A Trusted Partner in{" "}
               <span className="italic font-serif text-[#BE5103]">
                 International Education
@@ -143,9 +222,9 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="order-first md:order-last relative h-full">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative h-80 md:h-96 rounded-3xl overflow-hidden translate-y-12">
+          <div className="order-first md:order-last relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-0">
+              <div className="relative h-80 sm:h-96 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden md:translate-y-12 shadow-2xl">
                 <Image
                   src="/images/graduation.jpg"
                   alt="Student"
@@ -153,7 +232,7 @@ export default async function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden">
+              <div className="hidden md:block relative h-48 sm:h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/counseling.jpg"
                   alt="Counseling"
@@ -163,7 +242,7 @@ export default async function Home() {
               </div>
             </div>
 
-            <div className="absolute bottom-10 left-10 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 z-20">
+            <div className="absolute -bottom-6 md:-bottom-10 left-1/2 -translate-x-1/2 bg-white p-3 md:p-4 rounded-xl shadow-xl flex items-center gap-3 md:gap-4 z-20 w-max">
               <div className="flex -space-x-3">
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-300 relative">
                   <Image
@@ -230,7 +309,7 @@ export default async function Home() {
               </div>
 
               {/* Bottom Content */}
-              <div className="p-6 md:p-8 flex-1 flex flex-col">
+              <div className="p-6 md:p-8 flex-1 flex flex-col pb-20 md:pb-8">
                 <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 group-hover:text-[#BE5103] transition">
                   {course.title}
                 </h3>
@@ -240,10 +319,10 @@ export default async function Home() {
                 </p>
               </div>
               {/* Arrow Button */}
-              <div className="absolute bottom-5 right-5">
+              <div className="absolute bottom-6 right-6">
                 <Link href={`/courses/${course.id}`}>
-                  <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#BE5103] hover:scale-110 transition duration-300 shadow-lg">
-                    <ArrowUpRight size={18} />
+                  <button className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-[#BE5103] hover:scale-110 transition duration-300 shadow-lg">
+                    <ArrowUpRight size={18} className="md:size-[18px] size-4" />
                   </button>
                 </Link>
               </div>
@@ -264,7 +343,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US ================= */}
       <section className="py-12 md:py-20 px-6">
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-5">
           <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
@@ -288,24 +366,24 @@ export default async function Home() {
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {[
             {
-              icon: Globe,
-              title: "Global Network",
-              desc: "Partnerships with internationally recognized universities.",
+              icon: Newspaper,
+              title: "Education Journalism",
+              desc: "India's 1st journalism-led platform providing raw, honest, and unbiased career reporting.",
             },
             {
               icon: ShieldCheck,
-              title: "Transparent Process",
-              desc: "Clear communication and ethical consultancy support.",
+              title: "Ethical Advocacy",
+              desc: "A transparent, student-first approach that prioritizes facts over marketing agendas.",
+            },
+            {
+              icon: Globe,
+              title: "Global Readiness",
+              desc: "Comprehensive GCRP/GSRP training to build civic, cultural, and professional confidence.",
             },
             {
               icon: GraduationCap,
-              title: "Expert Guidance",
-              desc: "Experienced counsellors with proven success records.",
-            },
-            {
-              icon: Users,
-              title: "Personalized Support",
-              desc: "One-on-one mentoring tailored to individual goals.",
+              title: "Long-term Mentorship",
+              desc: "Strategic guidance focused on your growth and success in competitive global markets.",
             },
           ].map((item, i) => (
             <div
@@ -345,7 +423,7 @@ export default async function Home() {
           <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {[
             {
               name: "Dr. Sarah Mitchell",
@@ -407,7 +485,7 @@ export default async function Home() {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-5 md:gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-8">
           {[
             { logo: "/images/partner1.jpg" },
             { logo: "/images/partner2.jpg" },

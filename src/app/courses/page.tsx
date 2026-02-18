@@ -82,7 +82,7 @@ export default async function CoursesPage() {
       {" "}
       {/* Removed Main px padding if any */}
       {/* ================= HERO BANNER ================= */}
-      <section className="relative min-h-[45vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0 overflow-hidden">
+      <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-top"
@@ -100,15 +100,16 @@ export default async function CoursesPage() {
             </p>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
             Our{" "}
             <span className="italic font-serif text-[#BE5103]">Courses</span>
           </h1>
         </div>
       </section>
       <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
-        <h1 className="text-3xl md:text-5xl font-light mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-light mb-6 px-4">
           Comprehensive{" "}
+          <br className="sm:hidden" />
           <span className="italic font-serif text-[#BE5103]">
             Global Readiness Courses
           </span>

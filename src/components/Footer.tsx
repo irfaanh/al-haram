@@ -14,9 +14,9 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-gray-300 pt-20 md:pt-28 pb-10 md:pb-16 overflow-hidden">
+    <footer className="relative bg-black text-gray-300 pt-16 md:pt-28 pb-8 md:pb-16 overflow-hidden">
       {/* BIG BACKGROUND TEXT */}
-      <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[18vw] md:text-[14rem] font-extrabold uppercase text-white/5 select-none pointer-events-none whitespace-nowrap leading-none">
+      <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[15vw] md:text-[14rem] font-extrabold uppercase text-white/5 select-none pointer-events-none whitespace-nowrap leading-none">
         momentor
       </h1>
 
