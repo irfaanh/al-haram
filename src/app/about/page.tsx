@@ -464,18 +464,19 @@ export default function AboutPage() {
                 global study goals
               </span>
             </h3>
-
-            <button
-              className="
+            <Link href="/contact">
+              <button
+                className="
     mt-8 px-6 py-3 rounded-full
     bg-[#BE5103] text-white text-sm font-semibold
     hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103]
     transition-transform duration-200 ease-out
     hover:-translate-y-2
   "
-            >
-              Book Free Consultation →
-            </button>
+              >
+                Book Free Consultation →
+              </button>
+            </Link>
           </div>
         </div>
       </section>
