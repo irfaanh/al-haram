@@ -103,7 +103,7 @@ export default async function Home() {
         <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#BE5103] opacity-[0.03] blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className="relative group">
+          <div className="relative group hidden md:block">
             <div className="relative h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden border border-white/10 group-hover:border-[#BE5103]/50 transition-colors duration-500">
               <Image
                 src="/images/europe.jpg"
@@ -123,7 +123,7 @@ export default async function Home() {
           </div>
 
           <div className="relative z-10">
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-[#BE5103]/30 bg-[#BE5103]/5">
+            <div className="hidden md:inline-block px-4 py-1.5 mb-6 rounded-full border border-[#BE5103]/30 bg-[#BE5103]/5">
               <p className="text-[10px] md:text-xs tracking-[0.3em] text-[#BE5103] font-bold uppercase">
                 India's First Platform
               </p>
@@ -423,7 +423,7 @@ export default async function Home() {
           <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto flex md:grid md:grid-cols-4 gap-8 overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide">
           {[
             {
               name: "Dr. Sarah Mitchell",
@@ -446,7 +446,7 @@ export default async function Home() {
               image: "/images/member1.jpg", // Reusing for placeholder
             },
           ].map((member, i) => (
-            <div key={i} className="group text-center">
+            <div key={i} className="group text-center min-w-[280px] md:min-w-0 snap-center shrink-0">
               <div
                 className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden 
                            border-2 border-white/10 group-hover:border-[#BE5103] 

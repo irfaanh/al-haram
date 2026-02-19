@@ -22,15 +22,17 @@ export default function Footer() {
 
       {/* FOOTER CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12">
-        {/* LOGO + ABOUT (UNCHANGED POSITION) */}
+        {/* LOGO + ABOUT (LEFT ALIGNED) */}
         <div className="md:col-span-1 flex flex-col items-start text-left">
-          <Image
-            src="/images/log.png"
-            alt="Momentor logo"
-            width={200}
-            height={100}
-            className="mb-4 object-contain"
-          />
+          <Link href="/" className="mb-4">
+            <Image
+              src="/images/log.png"
+              alt="Momentor logo"
+              width={200}
+              height={100}
+              className="object-contain self-start"
+            />
+          </Link>
 
           <p className="text-sm leading-relaxed max-w-xs mt-2">
             Momentor is India’s first education journalism + future-skills
