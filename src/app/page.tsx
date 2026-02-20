@@ -79,11 +79,11 @@ export default async function Home() {
           {[...Array(4)].map((_, i) => (
             <div key={i} className="flex shrink-0 gap-16 px-8">
               {[
-                "Admissions Open for 2025 Intake at Top UK Universities",
+                "Admissions Open for 2026 Intake at Top UK Universities",
                 "New Scholarship Opportunities Announced for Canadian Colleges",
                 "Free Webinar on Visa Processing for USA - Register Now",
                 "Exclusive Seminar with Australian University Representatives in Mumbai",
-                "Germany Introduces New Post-Study Work Visa Rules for 2025",
+                "Germany Introduces New Post-Study Work Visa Rules for 2026",
               ].map((news, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
@@ -446,7 +446,10 @@ export default async function Home() {
               image: "/images/member1.jpg", // Reusing for placeholder
             },
           ].map((member, i) => (
-            <div key={i} className="group text-center min-w-[280px] md:min-w-0 snap-center shrink-0">
+            <div
+              key={i}
+              className="group text-center min-w-[280px] md:min-w-0 snap-center shrink-0"
+            >
               <div
                 className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden 
                            border-2 border-white/10 group-hover:border-[#BE5103] 
