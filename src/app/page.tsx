@@ -10,6 +10,7 @@ import {
   Users,
   Newspaper,
 } from "lucide-react";
+import TeamSlider from "@/components/TeamSlider";
 
 interface Course {
   id: string;
@@ -417,51 +418,8 @@ export default async function Home() {
           <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
 
-        <div className="max-w-6xl mx-auto flex md:grid md:grid-cols-4 gap-8 overflow-x-auto md:overflow-visible pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide">
-          {[
-            {
-              name: "Dr. Sarah Mitchell",
-              role: "Head of International Admissions",
-              image: "/images/member.jpg",
-            },
-            {
-              name: "James Anderson",
-              role: "Senior Career Consultant",
-              image: "/images/member1.jpg",
-            },
-            {
-              name: "Emily Chen",
-              role: "Student Success Manager",
-              image: "/images/member.jpg", // Reusing for placeholder
-            },
-            {
-              name: "Michael Ross",
-              role: "Visa & Immigration Specialist",
-              image: "/images/member1.jpg", // Reusing for placeholder
-            },
-          ].map((member, i) => (
-            <div
-              key={i}
-              className="group text-center min-w-[280px] md:min-w-0 snap-center shrink-0"
-            >
-              <div
-                className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden 
-                           border-2 border-white/10 group-hover:border-[#BE5103] 
-                           transition-all duration-300 group-hover:scale-105"
-              >
-                <Image
-                  src={member.image}
-                  fill
-                  className="object-cover grayscale-0 group-hover:grayscale transition-all duration-500"
-                  alt={member.name}
-                />
-              </div>
-              <h4 className="text-lg md:text-xl font-semibold mb-1 group-hover:text-[#BE5103] transition">
-                {member.name}
-              </h4>
-              <p className="text-gray-400 text-xs md:text-sm">{member.role}</p>
-            </div>
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <TeamSlider />
         </div>
       </section>
 
