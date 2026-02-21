@@ -159,12 +159,6 @@ export default async function Home() {
                 </li>
               ))}
             </ul>
-
-            <Link href="/about">
-              <button className="text-[#BE5103] font-semibold flex items-center gap-2 group hover:gap-4 transition-all">
-                Read Our Story <span className="text-xl">→</span>
-              </button>
-            </Link>
           </div>
         </div>
       </section>
