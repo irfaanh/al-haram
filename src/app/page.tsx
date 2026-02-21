@@ -9,6 +9,10 @@ import {
   GraduationCap,
   Users,
   Newspaper,
+  Search,
+  FileText,
+  CheckCircle,
+  TrendingUp,
 } from "lucide-react";
 import TeamSlider from "@/components/TeamSlider";
 
@@ -99,67 +103,79 @@ export default async function Home() {
       </section>
 
       {/* ================= EDUCATION JOURNALISM ================= */}
-      <section className="py-16 md:py-28 px-6 bg-black relative overflow-hidden">
-        {/* Decorative Background Element */}
-        <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#BE5103] opacity-[0.03] blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+      <section id="journalism" className="py-20 md:py-32 px-6 bg-black relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#BE5103] opacity-[0.05] blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#BE5103] opacity-[0.02] blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" />
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className="relative group hidden md:block">
-            <div className="relative h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden border border-white/10 group-hover:border-[#BE5103]/50 transition-colors duration-500">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+          {/* Image Side */}
+          <div className="relative group order-2 md:order-1">
+            <div className="relative h-[350px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#BE5103]/30 transition-all duration-700 shadow-2xl">
               <Image
                 src="/images/europe.jpg"
                 alt="Education Journalism"
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
             </div>
-            {/* Overlay Tag */}
-            <div className="absolute -bottom-6 -right-6 md:right-10 bg-[#BE5103] p-6 md:p-8 rounded-2xl shadow-2xl hidden sm:block">
-              <p className="text-white font-bold text-2xl md:text-3xl">1st</p>
-              <p className="text-white/80 text-xs md:text-sm uppercase tracking-widest">
-                In India
-              </p>
+
+            {/* Floating Badge */}
+            <div className="absolute -bottom-8 -right-4 md:-right-8 bg-black border border-white/10 p-0.5 rounded-[1.8rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform group-hover:scale-105 transition-transform duration-500">
+              <div className="bg-[#BE5103] px-6 py-4 rounded-[1.5rem] flex flex-col items-center justify-center min-w-[110px]">
+                <span className="text-white font-bold text-3xl md:text-4xl leading-none">1st</span>
+                <span className="text-white/90 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium mt-1">
+                  In India
+                </span>
+              </div>
+            </div>
+
+            {/* Subtle Glass Card Element */}
+            <div className="absolute -top-6 -left-6 hidden lg:block bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl animate-bounce-slow">
+              <Newspaper className="text-[#BE5103]" size={32} />
             </div>
           </div>
 
-          <div className="relative z-10">
-            <div className="hidden md:inline-block px-4 py-1.5 mb-6 rounded-full border border-[#BE5103]/30 bg-[#BE5103]/5">
+          {/* Content Side */}
+          <div className="relative z-10 order-1 md:order-2">
+            <div className="inline-flex items-center gap-3 px-4 py-2 mb-8 rounded-full border border-[#BE5103]/20 bg-[#BE5103]/5 backdrop-blur-sm">
+              <span className="flex h-2 w-2 rounded-full bg-[#BE5103] animate-ping" />
               <p className="text-[10px] md:text-xs tracking-[0.3em] text-[#BE5103] font-bold uppercase">
                 India's First Platform
               </p>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-light leading-tight mb-8">
-              Pioneering{" "}
-              <span className="italic font-serif text-[#BE5103]">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-light leading-[1.1] mb-8 tracking-tight">
+              Pioneering <br />
+              <span className="italic font-serif text-[#BE5103] font-medium">
                 Education Journalism
               </span>
             </h2>
 
-            <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
-              We are more than just a consultancy. Momentor is India's first
-              dedicated education journalism platform, bringing truth and
-              clarity to the complex world of global careers. We expose industry
-              trends, debunk myths, and provide raw, honest insights that help
-              students make decisions based on facts, not just marketing.
+            <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+              Momentor is India's first dedicated education journalism platform,
+              bringing <span className="text-white font-medium italic underline decoration-[#BE5103]/40 underline-offset-4">truth and clarity</span> to the complex world of global careers.
+              We expose industry trends and provide raw, honest insights.
             </p>
 
-            <ul className="space-y-4 mb-10">
+            <div className="space-y-6 mb-12">
               {[
-                "Unbiased career reporting and industry analysis",
-                "Deep-dive guides on global education systems",
-                "Mentorship based on real-world professional data",
+                { icon: Search, title: "Unbiased Reporting", desc: "No marketing agendas, just raw reporting." },
+                { icon: FileText, title: "Deep-dive Guides", desc: "Complex systems broken down for students." },
+                { icon: CheckCircle, title: "Data-driven Mentorship", desc: "Based on real-world professional metrics." },
               ].map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-3 text-sm text-gray-300"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#BE5103]" />
-                  {item}
-                </li>
+                <div key={i} className="flex items-start gap-4 group/item">
+                  <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#BE5103] group-hover/item:bg-[#BE5103] group-hover/item:text-white transition-all duration-300">
+                    <item.icon size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base mb-1 group-hover/item:text-[#BE5103] transition-colors">{item.title}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
