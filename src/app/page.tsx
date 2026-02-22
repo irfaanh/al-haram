@@ -79,7 +79,7 @@ export default async function Home() {
 
           <Link href="/learn-more">
             <button
-              className="px-6 py-2 md:px-8 md:py-3 rounded-full 
+              className="px-6 py-1 md:px-8 md:py-3 rounded-full mb-13
 bg-white/10 backdrop-blur-md 
 border border-white/30 
 text-white 
@@ -529,7 +529,7 @@ hover:border-[#BE5103]"
             {/* Card 1 */}
             <div
               className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
-                    hover:border-[#BE5103]/40 transition duration-300 
+                    hover:border-[#BE5103] transition duration-300 
                     hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -552,7 +552,7 @@ hover:border-[#BE5103]"
             {/* Card 2 */}
             <div
               className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
-                    hover:border-[#BE5103]/40 transition duration-300 
+                    hover:border-[#BE5103] transition duration-300 
                     hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -571,7 +571,7 @@ hover:border-[#BE5103]"
             {/* Card 3 */}
             <div
               className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
-                    hover:border-[#BE5103]/40 transition duration-300 
+                    hover:border-[#BE5103] transition duration-300 
                     hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -591,7 +591,7 @@ hover:border-[#BE5103]"
             {/* Card 4 */}
             <div
               className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
-                    hover:border-[#BE5103]/40 transition duration-300 
+                    hover:border-[#BE5103] transition duration-300 
                     hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
             >
               <div className="flex items-center gap-3 mb-4">

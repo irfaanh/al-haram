@@ -75,8 +75,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="text-gray-400 mb-8 w-full">
-                  <p className="text-[#BE5103] font-bold mb-2">hello@momentor.in</p>
-                  <p className="text-xs uppercase tracking-widest">Want to book a quick call instead?</p>
+                  <p className="text-[#BE5103] font-bold mb-2">
+                    hello@momentor.in
+                  </p>
+                  <p className="text-xs uppercase tracking-widest">
+                    Want to book a quick call instead?
+                  </p>
                 </div>
 
                 <button
@@ -95,8 +99,10 @@ export default function ContactPage() {
               </div>
 
               {/* ================= RIGHT SIDE (FORM) ================= */}
-              <div className="space-y-8 bg-white/[0.02] p-6 md:p-0 rounded-[2rem] border border-white/5 md:border-none">
-                <h3 className="text-xl font-bold md:hidden text-center mb-6 text-[#BE5103]">Enquiry Form</h3>
+              <div className="space-y-8 bg-white/[0.002] p-6 md:p-0 rounded-[2rem] border border-white/5 md:border-none">
+                <h3 className="text-xl font-bold md:hidden text-center mb-6 text-[#BE5103]">
+                  Enquiry Form
+                </h3>
                 {/* Inputs */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="relative group">
