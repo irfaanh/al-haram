@@ -23,7 +23,7 @@ export default function Footer() {
       {/* FOOTER CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12">
         {/* LOGO + ABOUT (CENTERED ON MOBILE) */}
-        <div className="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="md:col-span-1 flex flex-col items-start text-left">
           <Link href="/" className="mb-6">
             <Image
               src="/images/log.png"
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         {/* NAV + SOCIAL WRAPPER (CENTERED ON MOBILE) */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 gap-10 md:contents text-center md:text-left">
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-10 md:contents text-left">
           {/* NAVIGATION */}
           <div className="md:px-10">
             <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Navigation</h4>
@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
 
         {/* LEGAL (CENTERED ON MOBILE) */}
-        <div className="text-center md:text-left">
+        <div className="text-left">
           <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Legal</h4>
           <ul className="space-y-4 text-sm">
             <li className="hover:text-[#BE5103] cursor-pointer transition">
@@ -122,7 +122,7 @@ export default function Footer() {
         </div>
 
         {/* CONTACT (CENTERED ON MOBILE) */}
-        <div className="text-center md:text-left flex flex-col items-center md:items-start">
+        <div className="text-left flex flex-col items-start">
           <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Contact Us</h4>
           <p className="text-sm mb-8 text-gray-400">
             Have questions? We’re here to guide you. Reach out to our team
@@ -130,21 +130,21 @@ export default function Footer() {
           </p>
 
           <ul className="space-y-5 text-sm">
-            <li className="flex items-center gap-4 justify-center md:justify-start group cursor-pointer hover:text-white transition-colors">
+            <li className="flex items-center gap-4 justify-start group cursor-pointer hover:text-white transition-colors">
               <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
                 <Phone size={16} />
               </span>
               +91 98765 43210
             </li>
 
-            <li className="flex items-center gap-4 justify-center md:justify-start group cursor-pointer hover:text-white transition-colors">
+            <li className="flex items-center gap-4 justify-start group cursor-pointer hover:text-white transition-colors">
               <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
                 <Mail size={16} />
               </span>
               hello@momentor.in
             </li>
 
-            <li className="flex items-start gap-4 justify-center md:justify-start group cursor-pointer hover:text-white transition-colors">
+            <li className="flex items-start gap-4 justify-start group cursor-pointer hover:text-white transition-colors">
               <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full mt-1 min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
                 <MapPin size={16} />
               </span>
@@ -159,8 +159,8 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="relative z-10 mt-16 md:mt-20 border-t border-white/10 pt-10 pb-8 px-6 text-center">
-        <div className="max-w-7xl mx-auto flex flex-col items-center gap-6">
+      <div className="relative z-10 mt-16 md:mt-20 border-t border-white/10 pt-10 pb-8 px-6 text-left md:text-center">
+        <div className="max-w-7xl mx-auto flex flex-col items-start md:items-center gap-6">
           <p className="text-gray-500 text-xs md:text-sm uppercase tracking-widest font-medium">
             MOMENTOR © 2026 All rights reserved
           </p>
