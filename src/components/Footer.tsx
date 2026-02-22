@@ -22,7 +22,7 @@ export default function Footer() {
 
       {/* FOOTER CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12">
-        {/* LOGO + ABOUT (CENTERED ON MOBILE) */}
+        {/* LOGO + ABOUT */}
         <div className="md:col-span-1 flex flex-col items-start text-left">
           <Link href="/" className="mb-6">
             <Image
@@ -41,92 +41,45 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* NAV + SOCIAL WRAPPER (CENTERED ON MOBILE) */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 gap-10 md:contents text-left">
-          {/* NAVIGATION */}
-          <div className="md:px-10">
-            <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Navigation</h4>
-            <ul className="space-y-4 text-sm">
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-[#BE5103] transition-colors duration-300"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-[#BE5103] transition-colors duration-300"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/courses"
-                  className="hover:text-[#BE5103] transition-colors duration-300"
-                >
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/gallery"
-                  className="hover:text-[#BE5103] transition-colors duration-300"
-                >
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-[#BE5103] transition-colors duration-300"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* SOCIAL */}
-          <div>
-            <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Social</h4>
-            <ul className="space-y-4 text-sm">
-              <li className="hover:text-[#BE5103] cursor-pointer transition">Twitter</li>
-              <li className="hover:text-[#BE5103] cursor-pointer transition">LinkedIn</li>
-              <li className="hover:text-[#BE5103] cursor-pointer transition">Facebook</li>
-              <li className="hover:text-[#BE5103] cursor-pointer transition">Instagram</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* LEGAL (CENTERED ON MOBILE) */}
-        <div className="text-left">
-          <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+        {/* NAVIGATION */}
+        <div className="md:px-10 text-left">
+          <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Navigation</h4>
           <ul className="space-y-4 text-sm">
-            <li className="hover:text-[#BE5103] cursor-pointer transition">
-              Terms
-            </li>
-            <li className="hover:text-[#BE5103] cursor-pointer transition">
-              Privacy
-            </li>
-            <li className="hover:text-[#BE5103] cursor-pointer transition">
-              Cookies
-            </li>
-            <li className="hover:text-[#BE5103] cursor-pointer transition">
-              Contact
-            </li>
+            <li><Link href="/" className="hover:text-[#BE5103] transition-colors">Home</Link></li>
+            <li><Link href="/about" className="hover:text-[#BE5103] transition-colors">About</Link></li>
+            <li><Link href="/courses" className="hover:text-[#BE5103] transition-colors">Courses</Link></li>
+            <li><Link href="/gallery" className="hover:text-[#BE5103] transition-colors">Gallery</Link></li>
+            <li><Link href="/contact" className="hover:text-[#BE5103] transition-colors">Contact</Link></li>
           </ul>
         </div>
 
-        {/* CONTACT (CENTERED ON MOBILE) */}
+        {/* SOCIAL */}
+        <div className="text-left">
+          <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Social</h4>
+          <ul className="space-y-4 text-sm">
+            <li className="hover:text-[#BE5103] cursor-pointer transition">Twitter</li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">LinkedIn</li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">Facebook</li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">Instagram</li>
+          </ul>
+        </div>
+
+        {/* LEGAL */}
+        <div className="text-left">
+          <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+          <ul className="space-y-4 text-sm">
+            <li className="hover:text-[#BE5103] cursor-pointer transition">Terms</li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">Privacy</li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">Cookies</li>
+            <li className="hover:text-[#BE5103] cursor-pointer transition">Contact</li>
+          </ul>
+        </div>
+
+        {/* CONTACT US */}
         <div className="text-left flex flex-col items-start">
           <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Contact Us</h4>
           <p className="text-sm mb-8 text-gray-400">
-            Have questions? We’re here to guide you. Reach out to our team
-            anytime.
+            Have questions? We’re here to guide you. Reach out to our team anytime.
           </p>
 
           <ul className="space-y-5 text-sm">
@@ -148,7 +101,7 @@ export default function Footer() {
               <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full mt-1 min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
                 <MapPin size={16} />
               </span>
-              <span className="text-justify md:text-left">
+              <span className="text-left">
                 Hilite Business Park, Palazhi
                 <br />
                 Calicut, Kerala, India
