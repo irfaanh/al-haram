@@ -79,14 +79,14 @@ export default async function Home() {
 
           <Link href="/learn-more">
             <button
-              className="px-6 py-1 md:px-8 md:py-3 rounded-full mb-13
+              className="px-8 py-2 md:px-8 md:py-3 rounded-full mb-6 md:mb-13
 bg-white/10 backdrop-blur-md 
 border border-white/30 
 text-white 
 hover:bg-white/20 
 transition-all duration-300 
 hover:-translate-y-1 
-text-[13px] md:text-base font-medium shadow-lg -mt-5"
+text-sm md:text-base font-medium shadow-lg -mt-5"
             >
               Learn More
             </button>
