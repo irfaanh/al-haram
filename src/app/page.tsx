@@ -129,7 +129,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5"
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
           {/* Image Side */}
-          <div className="relative group order-2 md:order-1 px-4 md:px-0">
+          <div className="hidden md:block relative group order-2 md:order-1 px-4 md:px-0">
             <div className="relative h-[300px] sm:h-[400px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#BE5103]/30 transition-all duration-700 shadow-2xl">
               <Image
                 src="/images/europe.jpg"
