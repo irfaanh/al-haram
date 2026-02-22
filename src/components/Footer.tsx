@@ -16,37 +16,37 @@ export default function Footer() {
   return (
     <footer className="relative bg-black text-gray-300 pt-16 md:pt-28 pb-8 md:pb-16 overflow-hidden">
       {/* BIG BACKGROUND TEXT */}
-      <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[15vw] md:text-[14rem] font-extrabold uppercase text-white/5 select-none pointer-events-none whitespace-nowrap leading-none">
+      <h1 className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[18vw] md:text-[14rem] font-extrabold uppercase text-white/[0.03] select-none pointer-events-none whitespace-nowrap leading-none transition-all duration-700">
         momentor
       </h1>
 
       {/* FOOTER CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12">
-        {/* LOGO + ABOUT (LEFT ALIGNED) */}
-        <div className="md:col-span-1 flex flex-col items-start text-left">
-          <Link href="/" className="mb-4">
+        {/* LOGO + ABOUT (CENTERED ON MOBILE) */}
+        <div className="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
+          <Link href="/" className="mb-6">
             <Image
               src="/images/log.png"
               alt="Momentor logo"
-              width={200}
-              height={100}
-              className="object-contain self-start"
+              width={180}
+              height={90}
+              className="object-contain"
             />
           </Link>
 
-          <p className="text-sm leading-relaxed max-w-xs mt-2">
+          <p className="text-sm leading-relaxed max-w-xs text-gray-400">
             Momentor is India’s first education journalism + future-skills
             mentorship platform guiding youth with clarity, skills, and global
             career opportunities.
           </p>
         </div>
 
-        {/* NAV + SOCIAL WRAPPER */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:contents">
+        {/* NAV + SOCIAL WRAPPER (CENTERED ON MOBILE) */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-10 md:contents text-center md:text-left">
           {/* NAVIGATION */}
-          <div className="md:px-10 text-left">
-            <h4 className="text-white font-semibold mb-4">Navigation</h4>
-            <ul className="space-y-3 text-sm">
+          <div className="md:px-10">
+            <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Navigation</h4>
+            <ul className="space-y-4 text-sm">
               <li>
                 <Link
                   href="/"
@@ -91,21 +91,21 @@ export default function Footer() {
           </div>
 
           {/* SOCIAL */}
-          <div className="text-left">
-            <h4 className="text-white font-semibold mb-5">Social</h4>
-            <ul className="space-y-3 text-sm">
-              <li>Twitter</li>
-              <li>LinkedIn</li>
-              <li>Facebook</li>
-              <li>Instagram</li>
+          <div>
+            <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Social</h4>
+            <ul className="space-y-4 text-sm">
+              <li className="hover:text-[#BE5103] cursor-pointer transition">Twitter</li>
+              <li className="hover:text-[#BE5103] cursor-pointer transition">LinkedIn</li>
+              <li className="hover:text-[#BE5103] cursor-pointer transition">Facebook</li>
+              <li className="hover:text-[#BE5103] cursor-pointer transition">Instagram</li>
             </ul>
           </div>
         </div>
 
-        {/* LEGAL */}
-        <div className="text-left">
-          <h4 className="text-white font-semibold mb-5">Legal</h4>
-          <ul className="space-y-3 text-sm">
+        {/* LEGAL (CENTERED ON MOBILE) */}
+        <div className="text-center md:text-left">
+          <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+          <ul className="space-y-4 text-sm">
             <li className="hover:text-[#BE5103] cursor-pointer transition">
               Terms
             </li>
@@ -121,39 +121,37 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* CONTACT */}
-        <div className="text-left">
-          <h4 className="text-white font-semibold mb-5">Contact Us</h4>
-          <p className="text-sm mb-6">
+        {/* CONTACT (CENTERED ON MOBILE) */}
+        <div className="text-center md:text-left flex flex-col items-center md:items-start">
+          <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Contact Us</h4>
+          <p className="text-sm mb-8 text-gray-400">
             Have questions? We’re here to guide you. Reach out to our team
             anytime.
           </p>
 
-          <ul className="space-y-4 text-sm text-left">
-            <li className="flex items-center gap-3 justify-start">
-              <span className="p-2 bg-[#BE5103] text-black rounded-full min-w-[32px] flex items-center justify-center">
-                <Phone size={14} />
+          <ul className="space-y-5 text-sm">
+            <li className="flex items-center gap-4 justify-center md:justify-start group cursor-pointer hover:text-white transition-colors">
+              <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                <Phone size={16} />
               </span>
               +91 98765 43210
             </li>
 
-            <li className="flex items-center gap-3 justify-start">
-              <span className="p-2 bg-[#BE5103] text-black rounded-full min-w-[32px] flex items-center justify-center">
-                <Mail size={14} />
+            <li className="flex items-center gap-4 justify-center md:justify-start group cursor-pointer hover:text-white transition-colors">
+              <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                <Mail size={16} />
               </span>
               hello@momentor.in
             </li>
 
-            <li className="flex items-start gap-3 justify-start">
-              <span className="p-2 bg-[#BE5103] text-black rounded-full mt-1 min-w-[32px] flex items-center justify-center">
-                <MapPin size={14} />
+            <li className="flex items-start gap-4 justify-center md:justify-start group cursor-pointer hover:text-white transition-colors">
+              <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full mt-1 min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                <MapPin size={16} />
               </span>
-              <span>
-                Hilite Business Park
+              <span className="text-justify md:text-left">
+                Hilite Business Park, Palazhi
                 <br />
-                Palazhi, Calicut
-                <br />
-                Kerala, India
+                Calicut, Kerala, India
               </span>
             </li>
           </ul>

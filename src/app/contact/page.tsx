@@ -37,7 +37,7 @@ export default function ContactPage() {
             Study Abroad Journey
           </span>
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center text-sm md:text-base">
+        <p className="text-gray-400 max-w-2xl mx-auto text-center text-sm md:text-lg leading-relaxed px-4">
           Connect with our expert advisors for personalised guidance on
           university selection, applications, scholarships, and visa support.
           Your global education journey begins with the right advice.
@@ -50,101 +50,94 @@ export default function ContactPage() {
 
             <div className="grid md:grid-cols-2 gap-10 md:gap-16 relative z-10">
               {/* ================= LEFT SIDE ================= */}
-              <div>
-                <h1 className="text-3xl md:text-5xl font-semibold leading-tight mb-6 md:mb-8 text-center md:text-left">
-                  Let’s Plan Your <br />{" "}
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+                  Let’s Plan Your <br className="hidden md:block" />{" "}
                   <span className="text-[#BE5103] italic font-serif">
                     Global Education
                   </span>
                 </h1>
 
-                <div className="space-y-4 text-gray-300 mb-8 md:mb-10 text-sm md:text-base">
-                  <div className="flex items-center gap-3">
-                    <Check size={18} className="text-[#BE5103]" />
+                <div className="space-y-4 text-gray-300 mb-10 text-sm md:text-base w-full">
+                  <div className="flex items-center gap-4 justify-center md:justify-start group">
+                    <span className="bg-[#BE5103]/10 p-1.5 rounded-lg text-[#BE5103]">
+                      <Check size={18} />
+                    </span>
                     <p>We will respond within 12 hours</p>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <Check size={18} className="text-[#BE5103]" />
+                  <div className="flex items-center gap-4 justify-center md:justify-start group">
+                    <span className="bg-[#BE5103]/10 p-1.5 rounded-lg text-[#BE5103]">
+                      <Check size={18} />
+                    </span>
                     <p>Access to dedicated consultants</p>
                   </div>
                 </div>
 
-                <div className="text-gray-400 mb-6 text-center md:text-left">
-                  <p className="underline mb-2">hello@momentor.com</p>
-                  <p>Want to book a quick call instead?</p>
+                <div className="text-gray-400 mb-8 w-full">
+                  <p className="text-[#BE5103] font-bold mb-2">hello@momentor.in</p>
+                  <p className="text-xs uppercase tracking-widest">Want to book a quick call instead?</p>
                 </div>
 
                 <button
                   className="
-    mt-4 md:mt-8 px-6 py-3 rounded-full
-    bg-[#BE5103] text-white text-sm font-semibold
-    hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103]
-    transition-transform duration-200 ease-out
+    mt-4 md:mt-8 px-10 py-4 rounded-full
+    bg-[#BE5103] text-white text-sm font-bold
+    hover:bg-[#BE5103]/90
+    hover:shadow-[0_0_30px_rgba(190,81,3,0.4)]
+    transition-all duration-300
     hover:-translate-y-2
     w-full md:w-auto
   "
                 >
-                  Book a free call
+                  Book a Free Call Now
                 </button>
               </div>
 
               {/* ================= RIGHT SIDE (FORM) ================= */}
-              <div className="space-y-6">
-                {/* Services */}
-                <div>
-                  <p className="mb-3 text-sm text-gray-400 font-semibold">
-                    Service
-                  </p>
-                  <div className="flex flex-wrap gap-2 md:gap-3">
-                    {[
-                      "Consulting",
-                      "Visa Support",
-                      "University Selection",
-                      "Application Help",
-                    ].map((item, i) => (
-                      <button
-                        key={i}
-                        className="px-3 md:px-4 py-2 rounded-full border border-[#BE5103]/50 text-xs md:text-sm hover:border-[#BE5103] transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-                      >
-                        {item}
-                      </button>
-                    ))}
+              <div className="space-y-8 bg-white/[0.02] p-6 md:p-0 rounded-[2rem] border border-white/5 md:border-none">
+                <h3 className="text-xl font-bold md:hidden text-center mb-6 text-[#BE5103]">Enquiry Form</h3>
+                {/* Inputs */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="relative group">
+                    <input
+                      type="text"
+                      placeholder="First name*"
+                      className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600"
+                    />
+                  </div>
+                  <div className="relative group">
+                    <input
+                      type="text"
+                      placeholder="Last Name*"
+                      className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="relative group">
+                    <input
+                      type="email"
+                      placeholder="Email*"
+                      className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600"
+                    />
+                  </div>
+                  <div className="relative group">
+                    <input
+                      type="tel"
+                      placeholder="Phone number*"
+                      className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600"
+                    />
                   </div>
                 </div>
 
-                {/* Inputs */}
-                <div className="grid md:grid-cols-2 gap-6">
-                  <input
-                    type="text"
-                    placeholder="First name*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
+                <div className="relative group">
+                  <textarea
+                    placeholder="Your study preferences*"
+                    rows={4}
+                    className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600 resize-none"
                   />
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <input
-                    type="email"
-                    placeholder="Email*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone number*"
-                    className="bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
-                  />
-                </div>
-
-                <textarea
-                  placeholder="Your study preferences*"
-                  rows={4}
-                  className="w-full bg-transparent border-b border-white/20 pb-2 outline-none focus:border-[#BE5103] text-sm md:text-base"
-                />
 
                 {/* Submit */}
                 <button
@@ -152,12 +145,14 @@ export default function ContactPage() {
     w-full
     bg-[#BE5103]
     text-white
-    py-3 md:py-4
+    py-4
     rounded-full
-    font-semibold
-    transition-all duration-300 ease-out
-    hover:bg-gradient-to-r hover:from-[#7A3300] hover:to-[#BE5103]
-    hover:-translate-y-3
+    font-bold
+    tracking-wide
+    transition-all duration-300
+    hover:bg-[#BE5103]/90
+    hover:shadow-[0_0_40px_rgba(190,81,3,0.3)]
+    hover:-translate-y-2
     text-sm md:text-base
   "
                 >
@@ -220,120 +215,6 @@ export default function ContactPage() {
             <p className="text-[#BE5103] font-medium mt-4">
               Hilite business Park,Calicut,Kerala
             </p>
-          </div>
-        </div>
-      </section>
-      {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-black py-12 md:py-18 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center font-light mb-10 md:mb-16">
-            Our students find countless <br />
-            reasons to{" "}
-            <span className="text-[#BE5103] italic font-serif">trust us</span>
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {/* CARD 1 */}
-            <div
-              className="bg-[#111] border border-[#BE5103]/40 rounded-3xl p-6 md:p-8 hover:border-[#BE5103] transition-transform duration-200 ease-out
-    hover:-translate-y-3 "
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-[#BE5103]/20 flex items-center justify-center">
-                  <span className="text-[#BE5103] font-bold">AK</span>
-                </div>
-                <div>
-                  <p className="text-white font-medium">Akhil Kumar</p>
-                  <p className="text-sm text-gray-400">MS in UK</p>
-                </div>
-              </div>
-
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Momentor guided me through university selection, SOP writing,
-                and visa processing smoothly. Their support made my dream of
-                studying abroad a reality.
-              </p>
-
-              <p className="mt-4 text-[#BE5103] text-sm font-medium">
-                ★★★★★ 5.0
-              </p>
-            </div>
-
-            {/* CARD 2 */}
-            <div
-              className="bg-[#111] border border-[#BE5103]/40 rounded-3xl p-6 md:p-8 hover:border-[#BE5103] transition-transform duration-200 ease-out
-    hover:-translate-y-3 "
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-[#BE5103]/20 flex items-center justify-center">
-                  <span className="text-[#BE5103] font-bold">SR</span>
-                </div>
-                <div>
-                  <p className="text-white font-medium">Sneha R</p>
-                  <p className="text-sm text-gray-400">MBA in Canada</p>
-                </div>
-              </div>
-
-              <p className="text-gray-400 text-sm leading-relaxed">
-                From counselling to visa approval, everything was transparent
-                and well-organised. I highly recommend Momentor to students
-                planning to study abroad.
-              </p>
-
-              <p className="mt-4 text-[#BE5103] text-sm font-medium">
-                ★★★★★ 5.0
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* ================= FAQ ================= */}
-      <section className="bg-black pb-20 md:pb-32 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center font-light mb-10 md:mb-14">
-            Got questions? We’ve got{" "}
-            <span className="text-[#BE5103] italic font-serif">answers!</span>
-          </h2>
-
-          <div className="space-y-4">
-            {[
-              {
-                q: "How do I choose the right university?",
-                a: "We evaluate your academic background, career goals, budget, and preferred destination to shortlist universities that best match your profile and long-term ambitions.",
-              },
-              {
-                q: "Do you assist with visa processing?",
-                a: "Yes. We provide complete visa guidance including documentation review, financial preparation, mock interviews, and submission support to maximise approval chances.",
-              },
-              {
-                q: "Can you help with scholarships?",
-                a: "Absolutely. We identify scholarship opportunities, assist with applications, and help you prepare strong supporting documents to improve your chances of receiving funding.",
-              },
-              {
-                q: "What is the application process timeline?",
-                a: "The process usually takes 3–6 months depending on intake and country. We guide you step-by-step from university selection to offer letter and visa approval.",
-              },
-              {
-                q: "Do you provide post-arrival support?",
-                a: "Yes, we assist with accommodation guidance, pre-departure briefings, and important information to help you settle comfortably in your new country.",
-              },
-            ].map((item, i) => (
-              <details
-                key={i}
-                className="group bg-[#111] border border-[#BE5103]/40 rounded-xl p-6 cursor-pointer hover:border-[#BE5103] transition"
-              >
-                <summary className="flex justify-between items-center text-white font-medium">
-                  {item.q}
-                  <span className="text-[#BE5103] group-open:rotate-45 transition">
-                    +
-                  </span>
-                </summary>
-
-                <p className="text-gray-400 text-sm mt-4 leading-relaxed">
-                  {item.a}
-                </p>
-              </details>
-            ))}
           </div>
         </div>
       </section>

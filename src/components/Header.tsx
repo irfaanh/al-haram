@@ -4,17 +4,27 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Courses", href: "/courses" },
+    {
+      name: "Courses",
+      href: "/courses",
+      subItems: [
+        { name: "Global Student Readiness (GSRP)", href: "/courses/gsrp" },
+        { name: "Global Career Readiness (GCRP)", href: "/courses/gcrp" },
+        { name: "Global Hospitality & Retail (GHRT)", href: "/courses/ghrt" },
+      ],
+    },
+    { name: "Journalism", href: "/journalism" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
   ];
@@ -40,19 +50,69 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
+            const hasSubItems = item.subItems && item.subItems.length > 0;
+
+            if (hasSubItems) {
+              return (
+                <div
+                  key={item.name}
+                  className="relative group py-2"
+                  onMouseEnter={() => setIsCoursesOpen(true)}
+                  onMouseLeave={() => setIsCoursesOpen(false)}
+                >
+                  <Link
+                    href={item.href}
+                    className={`
+                      relative px-5 py-2 text-sm font-semibold transition-all duration-300 flex items-center gap-1
+                      after:content-[''] after:absolute after:left-0 after:-bottom-1
+                      after:h-[2px] after:bg-[#BE5103] after:transition-all after:duration-300
+                      ${isActive
+                        ? "text-[#BE5103] after:w-full"
+                        : "text-gray-300 group-hover:text-[#BE5103] after:w-0 group-hover:after:w-full"
+                      }
+                    `}
+                  >
+                    {item.name}
+                    <ChevronDown size={14} className={`transition-transform duration-300 ${isCoursesOpen ? "rotate-180" : ""}`} />
+                  </Link>
+
+                  {/* Dropdown Menu */}
+                  <div
+                    className={`
+                      absolute top-full left-1/2 -translate-x-1/2 w-72 pt-4
+                      transition-all duration-300 ease-out z-[10000]
+                      ${isCoursesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}
+                    `}
+                  >
+                    <div className="bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-3 flex flex-col gap-1">
+                      {item.subItems?.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
+                          className="px-4 py-3 rounded-xl text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200"
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
             return (
               <Link
                 key={item.name}
                 href={item.href}
                 className={`
-  relative px-5 py-2 text-sm font-semibold transition-all duration-300
-  after:content-[''] after:absolute after:left-0 after:-bottom-1
-  after:h-[2px] after:bg-[#BE5103] after:transition-all after:duration-300
-  ${isActive
+                  relative px-5 py-2 text-sm font-semibold transition-all duration-300
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                  after:h-[2px] after:bg-[#BE5103] after:transition-all after:duration-300
+                  ${isActive
                     ? "text-[#BE5103] after:w-full"
                     : "text-gray-300 hover:text-[#BE5103] after:w-0 hover:after:w-full"
                   }
-`}
+                `}
               >
                 {item.name}
               </Link>
@@ -74,23 +134,52 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-4 right-4 mt-2 bg-black/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 p-6 md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5 duration-300">
-          {navItems.map((item) => {
-            const isActive = pathname === item.href;
-            return (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`px-5 py-4 rounded-xl text-center font-bold text-lg transition-all duration-200 border border-transparent ${isActive
-                  ? "bg-[#BE5103]/20 text-[#BE5103] border-[#BE5103]/30"
-                  : "text-gray-300 hover:text-white hover:bg-white/5"
-                  }`}
-              >
-                {item.name}
-              </Link>
-            );
-          })}
+        <div className="fixed inset-0 top-16 bg-black/95 backdrop-blur-2xl z-[9998] md:hidden px-6 pt-10 pb-20 flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-5 duration-500 overflow-y-auto">
+          <div className="flex flex-col gap-3">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              const hasSubItems = item.subItems && item.subItems.length > 0;
+
+              return (
+                <div key={item.name} className="flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      onClick={() => !hasSubItems && setIsOpen(false)}
+                      className={`flex-1 px-6 py-4 rounded-2xl text-left font-bold text-xl transition-all duration-300 border border-transparent ${isActive
+                        ? "bg-[#BE5103] text-white shadow-[0_10px_30px_rgba(190,81,3,0.3)]"
+                        : "text-gray-100 hover:bg-white/5 active:scale-[0.98]"
+                        }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </div>
+
+                  {hasSubItems && (
+                    <div className="grid grid-cols-1 gap-2 mt-1 px-2 border-l-2 border-[#BE5103]/20 ml-6 animate-in fade-in slide-in-from-left-2 duration-300">
+                      {item.subItems?.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
+                          onClick={() => setIsOpen(false)}
+                          className="px-6 py-3.5 text-[15px] font-semibold text-gray-400 hover:text-[#BE5103] active:text-[#BE5103] transition-colors"
+                        >
+                          → {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-auto pt-10 border-t border-white/10 flex flex-col items-center gap-6">
+            <p className="text-gray-500 text-[10px] uppercase tracking-[0.4em] font-bold">Connect with us</p>
+            <div className="flex gap-8 text-gray-300">
+              <Link href="/contact" onClick={() => setIsOpen(false)} className="text-[#BE5103] font-bold underline underline-offset-8">Contact Us</Link>
+            </div>
+          </div>
         </div>
       )}
     </header>

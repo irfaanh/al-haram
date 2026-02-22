@@ -45,14 +45,14 @@ export default function GalleryPage() {
       </section>
 
       <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
-        <h1 className="text-3xl md:text-6xl font-semibold leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
           Moments of{" "}
-          <span className="text-[#BE5103] italic font-serif">
+          <span className="text-[#BE5103] italic font-serif font-normal">
             Global Success
           </span>
-        </h1>
+        </h2>
 
-        <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
+        <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed px-6">
           Explore our student journeys, visa success stories, university
           partnerships, and unforgettable milestones.
         </p>

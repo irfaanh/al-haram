@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function GSRPPage() {
+export default function GHRTPage() {
   return (
     <main className="bg-black text-white">
       <Header />
@@ -9,8 +9,8 @@ export default function GSRPPage() {
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 md:px-0 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-bottom opacity-50"
-          style={{ backgroundImage: "url('/images/placement.jpg')" }}
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{ backgroundImage: "url('/images/studentss.jpg')" }}
         />
 
         {/* Dark Overlay */}
@@ -25,9 +25,9 @@ export default function GSRPPage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-            Global Student Readiness <br />
+            Global Hospitality & Retail <br />
             <span className="italic font-serif text-[#BE5103] font-normal">
-              Program (GSRP)
+              Training (GHRT)
             </span>
           </h1>
         </div>
@@ -36,11 +36,13 @@ export default function GSRPPage() {
       {/* CONTENT */}
       <section className="py-20 md:py-28 px-6 max-w-5xl mx-auto">
         <p className="text-gray-400 leading-relaxed mb-16 text-center text-sm md:text-lg max-w-3xl mx-auto font-medium md:font-normal">
-          The Global Soft Skills Readiness Program (GSRP) is designed to
-          strengthen essential interpersonal and professional skills required
-          for academic, career, and personal success. The program emphasizes
-          communication, emotional intelligence, teamwork, and leadership
-          development.
+          The Global Hospitality & Retail Training (GHRT) program is designed to
+          prepare participants for international careers in hospitality, retail,
+          and customer-focused industries by developing professional service
+          skills, communication confidence, and workplace readiness. The program
+          emphasizes practical learning, customer experience excellence, and
+          global industry standards to help participants succeed in dynamic
+          service environments worldwide.
         </p>
 
         <div className="grid md:grid-cols-2 gap-16 md:gap-24">
@@ -52,12 +54,12 @@ export default function GSRPPage() {
 
             <ul className="space-y-5 text-gray-300">
               {[
-                "Communication & Presentation Skills",
-                "Emotional Intelligence",
-                "Leadership & Teamwork",
-                "Time Management & Productivity",
-                "Confidence Building",
-                "Conflict Resolution & Adaptability",
+                "Customer Service Excellence",
+                "Professional Communication & Interaction",
+                "Sales & Retail Techniques",
+                "Hospitality Industry Standards",
+                "Personality Development & Grooming",
+                "Workplace Etiquette & Team Coordination",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-4 group">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#BE5103] group-hover:scale-150 transition-transform" />
@@ -75,11 +77,11 @@ export default function GSRPPage() {
 
             <ul className="space-y-5 text-gray-300">
               {[
-                "Strong interpersonal communication abilities",
-                "Increased self-confidence",
-                "Better teamwork and leadership skills",
-                "Career and academic readiness",
-                "Program completion certificate",
+                "Strong customer handling & service confidence",
+                "Industry-relevant hospitality & retail skills",
+                "Exposure to international service standards",
+                "Practical training with real-world scenarios",
+                "Certification upon successful completion",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-4 group">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#BE5103] group-hover:scale-150 transition-transform" />

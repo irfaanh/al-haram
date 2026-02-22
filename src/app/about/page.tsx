@@ -43,18 +43,19 @@ export default function AboutPage() {
           <span className="text-[#BE5103] italic font-serif">Education</span>
         </h1>
 
-        <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
+        <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed px-6">
           We guide students toward world-class international education through
           expert counselling, transparent processes, and personalized support.
         </p>
         <Link href="/courses">
           <button
             className="
-    mt-8 px-6 py-3 rounded-full
-    bg-[#BE5103] text-white text-sm font-semibold
-    hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103]
-    transition-transform duration-200 ease-out
-    hover:-translate-y-2
+    mt-10 px-8 py-3.5 rounded-full
+    bg-[#BE5103] text-white text-sm md:text-base font-bold
+    hover:bg-[#BE5103]/90
+    hover:shadow-[0_0_30px_rgba(190,81,3,0.4)]
+    transition-all duration-300 
+    hover:-translate-y-1.5
   "
           >
             Explore Opportunities →
@@ -78,33 +79,33 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 text-center">
             {/* Stat 1 */}
-            <div className="group transition-all duration-500 hover:-translate-y-3">
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <div className="group transition-all duration-500 hover:-translate-y-3 bg-white/[0.02] border border-white/5 p-8 rounded-[2rem] md:bg-transparent md:border-none md:p-0">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#BE5103] md:text-white group-hover:text-[#BE5103] transition-colors">
                 28,000+
               </h2>
-              <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-500">
+              <p className="mt-4 text-sm md:text-lg text-gray-400 font-medium md:font-normal">
                 Youth Reached <br />
                 across Kerala and beyond
               </p>
             </div>
 
             {/* Stat 2 */}
-            <div className="group transition-all duration-500 hover:-translate-y-3">
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <div className="group transition-all duration-500 hover:-translate-y-3 bg-white/[0.02] border border-white/5 p-8 rounded-[2rem] md:bg-transparent md:border-none md:p-0">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#BE5103] md:text-white group-hover:text-[#BE5103] transition-colors">
                 35,000+
               </h2>
-              <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-500">
+              <p className="mt-4 text-sm md:text-lg text-gray-400 font-medium md:font-normal">
                 Hours of Learning Content <br />
                 skills, mindset & communication
               </p>
             </div>
 
             {/* Stat 3 */}
-            <div className="group transition-all duration-500 hover:-translate-y-3">
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <div className="group transition-all duration-500 hover:-translate-y-3 bg-white/[0.02] border border-white/5 p-8 rounded-[2rem] md:bg-transparent md:border-none md:p-0">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#BE5103] md:text-white group-hover:text-[#BE5103] transition-colors">
                 120+
               </h2>
-              <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-500">
+              <p className="mt-4 text-sm md:text-lg text-gray-400 font-medium md:font-normal">
                 Training & Mentorship Programs <br />
                 designed for real employability
               </p>
@@ -119,21 +120,21 @@ export default function AboutPage() {
           {/* ================= OUR VISION ================= */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Image Side */}
-            <div className="md:order-last">
+            <div className="md:order-last px-2 md:px-0">
               <img
-                src="/images/counseling.jpg"
+                src="/images/missionn.jpg"
                 alt="Vision"
-                className="rounded-3xl w-full object-cover"
+                className="rounded-3xl w-full aspect-[4/3] md:aspect-auto object-cover border border-white/5"
               />
             </div>
 
             {/* Text Side */}
-            <div className="md:order-first">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6 text-center md:text-left">
+            <div className="md:order-first px-4 md:px-0">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#BE5103] mb-8 text-center md:text-left">
                 Our Mission
               </h2>
 
-              <p className="text-gray-300 leading-relaxed mb-8 text-sm md:text-base text-justify md:text-left">
+              <p className="text-gray-400 leading-relaxed mb-10 text-sm md:text-base text-center md:text-left mx-auto md:mx-0 max-w-2xl font-medium md:font-normal">
                 Our mission is to empower youth with clarity, mindset, and
                 future-ready skills — by exposing the truth about careers,
                 building real awareness, and opening global opportunities that
@@ -143,27 +144,24 @@ export default function AboutPage() {
                 of work is changing.
               </p>
 
-              <ul className="space-y-4 text-sm md:text-base">
-                <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1 min-w-[20px]">
-                    <CircleCheck size={20} />
+              <ul className="space-y-5 text-sm md:text-base flex flex-col items-center md:items-start">
+                <li className="flex items-start gap-4 text-gray-300 group">
+                  <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                    <CircleCheck size={18} />
                   </span>
-                  Provide clarity and direction by telling the truth about
-                  careers and industries.
+                  <span className="max-w-md">Provide clarity and direction by telling the truth about careers and industries.</span>
                 </li>
-                <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1 min-w-[20px]">
-                    <CircleCheck size={20} />
+                <li className="flex items-start gap-4 text-gray-300 group">
+                  <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                    <CircleCheck size={18} />
                   </span>
-                  Equip youth with future skills that make them confident and
-                  employable.
+                  <span className="max-w-md">Equip youth with future skills that make them confident and employable.</span>
                 </li>
-                <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1 min-w-[20px]">
-                    <CircleCheck size={20} />
+                <li className="flex items-start gap-4 text-gray-300 group">
+                  <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                    <CircleCheck size={18} />
                   </span>
-                  Create pathways for global exposure, mentorship, and real
-                  opportunities.
+                  <span className="max-w-md">Create pathways for global exposure, mentorship, and real opportunities.</span>
                 </li>
               </ul>
             </div>
@@ -387,73 +385,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ================= SUCCESSFUL ADMISSIONS ================= */}
-      <section className="bg-black py-12 md:py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-light mb-10 md:mb-16 text-center">
-            Explore our winning{" "}
-            <span className="text-[#BE5103] italic font-serif">admissions</span>
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            {/* LEFT ACCORDION */}
-            <div className="space-y-4">
-              {[
-                "Top University Admissions",
-                "High Visa Success Rate",
-                "Scholarship Assistance",
-                "Country-Specific Expertise",
-                "Student Success Stories",
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-xl p-5 text-sm hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            {/* RIGHT TABLE */}
-            <div
-              className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-xl p-6 text-sm hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2 overflow-x-auto"
-            >
-              <table className="w-full text-left text-gray-400 min-w-[300px]">
-                <thead className="text-gray-300">
-                  <tr>
-                    <th className="pb-3 text-xs md:text-sm">Country</th>
-                    <th className="pb-3 text-xs md:text-sm">University</th>
-                    <th className="pb-3 text-xs md:text-sm">Intake</th>
-                    <th className="pb-3 text-xs md:text-sm">Scholarship</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ["UK", "University of Manchester", "Fall", "Yes"],
-                    ["Canada", "University of Toronto", "Fall", "Yes"],
-                    ["Australia", "Monash University", "Spring", "No"],
-                    ["USA", "Arizona State University", "Fall", "Yes"],
-                  ].map((row, i) => (
-                    <tr
-                      key={i}
-                      className="border-t border-[#BE5103]/40 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-                    >
-                      {row.map((cell, j) => (
-                        <td key={j} className="py-3 text-xs md:text-sm">
-                          {cell}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* ================= CTA ================= */}
       <section className="bg-black pb-12 md:pb-20 px-6">
         <div className="max-w-7xl mx-auto">

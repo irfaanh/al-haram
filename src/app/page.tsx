@@ -1,20 +1,22 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 import {
   Globe,
-  ShieldCheck,
-  GraduationCap,
   Users,
   Newspaper,
   Search,
   FileText,
   CheckCircle,
-  TrendingUp,
+  ArrowUpRight,
+  BookOpen,
+  BrainCircuit,
+  Target,
+  GraduationCap,
 } from "lucide-react";
 import TeamSlider from "@/components/TeamSlider";
+import PartnersSlider from "@/components/PartnersSlider";
 
 interface Course {
   id: string;
@@ -42,6 +44,13 @@ export default async function Home() {
         "Prepare for international education with civic discipline, cultural adaptation, and real-world global behavior training to confidently live and succeed abroad.",
       image: "/images/placement.jpg",
     },
+    {
+      id: "ghrt",
+      title: "Global Hospitality & Retail Training (GHRT)",
+      description:
+        "Gain practical skills, service confidence, and international exposure to thrive in global hospitality, retail, and customer-focused industries.",
+      image: "/images/studentss.jpg",
+    },
   ];
 
   return (
@@ -49,19 +58,17 @@ export default async function Home() {
       {/* ================= HERO ================= */}
       <section className="relative min-h-[75vh] md:min-h-[85vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-70"
-          style={{ backgroundImage: "url('/images/home.jpg')" }}
+          className="absolute inset-0 bg-cover bg-center opacity-55"
+          style={{ backgroundImage: "url('/images/homee.jpg')" }}
         />
 
         <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative z-10 max-w-4xl pt-10 md:pt-20 px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-7xl font-light leading-tight mb-6">
-            Study Beyond Borders. <br />
-            Build a{" "}
-            <span className="italic font-serif text-[#BE5103]">
-              Global Future
-            </span>
+          <h1 className="text-2xl sm:text-3xl md:text-6xl font-semibold leading-tight mb-6">
+            MOMENTOR - <br />
+            Where Guidance Meets the{" "}
+            <span className="italic font-serif text-[#BE5103]">Future</span>
           </h1>
 
           <p className="text-gray-300 max-w-2xl mx-auto mb-10 text-sm md:text-base">
@@ -70,9 +77,18 @@ export default async function Home() {
             long-term career readiness support.
           </p>
 
-          <Link href="/contact">
-            <button className="px-5 py-2.5 md:px-8 md:py-4 rounded-full bg-[#BE5103] hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103] transition hover:-translate-y-1 text-[13px] md:text-base font-medium">
-              Book Free Consultation →
+          <Link href="/learn-more">
+            <button
+              className="px-6 py-2 md:px-8 md:py-3 rounded-full 
+bg-white/10 backdrop-blur-md 
+border border-white/30 
+text-white 
+hover:bg-white/20 
+transition-all duration-300 
+hover:-translate-y-1 
+text-[13px] md:text-base font-medium shadow-lg -mt-5"
+            >
+              Learn More
             </button>
           </Link>
         </div>
@@ -84,11 +100,11 @@ export default async function Home() {
           {[...Array(4)].map((_, i) => (
             <div key={i} className="flex shrink-0 gap-16 px-8">
               {[
-                "Admissions Open for 2026 Intake at Top UK Universities",
-                "New Scholarship Opportunities Announced for Canadian Colleges",
-                "Free Webinar on Visa Processing for USA - Register Now",
-                "Exclusive Seminar with Australian University Representatives in Mumbai",
-                "Germany Introduces New Post-Study Work Visa Rules for 2026",
+                "INDIAS first Education Journalism platform exposing Myths, Mistakes, and Realities",
+                "A Future-Skills Training Academy",
+                "A Global Internship Gateway",
+                "INDIAS’s First Career & Education Truth Platform",
+                "A Youth Mentorship Ecosystem",
               ].map((news, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
@@ -103,15 +119,18 @@ export default async function Home() {
       </section>
 
       {/* ================= EDUCATION JOURNALISM ================= */}
-      <section id="journalism" className="py-20 md:py-32 px-6 bg-black relative overflow-hidden">
+      <section
+        id="journalism"
+        className="py-20 md:py-32 px-6 bg-black relative overflow-hidden"
+      >
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#BE5103] opacity-[0.05] blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2 animate-pulse" />
         <div className="absolute bottom-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#BE5103] opacity-[0.02] blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" />
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
           {/* Image Side */}
-          <div className="relative group order-2 md:order-1">
-            <div className="relative h-[350px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#BE5103]/30 transition-all duration-700 shadow-2xl">
+          <div className="relative group order-2 md:order-1 px-4 md:px-0">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#BE5103]/30 transition-all duration-700 shadow-2xl">
               <Image
                 src="/images/europe.jpg"
                 alt="Education Journalism"
@@ -122,10 +141,12 @@ export default async function Home() {
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-8 -right-4 md:-right-8 bg-black border border-white/10 p-0.5 rounded-[1.8rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform group-hover:scale-105 transition-transform duration-500">
-              <div className="bg-[#BE5103] px-6 py-4 rounded-[1.5rem] flex flex-col items-center justify-center min-w-[110px]">
-                <span className="text-white font-bold text-3xl md:text-4xl leading-none">1st</span>
-                <span className="text-white/90 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium mt-1">
+            <div className="absolute -bottom-6 -right-2 md:-right-8 bg-black/40 backdrop-blur-xl border border-white/10 p-1 rounded-[1.8rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform group-hover:scale-105 transition-transform duration-500">
+              <div className="bg-[#BE5103] px-6 py-4 rounded-[1.5rem] flex flex-col items-center justify-center min-w-[100px] md:min-w-[110px]">
+                <span className="text-white font-bold text-2xl md:text-4xl leading-none">
+                  1st
+                </span>
+                <span className="text-white/90 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-medium mt-1 text-center">
                   In India
                 </span>
               </div>
@@ -138,7 +159,7 @@ export default async function Home() {
           </div>
 
           {/* Content Side */}
-          <div className="relative z-10 order-1 md:order-2">
+          <div className="relative z-10 order-1 md:order-2 text-center md:text-left">
             <div className="inline-flex items-center gap-3 px-4 py-2 mb-8 rounded-full border border-[#BE5103]/20 bg-[#BE5103]/5 backdrop-blur-sm">
               <span className="flex h-2 w-2 rounded-full bg-[#BE5103] animate-ping" />
               <p className="text-[10px] md:text-xs tracking-[0.3em] text-[#BE5103] font-bold uppercase">
@@ -146,32 +167,52 @@ export default async function Home() {
               </p>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-light leading-[1.1] mb-8 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
               Pioneering <br />
-              <span className="italic font-serif text-[#BE5103] font-medium">
+              <span className="italic font-serif text-[#BE5103] font-normal">
                 Education Journalism
               </span>
             </h2>
 
-            <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+            <p className="text-gray-400 text-sm md:text-lg leading-relaxed mb-12 max-w-xl mx-auto md:mx-0">
               Momentor is India's first dedicated education journalism platform,
-              bringing <span className="text-white font-medium italic underline decoration-[#BE5103]/40 underline-offset-4">truth and clarity</span> to the complex world of global careers.
-              We expose industry trends and provide raw, honest insights.
+              bringing{" "}
+              <span className="text-white font-medium italic underline decoration-[#BE5103]/40 underline-offset-4">
+                truth and clarity
+              </span>{" "}
+              to the complex world of global careers. We expose industry trends
+              and provide raw, honest insights.
             </p>
 
-            <div className="space-y-6 mb-12">
+            <div className="space-y-6 md:space-y-8 mb-12 text-left">
               {[
-                { icon: Search, title: "Unbiased Reporting", desc: "No marketing agendas, just raw reporting." },
-                { icon: FileText, title: "Deep-dive Guides", desc: "Complex systems broken down for students." },
-                { icon: CheckCircle, title: "Data-driven Mentorship", desc: "Based on real-world professional metrics." },
+                {
+                  icon: Search,
+                  title: "Unbiased Reporting",
+                  desc: "No marketing agendas, just raw reporting.",
+                },
+                {
+                  icon: FileText,
+                  title: "Deep-dive Guides",
+                  desc: "Complex systems broken down for students.",
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Data-driven Mentorship",
+                  desc: "Based on real-world professional metrics.",
+                },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4 group/item">
-                  <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#BE5103] group-hover/item:bg-[#BE5103] group-hover/item:text-white transition-all duration-300">
-                    <item.icon size={20} />
+                  <div className="mt-1 flex-shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#BE5103] group-hover/item:bg-[#BE5103] group-hover/item:text-white transition-all duration-300">
+                    <item.icon size={22} />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-base mb-1 group-hover/item:text-[#BE5103] transition-colors">{item.title}</h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                    <h4 className="text-white font-bold text-base md:text-lg mb-1 group-hover/item:text-[#BE5103] transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -300,7 +341,7 @@ export default async function Home() {
             forward with clarity. Study globally.
           </p>
         </div>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-10">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-10">
           {courses.slice(0, 3).map((course, i) => (
             <div
               key={course.id}
@@ -362,65 +403,214 @@ export default async function Home() {
           </p>
           <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
         </div>
-        <div>
-          <p className="text-gray-400 text-sm md:text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-10 md:mb-15">
-            We combine structured global readiness training with transparent
-            consultancy support to ensure every student is fully prepared for
-            international success. From ethical guidance and academic compliance
-            to professional skill development, our approach goes beyond
-            admissions. We focus on discipline, responsibility, and long-term
-            career confidence — building not just students, but future global
-            professionals.
-          </p>
-        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
+          {/* Card 1 */}
+          <div
+            className="group bg-white/5 backdrop-blur-xl border border-white/10 
+rounded-2xl p-6 
+transition-all duration-300 ease-out
+hover:-translate-y-2 
+hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
+hover:border-[#BE5103]"
+          >
+            <div className="flex items-start gap-3 mb-3">
+              <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
+                <BookOpen size={20} />
+              </span>
+              <h3 className="font-semibold text-white text-lg">
+                Industry-Driven Curriculum
+              </h3>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Designed with employers and based on real workforce needs to
+              ensure practical relevance and strong career readiness.
+            </p>
+          </div>
 
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          {[
-            {
-              icon: Newspaper,
-              title: "Education Journalism",
-              desc: "India's 1st journalism-led platform providing raw, honest, and unbiased career reporting.",
-            },
-            {
-              icon: ShieldCheck,
-              title: "Ethical Advocacy",
-              desc: "A transparent, student-first approach that prioritizes facts over marketing agendas.",
-            },
-            {
-              icon: Globe,
-              title: "Global Readiness",
-              desc: "Comprehensive GCRP/GSRP training to build civic, cultural, and professional confidence.",
-            },
-            {
-              icon: GraduationCap,
-              title: "Long-term Mentorship",
-              desc: "Strategic guidance focused on your growth and success in competitive global markets.",
-            },
-          ].map((item, i) => (
+          {/* Card 2 */}
+          <div
+            className="group bg-white/5 backdrop-blur-xl border border-white/10 
+rounded-2xl p-6 
+transition-all duration-300 ease-out
+hover:-translate-y-2 
+hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
+hover:border-[#BE5103]"
+          >
+            <div className="flex items-start gap-3 mb-3">
+              <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
+                <Users size={20} />
+              </span>
+              <h3 className="font-semibold text-white text-lg">
+                Mentorship That Matters
+              </h3>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              We don’t lecture — we mentor, guide, support, and transform
+              individuals through personalised attention and real-world insight.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div
+            className="group bg-white/5 backdrop-blur-xl border border-white/10 
+rounded-2xl p-6 
+transition-all duration-300 ease-out
+hover:-translate-y-2 
+hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
+hover:border-[#BE5103]"
+          >
+            <div className="flex items-start gap-3 mb-3">
+              <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
+                <Globe size={20} />
+              </span>
+              <h3 className="font-semibold text-white text-lg">
+                Real Opportunities
+              </h3>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Access to internships, global exposure, and structured career
+              pathways that go beyond traditional education.
+            </p>
+          </div>
+
+          {/* Row for last two cards */}
+          <div className="md:col-span-3 flex justify-center gap-6 flex-wrap">
+            {/* Card 4 */}
             <div
-              key={i}
-              className="bg-[#111] border border-white/10 rounded-2xl p-6 md:p-8 
-                   hover:border-[#BE5103] transition-all duration-500 
-                   hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(190,81,3,0.2)]"
+              className="w-full md:w-[31%] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-300 ease-out
+hover:-translate-y-2 
+hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
+hover:border-[#BE5103]"
             >
-              <div className="flex justify-center mb-6">
-                <div
-                  className="w-14 h-14 rounded-full border border-[#BE5103] 
-                          flex items-center justify-center text-[#BE5103]"
-                >
-                  <item.icon size={24} />
-                </div>
+              <div className="flex items-start gap-3 mb-3">
+                <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
+                  <BrainCircuit size={20} />
+                </span>
+                <h3 className="font-semibold text-white text-lg">
+                  Training for the Future
+                </h3>
               </div>
-
-              <h4 className="text-white font-semibold mb-3 text-center">
-                {item.title}
-              </h4>
-
-              <p className="text-gray-400 text-sm text-center leading-relaxed">
-                {item.desc}
+              <p className="text-gray-400 text-sm leading-relaxed">
+                AI-era readiness, international etiquette, communication
+                mastery, and modern workplace competencies.
               </p>
             </div>
-          ))}
+
+            {/* Card 5 */}
+            <div
+              className="w-full md:w-[31%] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-300 ease-out
+hover:-translate-y-2 
+hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
+hover:border-[#BE5103]"
+            >
+              <div className="flex items-start gap-3 mb-3">
+                <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
+                  <Target size={20} />
+                </span>
+                <h3 className="font-semibold text-white text-lg">
+                  Youth-Focused Approach
+                </h3>
+              </div>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Designed specifically for ages 18–30 with flexible, practical,
+                hands-on learning experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* WHAT WE DO */}
+        <div className="mt-20 px-6 md:px-12 lg:px-24">
+          <h2 className="text-4xl md:text-4xl font-serif italic font-bold text-[#BE5103] mb-12 text-left">
+            What We Do
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Card 1 */}
+            <div
+              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
+                    hover:border-[#BE5103]/40 transition duration-300 
+                    hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <GraduationCap className="text-[#BE5103]" size={26} />
+                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  Future Skills Training
+                </h3>
+              </div>
+
+              <ul className="space-y-2 text-gray-400 font-semibold text-sm md:text-base">
+                <li>• Global student readiness program</li>
+                <li>• Communication & Etiquette</li>
+                <li>• Sales & Business Development</li>
+                <li>• Digital & AI Literacy</li>
+                <li>• Workplace Behaviour</li>
+                <li>• Leadership & Mindset</li>
+              </ul>
+            </div>
+
+            {/* Card 2 */}
+            <div
+              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
+                    hover:border-[#BE5103]/40 transition duration-300 
+                    hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="text-[#BE5103]" size={26} />
+                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  Career Mentorship
+                </h3>
+              </div>
+
+              <p className="text-gray-400 font-semibold text-sm md:text-base leading-relaxed">
+                Direction, clarity, and personalised guidance that help youth
+                make confident career decisions and long-term plans.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div
+              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
+                    hover:border-[#BE5103]/40 transition duration-300 
+                    hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <Globe className="text-[#BE5103]" size={26} />
+                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  Global Internship Programs
+                </h3>
+              </div>
+
+              <p className="text-gray-400 font-semibold text-sm md:text-base leading-relaxed">
+                Our flagship programs combine industry readiness with
+                international internship opportunities in destinations such as
+                Dubai and Vietnam, providing real global exposure.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div
+              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
+                    hover:border-[#BE5103]/40 transition duration-300 
+                    hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <Newspaper className="text-[#BE5103]" size={26} />
+                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  Youth Awareness & Journalism
+                </h3>
+              </div>
+
+              <ul className="space-y-2 text-gray-400 font-semibold text-sm md:text-base">
+                <li>• Video stories</li>
+                <li>• Research-based articles</li>
+                <li>• Industry interviews</li>
+                <li>• Student case studies</li>
+                <li>• Investigation into hidden career challenges</li>
+                <li>• Career crisis analysis</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -456,42 +646,132 @@ export default async function Home() {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-8">
-          {[
-            { logo: "/images/partner1.jpg" },
-            { logo: "/images/partner2.jpg" },
-            { logo: "/images/partner3.jpg" },
-            { logo: "/images/partner4.jpg" },
-            { logo: "/images/partner5.jpg" },
-            { logo: "/images/partner1.jpg" },
-            { logo: "/images/partner2.jpg" },
-            { logo: "/images/partner3.jpg" },
-            { logo: "/images/partner4.jpg" },
-            { logo: "/images/partner5.jpg" },
-          ].map((item, i) => (
+        <PartnersSlider />
+      </section>
+
+      {/* ================= TESTIMONIALS ================= */}
+      <section className="bg-black py-12 md:py-24 px-6 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto text-white leading-relaxed">
+          <h2 className="text-3xl md:text-5xl text-center font-light mb-12 md:mb-20">
+            Our students find countless <br />
+            reasons to{" "}
+            <span className="text-[#BE5103] italic font-serif">trust us</span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+            {/* CARD 1 */}
             <div
-              key={i}
-              className="
-          bg-[#111]
-          border border-[#BE5103]/40
-          rounded-xl
-          h-[90px] md:h-[110px]
-          flex items-center justify-center
-          hover:border-[#BE5103]
-          hover:-translate-y-1
-          hover:shadow-[0_10px_30px_rgba(190,81,3,0.25)]
-          transition-all duration-500
-        "
+              className="bg-[#111] border border-[#BE5103]/30 rounded-[2.5rem] p-8 md:p-10 hover:border-[#BE5103] transition-all duration-300 group
+    hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,81,3,0.1)] "
             >
-              <Image
-                src={item.logo}
-                alt="partner"
-                width={140}
-                height={70}
-                className="object-contain max-h-[60px] w-auto"
-              />
+              <div className="flex items-center gap-5 mb-8">
+                <div className="w-14 h-14 rounded-full bg-[#BE5103]/10 border border-[#BE5103]/20 flex items-center justify-center">
+                  <span className="text-[#BE5103] font-bold text-lg">AK</span>
+                </div>
+                <div>
+                  <p className="text-white font-bold text-lg">Akhil Kumar</p>
+                  <p className="text-sm text-gray-500">MS in UK</p>
+                </div>
+              </div>
+
+              <p className="text-gray-400 text-base leading-relaxed italic">
+                "Momentor guided me through university selection, SOP writing,
+                and visa processing smoothly. Their support made my dream of
+                studying abroad a reality."
+              </p>
+
+              <div className="mt-8 flex items-center gap-1 text-[#BE5103]">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i}>★</span>
+                ))}
+                <span className="ml-2 text-white/50 text-sm font-medium">
+                  5.0
+                </span>
+              </div>
             </div>
-          ))}
+
+            {/* CARD 2 */}
+            <div
+              className="bg-[#111] border border-[#BE5103]/30 rounded-[2.5rem] p-8 md:p-10 hover:border-[#BE5103] transition-all duration-300 group
+    hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,81,3,0.1)] "
+            >
+              <div className="flex items-center gap-5 mb-8">
+                <div className="w-14 h-14 rounded-full bg-[#BE5103]/10 border border-[#BE5103]/20 flex items-center justify-center">
+                  <span className="text-[#BE5103] font-bold text-lg">SR</span>
+                </div>
+                <div>
+                  <p className="text-white font-bold text-lg">Sneha R</p>
+                  <p className="text-sm text-gray-500">MBA in Canada</p>
+                </div>
+              </div>
+
+              <p className="text-gray-400 text-base leading-relaxed italic">
+                "From counselling to visa approval, everything was transparent
+                and well-organised. I highly recommend Momentor to students
+                planning to study abroad."
+              </p>
+
+              <div className="mt-8 flex items-center gap-1 text-[#BE5103]">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i}>★</span>
+                ))}
+                <span className="ml-2 text-white/50 text-sm font-medium">
+                  5.0
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= FAQ ================= */}
+      <section className="bg-black py-20 md:py-32 px-6">
+        <div className="max-w-4xl mx-auto text-white leading-relaxed">
+          <h2 className="text-3xl md:text-5xl text-center font-light mb-12 md:mb-16">
+            Got questions? We’ve got{" "}
+            <span className="text-[#BE5103] italic font-serif">answers!</span>
+          </h2>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "How do I choose the right university?",
+                a: "We evaluate your academic background, career goals, budget, and preferred destination to shortlist universities that best match your profile and long-term ambitions.",
+              },
+              {
+                q: "Do you assist with visa processing?",
+                a: "Yes. We provide complete visa guidance including documentation review, financial preparation, mock interviews, and submission support to maximise approval chances.",
+              },
+              {
+                q: "Can you help with scholarships?",
+                a: "Absolutely. We identify scholarship opportunities, assist with applications, and help you prepare strong supporting documents to improve your chances of receiving funding.",
+              },
+              {
+                q: "What is the application process timeline?",
+                a: "The process usually takes 3–6 months depending on intake and country. We guide you step-by-step from university selection to offer letter and visa approval.",
+              },
+              {
+                q: "Do you provide post-arrival support?",
+                a: "Yes, we assist with accommodation guidance, pre-departure briefings, and important information to help you settle comfortably in your new country.",
+              },
+            ].map((item, i) => (
+              <details
+                key={i}
+                className="group bg-[#111] border border-white/5 rounded-2xl p-6 md:p-8 cursor-pointer hover:border-[#BE5103]/50 transition-all duration-300"
+              >
+                <summary className="flex justify-between items-center text-white font-bold text-lg">
+                  {item.q}
+                  <span className="text-[#BE5103] group-open:rotate-45 transition-transform duration-300 text-2xl font-light">
+                    +
+                  </span>
+                </summary>
+
+                <p className="text-gray-500 text-sm md:text-base mt-4 leading-relaxed max-w-3xl">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
