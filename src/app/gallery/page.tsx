@@ -107,7 +107,7 @@ export default function GalleryPage() {
         </h2>
 
         <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed px-6">
-          Empowering the next generation through India's first education journalism platform—bridging the gap between academic potential and real-world success with transparency, mentorship, and international exposure.
+          A visual chronicle of global student journeys, success stories, and university milestones.
         </p>
       </section>
 

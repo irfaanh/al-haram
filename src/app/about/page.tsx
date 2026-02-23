@@ -44,8 +44,7 @@ export default function AboutPage() {
         </h1>
 
         <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed px-6">
-          We guide students toward world-class international education through
-          expert counselling, transparent processes, and personalized support.
+          India's first education journalism and mentorship platform, bridging the gap between student potential and global excellence.
         </p>
         <Link href="/courses">
           <button
