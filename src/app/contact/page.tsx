@@ -75,15 +75,16 @@ export default function ContactPage() {
                 </div>
 
                 <div className="text-gray-400 mb-8 w-full">
-                  <p className="text-[#BE5103] font-bold mb-2">
+                  <a href="mailto:hello@momentor.in" className="text-[#BE5103] font-bold mb-2 block hover:underline">
                     hello@momentor.in
-                  </p>
+                  </a>
                   <p className="text-xs uppercase tracking-widest">
                     Want to book a quick call instead?
                   </p>
                 </div>
 
-                <button
+                <a
+                  href="tel:+919876543210"
                   className="
     mt-4 md:mt-8 px-10 py-4 rounded-full
     bg-[#BE5103] text-white text-sm font-bold
@@ -92,10 +93,11 @@ export default function ContactPage() {
     transition-all duration-300
     hover:-translate-y-2
     w-full md:w-auto
+    inline-block
   "
                 >
                   Book a Free Call Now
-                </button>
+                </a>
               </div>
 
               {/* ================= RIGHT SIDE (FORM) ================= */}
@@ -184,7 +186,7 @@ export default function ContactPage() {
             <p className="text-gray-400 text-sm">
               Speak directly with our study abroad advisors.
             </p>
-            <p className="text-[#BE5103] font-medium mt-4">+91 98765 43210</p>
+            <a href="tel:+919876543210" className="text-[#BE5103] font-medium mt-4 block hover:underline">+91 98765 43210</a>
           </div>
 
           {/* CARD 2 */}
@@ -199,9 +201,9 @@ export default function ContactPage() {
             <p className="text-gray-400 text-sm">
               Send your queries and we’ll respond quickly.
             </p>
-            <p className="text-[#BE5103] font-medium mt-4">
-              hello@momentor.com
-            </p>
+            <a href="mailto:hello@momentor.in" className="text-[#BE5103] font-medium mt-4 block hover:underline">
+              hello@momentor.in
+            </a>
           </div>
 
           {/* CARD 3 */}
@@ -218,9 +220,14 @@ export default function ContactPage() {
             <p className="text-gray-400 text-sm">
               Meet our experts for personalised counselling.
             </p>
-            <p className="text-[#BE5103] font-medium mt-4">
-              Hilite business Park,Calicut,Kerala
-            </p>
+            <a
+              href="https://google.com/maps/place/HiLITE+Mall/data=!4m2!3m1!1s0x0:0xc17c381f72b87e02?sa=X&ved=1t:2428&ictx=111"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BE5103] font-medium mt-4 block hover:underline"
+            >
+              Hilite business Park, Calicut, Kerala
+            </a>
           </div>
         </div>
       </section>

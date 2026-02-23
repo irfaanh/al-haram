@@ -85,28 +85,39 @@ export default function Footer() {
 
           <ul className="space-y-5 text-sm">
             <li className="flex items-center gap-4 justify-start group cursor-pointer hover:text-white transition-colors">
-              <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
-                <Phone size={16} />
-              </span>
-              +91 98765 43210
+              <a href="tel:+919876543210" className="flex items-center gap-4">
+                <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                  <Phone size={16} />
+                </span>
+                +91 98765 43210
+              </a>
             </li>
 
             <li className="flex items-center gap-4 justify-start group cursor-pointer hover:text-white transition-colors">
-              <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
-                <Mail size={16} />
-              </span>
-              hello@momentor.in
+              <a href="mailto:hello@momentor.in" className="flex items-center gap-4 group-hover:text-white transition-colors">
+                <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                  <Mail size={16} />
+                </span>
+                hello@momentor.in
+              </a>
             </li>
 
             <li className="flex items-start gap-4 justify-start group cursor-pointer hover:text-white transition-colors">
-              <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full mt-1 min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
-                <MapPin size={16} />
-              </span>
-              <span className="text-left">
-                Hilite Business Park, Palazhi
-                <br />
-                Calicut, Kerala, India
-              </span>
+              <a
+                href="https://google.com/maps/place/HiLITE+Mall/data=!4m2!3m1!1s0x0:0xc17c381f72b87e02?sa=X&ved=1t:2428&ictx=111"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 group-hover:text-white transition-colors"
+              >
+                <span className="p-2.5 bg-[#BE5103]/10 text-[#BE5103] rounded-full mt-1 min-w-[36px] flex items-center justify-center group-hover:bg-[#BE5103] group-hover:text-black transition-all">
+                  <MapPin size={16} />
+                </span>
+                <span className="text-left">
+                  Hilite Business Park, Palazhi
+                  <br />
+                  Calicut, Kerala, India
+                </span>
+              </a>
             </li>
           </ul>
         </div>
