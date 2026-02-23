@@ -3,15 +3,69 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const staticGallery = [
-  { id: "1", image: "/images/about.jpg", title: "About Our Mission" },
-  { id: "2", image: "/images/admission.jpg", title: "Admission Guidance" },
-  { id: "3", image: "/images/counseling.jpg", title: "Expert Counseling" },
-  { id: "4", image: "/images/europe.jpg", title: "Study in Europe" },
-  { id: "5", image: "/images/graduation.jpg", title: "Success Stories" },
-  { id: "6", image: "/images/students.jpg", title: "Our Students" },
-  { id: "7", image: "/images/support.jpg", title: "Full Support" },
-  { id: "8", image: "/images/teams.jpg", title: "Our Expert Team" },
-  { id: "9", image: "/images/visa1.jpg", title: "Visa Success" },
+  {
+    id: "1",
+    image: "/images/graduation.jpg",
+    title: "Global Success Stories",
+    category: "Milestones",
+    description: "Celebrating our students who have successfully transitioned to global careers."
+  },
+  {
+    id: "2",
+    image: "/images/visa1.jpg",
+    title: "Visa Approval Milestones",
+    category: "Visa Success",
+    description: "Consistent success in securing student visas for various international destinations."
+  },
+  {
+    id: "3",
+    image: "/images/europe.jpg",
+    title: "European University Partnerships",
+    category: "Partnerships",
+    description: "Direct ties with prestigious academic institutions across Europe."
+  },
+  {
+    id: "4",
+    image: "/images/counseling.jpg",
+    title: "Academic Mentorship",
+    category: "Journeys",
+    description: "Guidance sessions helping students navigate their academic path abroad."
+  },
+  {
+    id: "5",
+    image: "/images/students.jpg",
+    title: "International Orientation",
+    category: "Journeys",
+    description: "Preparing students for the cultural and academic shift of studying abroad."
+  },
+  {
+    id: "6",
+    image: "/images/admission.jpg",
+    title: "University Admission Support",
+    category: "Partnerships",
+    description: "Simplifying the application process for global university admissions."
+  },
+  {
+    id: "7",
+    image: "/images/support.jpg",
+    title: "Comprehensive Student Readiness",
+    category: "Journeys",
+    description: "Full-scale preparation for future-ready skills and global opportunities."
+  },
+  {
+    id: "8",
+    image: "/images/teams.jpg",
+    title: "Global Expert Panel",
+    category: "Partnerships",
+    description: "Collaboration with international educators to enhance student outcomes."
+  },
+  {
+    id: "9",
+    image: "/images/about.jpg",
+    title: "Educational Excellence Framework",
+    category: "Milestones",
+    description: "Our structured approach to future-skills and mentorship platform."
+  },
 ];
 
 export default function GalleryPage() {
@@ -34,7 +88,7 @@ export default function GalleryPage() {
         <div className="relative z-10 max-w-4xl">
           <div className="inline-block px-6 py-2 mb-6 rounded-full border border-[#BE5103]/40 bg-[#BE5103]/10 backdrop-blur-sm">
             <p className="text-xs md:text-sm tracking-[0.35em] text-[#BE5103] font-semibold">
-              WHAT WE DONE
+              GLOBAL MILESTONES
             </p>
           </div>
 
@@ -53,8 +107,7 @@ export default function GalleryPage() {
         </h2>
 
         <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed px-6">
-          Explore our student journeys, visa success stories, university
-          partnerships, and unforgettable milestones.
+          Empowering the next generation through India's first education journalism platform—bridging the gap between academic potential and real-world success with transparency, mentorship, and international exposure.
         </p>
       </section>
 
@@ -64,23 +117,34 @@ export default function GalleryPage() {
           {staticGallery.map((item) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 aspect-[4/3]"
+              className="group relative overflow-hidden rounded-[2rem] border border-white/10 aspect-[4/5] md:aspect-[4/5]"
             >
               <Image
                 src={item.image}
                 alt={item.title || "Gallery Image"}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-125"
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
 
-              {item.title && (
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                  <p className="text-white text-lg font-medium">
-                    {item.title}
-                  </p>
-                </div>
-              )}
+              {/* Category Badge */}
+              <div className="absolute top-6 left-6 z-20">
+                <span className="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-[10px] uppercase tracking-widest font-bold text-[#BE5103]">
+                  {item.category}
+                </span>
+              </div>
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+
+              {/* Content Box */}
+              <div className="absolute inset-0 p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-white group-hover:text-[#BE5103] transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-3">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

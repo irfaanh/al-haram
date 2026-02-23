@@ -71,12 +71,6 @@ export default async function Home() {
             <span className="italic font-serif text-[#BE5103]">Future</span>
           </h1>
 
-          <p className="text-gray-300 max-w-2xl mx-auto mb-10 text-sm md:text-base">
-            We guide ambitious students toward internationally recognized
-            universities with structured preparation, transparent processes, and
-            long-term career readiness support.
-          </p>
-
           <Link href="/learn-more">
             <button
               className="px-8 py-2 md:px-8 md:py-3 rounded-full mb-6 md:mb-13
