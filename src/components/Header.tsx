@@ -22,7 +22,7 @@ export default function Header() {
       subItems: [
         { name: "Global Student Readiness (GSRP)", href: "/courses/gsrp" },
         { name: "Global Career Readiness (GCRP)", href: "/courses/gcrp" },
-        { name: "Global Hospitality & Retail (GHRT)", href: "/courses/ghrt" },
+        { name: "Global Hospitality & Retail Readiness (GHRR)", href: "/courses/ghrt" },
       ],
     },
     { name: "Gallery", href: "/gallery" },
