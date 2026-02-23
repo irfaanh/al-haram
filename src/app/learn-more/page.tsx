@@ -9,7 +9,7 @@ export default function LearnMorePage() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/home.jpg')" }}
+          style={{ backgroundImage: "url('/images/about.jpg')" }}
         />
 
         {/* Overlay */}
