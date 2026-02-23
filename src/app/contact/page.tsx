@@ -162,6 +162,7 @@ export default function ContactPage() {
     hover:shadow-[0_0_40px_rgba(190,81,3,0.3)]
     hover:-translate-y-2
     text-sm md:text-base
+    cursor-pointer
   "
                 >
                   Submit Your Enquiry

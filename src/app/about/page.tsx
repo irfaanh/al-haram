@@ -55,6 +55,7 @@ export default function AboutPage() {
     hover:shadow-[0_0_30px_rgba(190,81,3,0.4)]
     transition-all duration-300 
     hover:-translate-y-1.5
+    cursor-pointer
   "
           >
             Explore Opportunities →
@@ -402,6 +403,7 @@ export default function AboutPage() {
     hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103]
     transition-transform duration-200 ease-out
     hover:-translate-y-2
+    cursor-pointer
   "
               >
                 Book Free Consultation →

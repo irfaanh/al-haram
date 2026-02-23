@@ -123,7 +123,7 @@ export default function Header() {
         {/* Action Button & Mobile Toggle */}
         <div className="flex items-center gap-4">
           <button
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >

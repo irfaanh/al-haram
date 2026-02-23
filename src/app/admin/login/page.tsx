@@ -72,7 +72,7 @@ export default function LoginPage() {
                     <button
                         type="submit"
                         disabled={isPending}
-                        className="group relative flex w-full justify-center rounded-lg bg-[#BE5103] px-3 py-2.5 text-sm font-semibold text-white hover:bg-[#BE5103]/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BE5103] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                        className="group relative flex w-full justify-center rounded-lg bg-[#BE5103] px-3 py-2.5 text-sm font-semibold text-white hover:bg-[#BE5103]/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BE5103] disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer"
                     >
                         {isPending ? (
                             <Loader2 className="animate-spin h-5 w-5 text-white" />

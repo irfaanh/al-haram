@@ -34,12 +34,6 @@ export default function LearnMorePage() {
           realities, challenges, and opportunities of today’s
           education-to-career journey.
         </p>
-
-        <p className="text-gray-400 leading-relaxed mb-10">
-          India’s Most Relevant Career Mentorship Platform + Next-Gen Future
-          Skills Career Academy
-        </p>
-
         <p className="text-gray-400 leading-relaxed mb-10">
           Empowering young minds aged 16–30 with clarity skills, confidence, and
           careers for the world of tomorrow.
@@ -47,6 +41,12 @@ export default function LearnMorePage() {
           Future-skills training • Global internship pathways • Industry-ready
           certifications
         </p>
+
+        <p className="text-gray-400 leading-relaxed mb-10">
+          India’s Most Relevant Career Mentorship Platform + Next-Gen Future
+          Skills Career Academy
+        </p>
+
 
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-[#BE5103]">
           Our Vision

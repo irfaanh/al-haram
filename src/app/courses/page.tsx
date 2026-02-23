@@ -184,7 +184,7 @@ export default async function CoursesPage() {
                   {/* View Program Button */}
                   <div className="mt-6">
                     <Link href={`/courses/${course.id}`}>
-                      <button className="px-8 py-3.5 rounded-full bg-[#BE5103] text-white text-sm md:text-base font-bold hover:bg-[#BE5103]/90 hover:shadow-[0_0_30px_rgba(190,81,3,0.4)] transition-all duration-300 hover:-translate-y-1.5 shadow-lg">
+                      <button className="px-8 py-3.5 rounded-full bg-[#BE5103] text-white text-sm md:text-base font-bold hover:bg-[#BE5103]/90 hover:shadow-[0_0_30px_rgba(190,81,3,0.4)] transition-all duration-300 hover:-translate-y-1.5 shadow-lg cursor-pointer">
                         View Program →
                       </button>
                     </Link>
@@ -227,7 +227,7 @@ export default async function CoursesPage() {
 
           <div className="mt-8 flex justify-center md:absolute md:bottom-10 md:right-10 md:mt-0">
             <Link href="/contact">
-              <button className="px-10 py-4 rounded-full bg-[#BE5103] text-white text-sm md:text-base font-bold hover:bg-[#BE5103]/90 hover:shadow-[0_0_40px_rgba(190,81,3,0.5)] transition-all duration-300 hover:-translate-y-2 shadow-2xl">
+              <button className="px-10 py-4 rounded-full bg-[#BE5103] text-white text-sm md:text-base font-bold hover:bg-[#BE5103]/90 hover:shadow-[0_0_40px_rgba(190,81,3,0.5)] transition-all duration-300 hover:-translate-y-2 shadow-2xl cursor-pointer">
                 Contact Our Team →
               </button>
             </Link>

@@ -80,7 +80,7 @@ text-white
 hover:bg-white/20 
 transition-all duration-300 
 hover:-translate-y-1 
-text-sm md:text-base font-medium shadow-lg -mt-5"
+text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             >
               Learn More
             </button>
@@ -367,7 +367,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5"
               {/* Arrow Button */}
               <div className="absolute bottom-6 right-6">
                 <Link href={`/courses/${course.id}`}>
-                  <button className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-[#BE5103] hover:scale-110 transition duration-300 shadow-lg">
+                  <button className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-[#BE5103] hover:scale-110 transition duration-300 shadow-lg cursor-pointer">
                     <ArrowUpRight size={18} className="md:size-[18px] size-4" />
                   </button>
                 </Link>
@@ -381,7 +381,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5"
             <button
               className="px-8 py-3 rounded-full border border-[#BE5103] text-[#BE5103] 
                  hover:bg-[#BE5103] hover:text-white
-                 transition-all duration-300 hover:-translate-y-2 font-medium"
+                 transition-all duration-300 hover:-translate-y-2 font-medium cursor-pointer"
             >
               View More →
             </button>

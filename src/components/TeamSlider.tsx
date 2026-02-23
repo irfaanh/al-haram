@@ -47,14 +47,14 @@ export default function TeamSlider() {
       <div className="md:hidden absolute top-[80px] left-0 right-0 z-20 flex justify-between items-center px-4 pointer-events-none">
         <button
           onClick={() => scroll("left")}
-          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/60 backdrop-blur-md text-white hover:bg-[#BE5103] hover:border-[#BE5103] transition-all pointer-events-auto shadow-2xl"
+          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/60 backdrop-blur-md text-white hover:bg-[#BE5103] hover:border-[#BE5103] transition-all pointer-events-auto shadow-2xl cursor-pointer"
           aria-label="Previous member"
         >
           <ChevronLeft size={20} />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/60 backdrop-blur-md text-white hover:bg-[#BE5103] hover:border-[#BE5103] transition-all pointer-events-auto shadow-2xl"
+          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/60 backdrop-blur-md text-white hover:bg-[#BE5103] hover:border-[#BE5103] transition-all pointer-events-auto shadow-2xl cursor-pointer"
           aria-label="Next member"
         >
           <ChevronRight size={20} />

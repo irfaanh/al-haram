@@ -67,7 +67,7 @@ export default function PartnersSlider() {
             <div className="flex md:hidden justify-center items-center mt-6">
                 <button
                     onClick={scrollRight}
-                    className="group flex flex-col items-center gap-2 text-[#BE5103] transition-all"
+                    className="group flex flex-col items-center gap-2 text-[#BE5103] transition-all cursor-pointer"
                     aria-label="Scroll partners"
                 >
                     <ArrowRight size={24} strokeWidth={2.5} className="animate-pulse" />
