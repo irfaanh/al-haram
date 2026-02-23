@@ -16,7 +16,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import TeamSlider from "@/components/TeamSlider";
-import PartnersSlider from "@/components/PartnersSlider";
+// import PartnersSlider from "@/components/PartnersSlider";
 
 interface Course {
   id: string;
@@ -630,7 +630,7 @@ hover:border-[#BE5103]"
       </section>
 
       {/* ================= TRUSTED PARTNERS ================= */}
-      <section className="py-12 md:py-20 px-6 bg-[#0f0f0f]">
+      {/* <section className="py-12 md:py-20 px-6 bg-[#0f0f0f]">
         <div className="max-w-6xl mx-auto text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-light">
             Our{" "}
@@ -647,7 +647,7 @@ hover:border-[#BE5103]"
         </div>
 
         <PartnersSlider />
-      </section>
+      </section> */}
 
       {/* ================= TESTIMONIALS ================= */}
       <section className="bg-black py-12 md:py-24 px-6 relative overflow-hidden">

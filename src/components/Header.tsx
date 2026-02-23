@@ -14,6 +14,7 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
+    { name: "Journalism", href: "/journalism" },
     { name: "About Us", href: "/about" },
     {
       name: "Courses",
@@ -24,7 +25,6 @@ export default function Header() {
         { name: "Global Hospitality & Retail (GHRT)", href: "/courses/ghrt" },
       ],
     },
-    { name: "Journalism", href: "/journalism" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
   ];
