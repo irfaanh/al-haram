@@ -266,10 +266,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-medium leading-tight text-center md:text-left mb-10">
             <span className="text-white">
-              Our custom approach <br /> ensures students{" "}
+              Our mentorship approach <br /> ensures students{" "}
             </span>
             <span className="text-[#BE5103] italic font-serif">
-              success abroad
+              gain career clarity
             </span>
           </h2>
 
@@ -280,18 +280,18 @@ export default function AboutPage() {
     hover:-translate-y-2"
             >
               <h3 className="text-lg font-semibold mb-3">
-                Study Abroad Counselling
+                Education Journalism
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Personalized counselling to help students choose the right
-                country, course, and university based on their academic profile
-                and future goals.
+                We investigate and expose the truth about industries, courses,
+                and career paths to provide students with unbiased,
+                actionable insights.
               </p>
 
               <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-500">
-                <span>Counselling</span>
+                <span>Awareness</span>
                 <span>•</span>
-                <span>Course Selection</span>
+                <span>Industry Truth</span>
               </div>
             </div>
 
@@ -299,7 +299,7 @@ export default function AboutPage() {
             <div className="relative rounded-2xl overflow-hidden border border-white/10 h-64 md:h-auto">
               <Image
                 src="/images/globe.jpg"
-                alt="Student counselling"
+                alt="Global mentorship"
                 width={500}
                 height={500}
                 className="object-cover w-full h-full"
@@ -311,16 +311,16 @@ export default function AboutPage() {
               className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#BE5103]  transition-transform duration-200 ease-out
     hover:-translate-y-2"
             >
-              <h3 className="text-lg font-semibold mb-3">End-to-End Support</h3>
+              <h3 className="text-lg font-semibold mb-3">Future-Skills Training</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                From applications and SOPs to visa filing and pre-departure
-                guidance — we handle the complete study abroad journey.
+                Bridging the employability gap by training youth in communication,
+                mindset, and practical skills required for global excellence.
               </p>
 
               <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-500">
-                <span>Applications</span>
+                <span>Skill Mastery</span>
                 <span>•</span>
-                <span>Visa Support</span>
+                <span>Employability</span>
               </div>
             </div>
           </div>
@@ -337,9 +337,9 @@ export default function AboutPage() {
           >
             <GraduationCap className="w-6 h-6 text-[#BE5103] mb-4" />
 
-            <h4 className="font-semibold mb-2">Expert Counselling</h4>
+            <h4 className="font-semibold mb-2">Expert Mentorship</h4>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Personalized guidance from experienced study abroad advisors.
+              Personalized guidance from experienced mentors across various industries.
             </p>
           </div>
 
@@ -350,9 +350,9 @@ export default function AboutPage() {
           >
             <Handshake className="w-6 h-6 text-[#BE5103] mb-4" />
 
-            <h4 className="font-semibold mb-2">Trusted Partnerships</h4>
+            <h4 className="font-semibold mb-2">Journalistic Integrity</h4>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Long-term student relationships built on transparency and trust.
+              Reliable career information built on research, transparency, and trust.
             </p>
           </div>
 
@@ -363,9 +363,9 @@ export default function AboutPage() {
           >
             <Zap className="w-6 h-6 text-[#BE5103] mb-4" />
 
-            <h4 className="font-semibold mb-2">Fast Processing</h4>
+            <h4 className="font-semibold mb-2">Skill Acceleration</h4>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Efficient applications, documentation, and visa assistance.
+              Fast-track your personal and professional growth with focused training.
             </p>
           </div>
 
@@ -376,10 +376,9 @@ export default function AboutPage() {
           >
             <BadgeCheck className="w-6 h-6 text-[#BE5103] mb-4" />
 
-            <h4 className="font-semibold mb-2">Free Consultation</h4>
+            <h4 className="font-semibold mb-2">Free Discovery Session</h4>
             <p className="text-sm text-gray-400 leading-relaxed">
-              No-obligation counselling to help students make informed
-              decisions.
+              Start your journey with a no-obligation call to discover your potential.
             </p>
           </div>
         </div>
@@ -390,9 +389,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="rounded-3xl bg-gradient-to-br from-[#BE5103] via-[#BE5103]/20 to-black p-8 md:p-16 flex flex-col items-center text-center">
             <h3 className="text-2xl md:text-4xl font-light max-w-2xl mb-6 text-center">
-              Get a reliable education partner that provides solutions to your{" "}
+              Partner with a reliable mentor who provides solutions for your{" "}
               <span className="text-[#BE5103] italic font-serif">
-                global study goals
+                career growth
               </span>
             </h3>
             <Link href="/contact">
@@ -406,7 +405,7 @@ export default function AboutPage() {
     cursor-pointer
   "
               >
-                Book Free Consultation →
+                Book Free Mentorship →
               </button>
             </Link>
           </div>
@@ -417,47 +416,45 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           {/* LEFT CONTENT */}
           <div>
-            <p className="text-gray-100 text-sm mb-4 font-semibold md:px-35">
-              WHY STUDENTS CHOOSE US
+            <p className="text-gray-100 text-sm mb-4 font-semibold">
+              WHY YOUTH CHOOSE US
             </p>
 
             <h2 className="text-3xl md:text-5xl font-light leading-tight mb-8">
               A guidance partner for your
               <span className="text-[#BE5103] italic font-serif">
                 {" "}
-                global education journey
+                professional journey
               </span>
             </h2>
 
             <p className="text-gray-400 max-w-xl leading-relaxed mb-10 text-sm md:text-base">
-              We don’t just process applications — we mentor students through
-              life-changing decisions. Our focus is long-term success,
-              transparent advice, and helping students confidently step into
-              international education environments.
+              We don’t just offer courses — we mentor youth through
+              life-changing career decisions. Our focus is long-term success,
+              unbiased journalism, and helping students confidently navigate the
+              global professional landscape.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
               <div
                 className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-2xl p-5 text-gray-400 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
+    hover:-translate-y-2 text-center"
               >
-                Ethical Counselling
+                Career Clarity
               </div>
 
               <div
                 className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-2xl p-5 text-gray-400 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
+    hover:-translate-y-2 text-center"
               >
-                {" "}
-                Global University Network
+                Unbiased Journalism
               </div>
 
               <div
                 className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-2xl p-5 text-gray-400 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
+    hover:-translate-y-2 text-center"
               >
-                {" "}
-                High Visa Success Rate
+                Global Exposure
               </div>
             </div>
           </div>
@@ -466,7 +463,7 @@ export default function AboutPage() {
           <div className="relative rounded-3xl overflow-hidden border border-white/10">
             <Image
               src="/images/graduation.jpg"
-              alt="Students succeeding abroad"
+              alt="Youth achieving success"
               width={600}
               height={600}
               className="object-cover"

@@ -34,13 +34,13 @@ export default function ContactPage() {
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-light mb-4 px-4 text-center">
           Let’s Start Your{" "}
           <span className="italic font-serif text-[#BE5103]">
-            Study Abroad Journey
+            Mentorship Journey
           </span>
         </h1>
         <p className="text-gray-400 max-w-2xl mx-auto text-center text-sm md:text-lg leading-relaxed px-4">
-          Connect with our expert advisors for personalised guidance on
-          university selection, applications, scholarships, and visa support.
-          Your global education journey begins with the right advice.
+          Connect with our expert mentors for personalised guidance on career
+          clarity, future-skills, and unbiased education journalism. Your professional
+          growth starts with the right mentorship.
         </p>
         <div className="max-w-7xl mx-auto py-12 md:py-20">
           {/* MAIN CARD */}
@@ -52,9 +52,9 @@ export default function ContactPage() {
               {/* ================= LEFT SIDE ================= */}
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
-                  Let’s Plan Your <br className="hidden md:block" />{" "}
+                  Plan Your <br className="hidden md:block" />{" "}
                   <span className="text-[#BE5103] italic font-serif">
-                    Global Education
+                    Future Career
                   </span>
                 </h1>
 
@@ -63,14 +63,14 @@ export default function ContactPage() {
                     <span className="bg-[#BE5103]/10 p-1.5 rounded-lg text-[#BE5103]">
                       <Check size={18} />
                     </span>
-                    <p>We will respond within 12 hours</p>
+                    <p>India's 1st Education Journalism Platform</p>
                   </div>
 
                   <div className="flex items-center gap-4 justify-center md:justify-start group">
                     <span className="bg-[#BE5103]/10 p-1.5 rounded-lg text-[#BE5103]">
                       <Check size={18} />
                     </span>
-                    <p>Access to dedicated consultants</p>
+                    <p>Access to dedicated career mentors</p>
                   </div>
                 </div>
 
@@ -79,7 +79,7 @@ export default function ContactPage() {
                     hello@momentor.in
                   </a>
                   <p className="text-xs uppercase tracking-widest">
-                    Want to book a quick call instead?
+                    Want to book a quick mentorship call?
                   </p>
                 </div>
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
     inline-block
   "
                 >
-                  Book a Free Call Now
+                  Book a Free Session Now
                 </a>
               </div>
 
@@ -141,7 +141,7 @@ export default function ContactPage() {
 
                 <div className="relative group">
                   <textarea
-                    placeholder="Your study preferences*"
+                    placeholder="Tell us about your career goals*"
                     rows={4}
                     className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600 resize-none"
                   />
@@ -165,7 +165,7 @@ export default function ContactPage() {
     cursor-pointer
   "
                 >
-                  Submit Your Enquiry
+                  Get Mentorship Guidance
                 </button>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-white">Call Us</h3>
             <p className="text-gray-400 text-sm">
-              Speak directly with our study abroad advisors.
+              Speak directly with our career mentorship team.
             </p>
             <a href="tel:+919876543210" className="text-[#BE5103] font-medium mt-4 block hover:underline">+91 98765 43210</a>
           </div>
@@ -200,7 +200,7 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-semibold mb-3 text-white">Email Us</h3>
             <p className="text-gray-400 text-sm">
-              Send your queries and we’ll respond quickly.
+              Send us your career queries or journalism tips.
             </p>
             <a href="mailto:hello@momentor.in" className="text-[#BE5103] font-medium mt-4 block hover:underline">
               hello@momentor.in
@@ -219,7 +219,7 @@ export default function ContactPage() {
               Visit Our Office
             </h3>
             <p className="text-gray-400 text-sm">
-              Meet our experts for personalised counselling.
+              Meet our mentors for personalised career sessions.
             </p>
             <a
               href="https://google.com/maps/place/HiLITE+Mall/data=!4m2!3m1!1s0x0:0xc17c381f72b87e02?sa=X&ved=1t:2428&ictx=111"
