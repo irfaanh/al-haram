@@ -11,6 +11,7 @@ export default function Header() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+  const [isMobileSubOpen, setIsMobileSubOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -22,7 +23,7 @@ export default function Header() {
       subItems: [
         { name: "Global Student Readiness (GSRP)", href: "/courses/gsrp" },
         { name: "Global Career Readiness (GCRP)", href: "/courses/gcrp" },
-        { name: "Global Hospitality & Retail Readiness (GHRR)", href: "/courses/ghrt" },
+        { name: "Global Hospitality & Readiness Training (GHRT)", href: "/courses/ghrt" },
       ],
     },
     { name: "Gallery", href: "/gallery" },
@@ -142,7 +143,7 @@ export default function Header() {
 
               return (
                 <div key={item.name} className="flex flex-col gap-2">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
                     <Link
                       href={item.href}
                       onClick={() => !hasSubItems && setIsOpen(false)}
@@ -153,9 +154,17 @@ export default function Header() {
                     >
                       {item.name}
                     </Link>
+                    {hasSubItems && (
+                      <button
+                        onClick={() => setIsMobileSubOpen(!isMobileSubOpen)}
+                        className="p-4 rounded-2xl bg-white/5 text-gray-300"
+                      >
+                        <ChevronDown size={24} className={`transition-transform duration-300 ${isMobileSubOpen ? "rotate-180" : ""}`} />
+                      </button>
+                    )}
                   </div>
 
-                  {hasSubItems && (
+                  {hasSubItems && isMobileSubOpen && (
                     <div className="grid grid-cols-1 gap-2 mt-1 px-2 border-l-2 border-[#BE5103]/20 ml-6 animate-in fade-in slide-in-from-left-2 duration-300">
                       {item.subItems?.map((sub) => (
                         <Link

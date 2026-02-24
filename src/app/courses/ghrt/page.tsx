@@ -25,9 +25,9 @@ export default function GHRTPage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-            Global Hospitality & Retail <br />
+            Global Hospitality & <br />
             <span className="italic font-serif text-[#BE5103] font-normal">
-              Readiness (GHRR)
+              Readiness Training (GHRT)
             </span>
           </h1>
         </div>
@@ -36,7 +36,7 @@ export default function GHRTPage() {
       {/* CONTENT */}
       <section className="py-20 md:py-28 px-6 max-w-5xl mx-auto">
         <p className="text-gray-400 leading-relaxed mb-16 text-center text-sm md:text-lg max-w-3xl mx-auto font-medium md:font-normal">
-          The Global Hospitality & Retail Readiness (GHRR) program is designed to
+          The Global Hospitality & Readiness Training (GHRT) program is designed to
           prepare participants for international careers in hospitality, retail,
           and customer-focused industries by developing professional service
           skills, communication confidence, and workplace readiness. The program

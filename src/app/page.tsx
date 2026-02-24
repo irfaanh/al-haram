@@ -46,7 +46,7 @@ export default async function Home() {
     },
     {
       id: "ghrt",
-      title: "Global Hospitality & Retail Readiness (GHRR)",
+      title: "Global Hospitality & Readiness Training (GHRT)",
       description:
         "Gain practical skills, service confidence, and international exposure to thrive in global hospitality, retail, and customer-focused industries.",
       image: "/images/studentss.jpg",

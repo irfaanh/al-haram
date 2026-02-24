@@ -66,7 +66,7 @@ export default async function CoursesPage() {
     },
     {
       id: "ghrt",
-      title: "Global Hospitality & Retail Readiness (GHRR)",
+      title: "Global Hospitality & Readiness Training (GHRT)",
       description:
         "Develop industry-ready skills for international hospitality and retail careers through professional communication, customer service excellence, sales training, and real-world global workplace exposure.",
       image: "/images/homee.jpg",
@@ -129,7 +129,7 @@ export default async function CoursesPage() {
         </h2>
 
         <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed text-sm md:text-lg px-6">
-          Our specialized courses — GSRP, GCRP, and GHRR — are designed to
+          Our specialized courses — GSRP, GCRP, and GHRT — are designed to
           equip students with academic discipline, professional competence, and
           global workplace skills for international success.
         </p>
