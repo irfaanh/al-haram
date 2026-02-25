@@ -19,9 +19,12 @@ export default function AboutPage() {
       {/* ================= HERO BANNER ================= */}
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 md:px-0 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/teams.jpg')" }}
+        <Image
+          src="/images/team-about.webp"
+          alt="About Momentor"
+          fill
+          priority
+          className="object-cover object-center"
         />
 
         {/* Dark Overlay (same intensity as reference) */}
@@ -49,7 +52,8 @@ export default function AboutPage() {
         </h1>
 
         <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed px-6">
-          India's first education journalism and mentorship platform, bridging the gap between student potential and global excellence.
+          India's first education journalism and mentorship platform, bridging
+          the gap between student potential and global excellence.
         </p>
         <Link href="/courses">
           <button
@@ -72,7 +76,7 @@ export default function AboutPage() {
       <section className="flex justify-center px-6 hover">
         <div className="relative w-full max-w-5xl rounded-3xl overflow-hidden">
           <Image
-            src="/images/teams.jpg"
+            src="/images/team-about.webp"
             alt="Team"
             width={1200}
             height={600}
@@ -126,9 +130,11 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Image Side */}
             <div className="md:order-last px-2 md:px-0">
-              <img
-                src="/images/missionn.jpg"
+              <Image
+                src="/images/mission.webp"
                 alt="Vision"
+                width={800}
+                height={600}
                 className="rounded-3xl w-full aspect-[4/3] md:aspect-auto object-cover border border-white/5"
               />
             </div>
@@ -154,19 +160,28 @@ export default function AboutPage() {
                   <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
                     <CircleCheck size={18} />
                   </span>
-                  <span className="max-w-md">Provide clarity and direction by telling the truth about careers and industries.</span>
+                  <span className="max-w-md">
+                    Provide clarity and direction by telling the truth about
+                    careers and industries.
+                  </span>
                 </li>
                 <li className="flex items-start gap-4 text-gray-300 group">
                   <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
                     <CircleCheck size={18} />
                   </span>
-                  <span className="max-w-md">Equip youth with future skills that make them confident and employable.</span>
+                  <span className="max-w-md">
+                    Equip youth with future skills that make them confident and
+                    employable.
+                  </span>
                 </li>
                 <li className="flex items-start gap-4 text-gray-300 group">
                   <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
                     <CircleCheck size={18} />
                   </span>
-                  <span className="max-w-md">Create pathways for global exposure, mentorship, and real opportunities.</span>
+                  <span className="max-w-md">
+                    Create pathways for global exposure, mentorship, and real
+                    opportunities.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -176,9 +191,11 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Image Side */}
             <div className="order-first">
-              <img
-                src="/images/teams.jpg"
+              <Image
+                src="/images/team-about.webp"
                 alt="Mission"
+                width={800}
+                height={600}
                 className="rounded-3xl w-full object-cover"
               />
             </div>
@@ -289,8 +306,8 @@ export default function AboutPage() {
               </h3>
               <p className="text-sm text-gray-400 leading-relaxed">
                 We investigate and expose the truth about industries, courses,
-                and career paths to provide students with unbiased,
-                actionable insights.
+                and career paths to provide students with unbiased, actionable
+                insights.
               </p>
 
               <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-500">
@@ -301,13 +318,12 @@ export default function AboutPage() {
             </div>
 
             {/* CENTER IMAGE CARD */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 h-64 md:h-auto">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 aspect-[4/5]">
               <Image
-                src="/images/globe.jpg"
+                src="/images/globe.webp"
                 alt="Global mentorship"
-                width={500}
-                height={500}
-                className="object-cover w-full h-full"
+                fill
+                className="object-cover"
               />
             </div>
 
@@ -316,10 +332,13 @@ export default function AboutPage() {
               className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#BE5103]  transition-transform duration-200 ease-out
     hover:-translate-y-2"
             >
-              <h3 className="text-lg font-semibold mb-3">Future-Skills Training</h3>
+              <h3 className="text-lg font-semibold mb-3">
+                Future-Skills Training
+              </h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Bridging the employability gap by training youth in communication,
-                mindset, and practical skills required for global excellence.
+                Bridging the employability gap by training youth in
+                communication, mindset, and practical skills required for global
+                excellence.
               </p>
 
               <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-500">
@@ -344,7 +363,8 @@ export default function AboutPage() {
 
             <h4 className="font-semibold mb-2">Expert Mentorship</h4>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Personalized guidance from experienced mentors across various industries.
+              Personalized guidance from experienced mentors across various
+              industries.
             </p>
           </div>
 
@@ -357,7 +377,8 @@ export default function AboutPage() {
 
             <h4 className="font-semibold mb-2">Journalistic Integrity</h4>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Reliable career information built on research, transparency, and trust.
+              Reliable career information built on research, transparency, and
+              trust.
             </p>
           </div>
 
@@ -370,7 +391,8 @@ export default function AboutPage() {
 
             <h4 className="font-semibold mb-2">Skill Acceleration</h4>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Fast-track your personal and professional growth with focused training.
+              Fast-track your personal and professional growth with focused
+              training.
             </p>
           </div>
 
@@ -383,7 +405,8 @@ export default function AboutPage() {
 
             <h4 className="font-semibold mb-2">Free Discovery Session</h4>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Start your journey with a no-obligation call to discover your potential.
+              Start your journey with a no-obligation call to discover your
+              potential.
             </p>
           </div>
         </div>
@@ -465,12 +488,11 @@ export default function AboutPage() {
           </div>
 
           {/* RIGHT IMAGE / VISUAL */}
-          <div className="relative rounded-3xl overflow-hidden border border-white/10">
+          <div className="relative rounded-3xl overflow-hidden border border-white/10 aspect-square">
             <Image
-              src="/images/graduation.jpg"
+              src="/images/graduation.webp"
               alt="Youth achieving success"
-              width={600}
-              height={600}
+              fill
               className="object-cover"
             />
           </div>

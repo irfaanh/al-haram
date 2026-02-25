@@ -11,63 +11,63 @@ export const metadata: Metadata = {
 const staticGallery = [
   {
     id: "1",
-    image: "/images/graduation.jpg",
+    image: "/images/graduation.webp",
     title: "Global Success Stories",
     category: "Milestones",
     description: "Celebrating our students who have successfully transitioned to global careers."
   },
   {
     id: "2",
-    image: "/images/visa1.jpg",
+    image: "/images/visa-milestone.webp",
     title: "Visa Approval Milestones",
     category: "Visa Success",
     description: "Consistent success in securing student visas for various international destinations."
   },
   {
     id: "3",
-    image: "/images/europe.jpg",
+    image: "/images/europe.webp",
     title: "European University Partnerships",
     category: "Partnerships",
     description: "Direct ties with prestigious academic institutions across Europe."
   },
   {
     id: "4",
-    image: "/images/counseling.jpg",
+    image: "/images/counseling.webp",
     title: "Academic Mentorship",
     category: "Journeys",
     description: "Guidance sessions helping students navigate their academic path abroad."
   },
   {
     id: "5",
-    image: "/images/students.jpg",
+    image: "/images/students-orientation.webp",
     title: "International Orientation",
     category: "Journeys",
     description: "Preparing students for the cultural and academic shift of studying abroad."
   },
   {
     id: "6",
-    image: "/images/admission.jpg",
+    image: "/images/admission.webp",
     title: "University Admission Support",
     category: "Partnerships",
     description: "Simplifying the application process for global university admissions."
   },
   {
     id: "7",
-    image: "/images/support.jpg",
+    image: "/images/student-support.webp",
     title: "Comprehensive Student Readiness",
     category: "Journeys",
     description: "Full-scale preparation for future-ready skills and global opportunities."
   },
   {
     id: "8",
-    image: "/images/teams.jpg",
+    image: "/images/team-about.webp",
     title: "Global Expert Panel",
     category: "Partnerships",
     description: "Collaboration with international educators to enhance student outcomes."
   },
   {
     id: "9",
-    image: "/images/about.jpg",
+    image: "/images/about-hero.webp",
     title: "Educational Excellence Framework",
     category: "Milestones",
     description: "Our structured approach to future-skills and mentorship platform."
@@ -82,9 +82,12 @@ export default function GalleryPage() {
       {/* ================= HERO BANNER ================= */}
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0 overflow-hidden">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-bottom"
-          style={{ backgroundImage: "url('/images/placement.jpg')" }}
+        <Image
+          src="/images/placement-hero.webp"
+          alt="Gallery Landmarks"
+          fill
+          priority
+          className="object-cover object-bottom"
         />
 
         {/* Dark Overlay (same intensity as reference) */}

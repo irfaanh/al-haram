@@ -75,9 +75,12 @@ export default function JournalismPage() {
       {/* ================= HERO BANNER ================= */}
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 md:px-0 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/teams.jpg')" }}
+        <Image
+          src="/images/team-about.webp"
+          alt="Education Journalism"
+          fill
+          priority
+          className="object-cover object-center"
         />
 
         {/* Dark Overlay (same intensity as reference) */}
@@ -272,7 +275,7 @@ export default function JournalismPage() {
 
             <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
               <Image
-                src="/images/graduation.jpg"
+                src="/images/graduation.webp"
                 alt="Journalism Style"
                 fill
                 className="object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"

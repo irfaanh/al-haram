@@ -35,21 +35,21 @@ export default async function Home() {
       title: "Global Career Readiness Program (GCRP)",
       description:
         "Transform into a globally employable professional through structured career skill training and paid international internship exposure with expert mentor guidance.",
-      image: "/images/graduation.jpg",
+      image: "/images/graduation.webp",
     },
     {
       id: "gsrp",
       title: "Global Student Readiness Program (GSRP)",
       description:
         "Prepare for international education with civic discipline, cultural adaptation, and real-world global behavior training to confidently live and succeed abroad.",
-      image: "/images/placement.jpg",
+      image: "/images/placement-hero.webp",
     },
     {
       id: "ghrt",
-      title: "Global Hospitality & Readiness Training (GHRT)",
+      title: "Global Hospitality & Retail Training (GHRT)",
       description:
         "Gain practical skills, service confidence, and international exposure to thrive in global hospitality, retail, and customer-focused industries.",
-      image: "/images/studentss.jpg",
+      image: "/images/students-hospitality.webp",
     },
   ];
 
@@ -57,9 +57,12 @@ export default async function Home() {
     <main className="bg-black text-white">
       {/* ================= HERO ================= */}
       <section className="relative min-h-[75vh] md:min-h-[85vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-55"
-          style={{ backgroundImage: "url('/images/homee.jpg')" }}
+        <Image
+          src="/images/home-hero.webp"
+          alt="Momentor Home"
+          fill
+          priority
+          className="object-cover object-center opacity-55"
         />
 
         <div className="absolute inset-0 bg-black/30" />
@@ -126,7 +129,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
           <div className="hidden md:block relative group order-2 md:order-1 px-4 md:px-0">
             <div className="relative h-[300px] sm:h-[400px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#BE5103]/30 transition-all duration-700 shadow-2xl">
               <Image
-                src="/images/europe.jpg"
+                src="/images/europe.webp"
                 alt="Education Journalism"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
@@ -272,7 +275,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-0">
               <div className="relative h-80 sm:h-96 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden md:translate-y-12 shadow-2xl">
                 <Image
-                  src="/images/graduation.jpg"
+                  src="/images/graduation.webp"
                   alt="Student"
                   fill
                   className="object-cover"
@@ -280,7 +283,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
               </div>
               <div className="hidden md:block relative h-48 sm:h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/counseling.jpg"
+                  src="/images/counseling.webp"
                   alt="Counseling"
                   fill
                   className="object-cover"
