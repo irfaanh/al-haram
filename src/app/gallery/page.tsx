@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Gallery",
-  description: "A visual chronicle of global student journeys, success stories, and university milestones at MOMENTOR.",
+  description: "A visual chronicle of global student journeys, success stories, and career milestones at MOMENTOR.",
 };
 
 const staticGallery = [
@@ -19,37 +19,37 @@ const staticGallery = [
   {
     id: "2",
     image: "/images/visa-milestone.webp",
-    title: "Visa Approval Milestones",
-    category: "Visa Success",
-    description: "Consistent success in securing student visas for various international destinations."
+    title: "Skill Mastery Workshops",
+    category: "Mentorship",
+    description: "Hands-on training sessions focusing on communication, leadership, and technical excellence."
   },
   {
     id: "3",
     image: "/images/europe.webp",
-    title: "European University Partnerships",
-    category: "Partnerships",
-    description: "Direct ties with prestigious academic institutions across Europe."
+    title: "Industry Expert Sessions",
+    category: "Insights",
+    description: "Interactive sessions with professionals from top global industries sharing real-world knowledge."
   },
   {
     id: "4",
     image: "/images/counseling.webp",
-    title: "Academic Mentorship",
-    category: "Journeys",
-    description: "Guidance sessions helping students navigate their academic path abroad."
+    title: "Career Clarity sessions",
+    category: "Mentorship",
+    description: "One-on-one guidance helping students discover their true professional calling."
   },
   {
     id: "5",
     image: "/images/students-orientation.webp",
-    title: "International Orientation",
-    category: "Journeys",
-    description: "Preparing students for the cultural and academic shift of studying abroad."
+    title: "Global Mindset Orientation",
+    category: "Readiness",
+    description: "Equipping youth with the cultural intelligence and etiquette needed for global workplaces."
   },
   {
     id: "6",
     image: "/images/admission.webp",
-    title: "University Admission Support",
-    category: "Partnerships",
-    description: "Simplifying the application process for global university admissions."
+    title: "Future-Skills Certification",
+    category: "Milestones",
+    description: "Recognizing the achievement of students who have completed our intensive readiness programs."
   },
   {
     id: "7",
@@ -116,7 +116,7 @@ export default function GalleryPage() {
         </h2>
 
         <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed px-6">
-          A visual chronicle of global student journeys, success stories, and university milestones.
+          A visual chronicle of global student journeys, success stories, and professional milestones.
         </p>
       </section>
 

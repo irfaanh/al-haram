@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const teamMembers = [
   {
     name: "Dr. Sarah Mitchell",
-    role: "Head of International Admissions",
+    role: "Head of Career Mentorship",
     image: "/images/member.jpg",
   },
   {
@@ -22,7 +22,7 @@ const teamMembers = [
   },
   {
     name: "Michael Ross",
-    role: "Visa & Immigration Specialist",
+    role: "Global Employment Advisor",
     image: "/images/member1.jpg",
   },
 ];

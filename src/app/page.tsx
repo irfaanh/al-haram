@@ -41,7 +41,7 @@ export default async function Home() {
       id: "gsrp",
       title: "Global Student Readiness Program (GSRP)",
       description:
-        "Prepare for international education with civic discipline, cultural adaptation, and real-world global behavior training to confidently live and succeed abroad.",
+        "Prepare for the professional world with civic discipline, cultural intelligence, and real-world global behavior training to confidently succeed in any environment.",
       image: "/images/placement-hero.webp",
     },
     {
@@ -232,16 +232,16 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-light mb-6 md:mb-8 text-center md:text-left">
               A Trusted Partner in{" "}
               <span className="italic font-serif text-[#BE5103]">
-                International Education
+                Professional Excellence
               </span>
             </h2>
 
             {/* CONTENT */}
             <div className="text-left text-sm md:text-base space-y-4 text-gray-300">
               <p>
-                We are a dedicated study abroad consultancy committed to helping
+                We are a dedicated mentorship and career consultancy committed to helping
                 ambitious students access world-class education opportunities.
-                From university selection to visa approval, we provide
+                From career discovery to professional placement, we provide
                 structured, transparent, and personalized guidance at every step
                 of the journey.
               </p>
@@ -261,11 +261,11 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
               </p>
 
               <p>
-                With strong university partnerships and a student-first
-                approach, we don’t just help you study abroad —
+                With strong industry partnerships and a student-first
+                approach, we don’t just help you find a path —
                 <span className="text-[#B08D55] font-medium">
                   {" "}
-                  we prepare you to succeed abroad.
+                  we prepare you to succeed globally.
                 </span>
               </p>
             </div>
@@ -672,9 +672,9 @@ hover:border-[#BE5103]"
               </div>
 
               <p className="text-gray-400 text-base leading-relaxed italic">
-                "Momentor guided me through university selection, SOP writing,
-                and visa processing smoothly. Their support made my dream of
-                studying abroad a reality."
+                "Momentor guided me through career selection, skill building,
+                and professional development smoothly. Their support made my dream of
+                a global career a reality."
               </p>
 
               <div className="mt-8 flex items-center gap-1 text-[#BE5103]">
@@ -703,9 +703,9 @@ hover:border-[#BE5103]"
               </div>
 
               <p className="text-gray-400 text-base leading-relaxed italic">
-                "From counselling to visa approval, everything was transparent
-                and well-organised. I highly recommend Momentor to students
-                planning to study abroad."
+                "From counselling to career readiness, everything was transparent
+                and well-organised. I highly recommend Momentor to anyone
+                planning their professional future."
               </p>
 
               <div className="mt-8 flex items-center gap-1 text-[#BE5103]">
@@ -732,24 +732,24 @@ hover:border-[#BE5103]"
           <div className="space-y-4">
             {[
               {
-                q: "How do I choose the right university?",
-                a: "We evaluate your academic background, career goals, budget, and preferred destination to shortlist universities that best match your profile and long-term ambitions.",
+                q: "What is Education Journalism?",
+                a: "It's our unique approach to career guidance. We investigate and expose the realities of various industries and courses, providing you with unbiased information to make informed decisions.",
               },
               {
-                q: "Do you assist with visa processing?",
-                a: "Yes. We provide complete visa guidance including documentation review, financial preparation, mock interviews, and submission support to maximise approval chances.",
+                q: "How does the mentorship program work?",
+                a: "We work one-on-one with you to understand your strengths and goals, then provide a structured roadmap including skill training and industry exposure to ensure you're ready for the professional world.",
               },
               {
-                q: "Can you help with scholarships?",
-                a: "Absolutely. We identify scholarship opportunities, assist with applications, and help you prepare strong supporting documents to improve your chances of receiving funding.",
+                q: "What are Future-Skills?",
+                a: "These are the competencies required in the modern workplace, including AI literacy, professional etiquette, emotional intelligence, and cross-cultural communication.",
               },
               {
-                q: "What is the application process timeline?",
-                a: "The process usually takes 3–6 months depending on intake and country. We guide you step-by-step from university selection to offer letter and visa approval.",
+                q: "Who can benefit from Momentor?",
+                a: "Any young professional or student (typically ages 18-30) looking for clarity in their career, seeking to upgrade their professional skills, or wanting global career exposure.",
               },
               {
-                q: "Do you provide post-arrival support?",
-                a: "Yes, we assist with accommodation guidance, pre-departure briefings, and important information to help you settle comfortably in your new country.",
+                q: "Do you offer internship opportunities?",
+                a: "Yes, our GCRP program includes exposure to international internship opportunities, providing real-world experience in global business hubs.",
               },
             ].map((item, i) => (
               <details

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Future Skills Training",
     "Global Internship Gateway",
     "Career Mentorship",
-    "Study Abroad Consultancy",
+    "Career & Future-Skills Mentorship",
     "Global Career Readiness",
     "Youth Mentorship Ecosystem",
   ],

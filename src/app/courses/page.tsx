@@ -16,13 +16,13 @@ export default async function CoursesPage() {
       id: "gsrp",
       title: "Global Student Readiness Program (GSRP)",
       description:
-        "Designed to equip students with academic discipline, ethical global standards, and cultural adaptability for international education.",
+        "Designed to equip students with professional discipline, ethical global standards, and adaptability for global careers.",
       image: "/images/graduation.webp",
       modules: [
         {
           title: "Academic Integrity & Standards",
           description:
-            "Understanding plagiarism, citations, and global academic expectations.",
+            "Understanding ethical standards and global industry expectations.",
         },
         {
           title: "Cultural Intelligence & Adaptation",
@@ -32,12 +32,12 @@ export default async function CoursesPage() {
         {
           title: "Time Management & Self-Discipline",
           description:
-            "Structuring study schedules and balancing academic life abroad.",
+            "Structuring schedules and balancing life in a professional environment.",
         },
         {
           title: "Effective Communication",
           description:
-            "Developing cross-cultural communication skills for academic success.",
+            "Developing cross-cultural communication skills for professional success.",
         },
       ],
     },
@@ -139,7 +139,7 @@ export default async function CoursesPage() {
 
         <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed text-sm md:text-lg px-6">
           Our specialized courses — GSRP, GCRP, and GHRT — are designed to
-          equip students with academic discipline, professional competence, and
+          equip youth with professional competence and
           global workplace skills for international success.
         </p>
       </section>
@@ -227,7 +227,7 @@ export default async function CoursesPage() {
             <h3 className="text-2xl md:text-4xl font-light max-w-2xl text-center">
               Ready to take the next step toward{" "}
               <span className="italic font-serif text-[#BE5103]">
-                international success?
+                professional success?
               </span>
               <br />
               Let’s plan your global journey together.
