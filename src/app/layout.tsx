@@ -28,6 +28,10 @@ export const metadata: Metadata = {
   authors: [{ name: "MOMENTOR" }],
   creator: "MOMENTOR",
   publisher: "MOMENTOR",
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   formatDetection: {
     email: false,
     address: false,
