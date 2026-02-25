@@ -2,6 +2,7 @@
 
 import { Check, Mail, Phone, MapPin } from "lucide-react";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function ContactPage() {
   return (
@@ -9,9 +10,12 @@ export default function ContactPage() {
       {/* ================= HERO BANNER ================= */}
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/contact.jpg')" }}
+        <Image
+          src="/images/contact-hero.webp"
+          alt="Contact Momentor"
+          fill
+          priority
+          className="object-cover object-center"
         />
 
         {/* Dark Overlay (same intensity as reference) */}

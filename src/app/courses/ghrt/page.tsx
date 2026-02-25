@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "GHRT - Global Hospitality & Readiness Training",
@@ -14,9 +15,12 @@ export default function GHRTPage() {
       {/* ================= HERO BANNER ================= */}
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 md:px-0 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{ backgroundImage: "url('/images/studentss.jpg')" }}
+        <Image
+          src="/images/students-hospitality.webp"
+          alt="GHRT Course"
+          fill
+          priority
+          className="object-cover object-center"
         />
 
         {/* Dark Overlay */}

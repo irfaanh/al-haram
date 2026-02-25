@@ -17,7 +17,7 @@ export default async function CoursesPage() {
       title: "Global Student Readiness Program (GSRP)",
       description:
         "Designed to equip students with academic discipline, ethical global standards, and cultural adaptability for international education.",
-      image: "/images/graduation.jpg",
+      image: "/images/graduation.webp",
       modules: [
         {
           title: "Academic Integrity & Standards",
@@ -46,7 +46,7 @@ export default async function CoursesPage() {
       title: "Global Career Readiness Program (GCRP)",
       description:
         "Focused on professional competence, resume building, and long-term career success in the global job market.",
-      image: "/images/placement.jpg",
+      image: "/images/placement-hero.webp",
       modules: [
         {
           title: "Global Resume & Cover Letter Building",
@@ -75,7 +75,7 @@ export default async function CoursesPage() {
       title: "Global Hospitality & Readiness Training (GHRT)",
       description:
         "Develop industry-ready skills for international hospitality and retail careers through professional communication, customer service excellence, sales training, and real-world global workplace exposure.",
-      image: "/images/homee.jpg",
+      image: "/images/home-hero.webp",
       modules: [
         {
           title: "Customer Service Excellence",
@@ -105,9 +105,12 @@ export default async function CoursesPage() {
     <main className="bg-black text-white px-0">
       {/* ================= HERO BANNER ================= */}
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 py-16 md:py-0 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-top"
-          style={{ backgroundImage: "url('/images/about.jpg')" }}
+        <Image
+          src="/images/about-hero.webp"
+          alt="Our Courses"
+          fill
+          priority
+          className="object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/65" />
 
