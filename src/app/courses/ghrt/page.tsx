@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "GHRT - Global Hospitality & Readiness Training",
+  description: "The Global Hospitality & Readiness Training (GHRT) program prepares participants for international careers in hospitality, retail, and customer-focused industries.",
+};
 
 export default function GHRTPage() {
   return (

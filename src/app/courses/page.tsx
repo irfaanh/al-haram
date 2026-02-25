@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Our Courses",
+  description: "Explore our specialized courses: Global Student Readiness Program (GSRP), Global Career Readiness Program (GCRP), and Global Hospitality & Readiness Training (GHRT).",
+};
 
 export const dynamic = "force-dynamic";
 

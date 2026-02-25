@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
-import { GraduationCap, Handshake, Zap, BadgeCheck } from "lucide-react";
+import { GraduationCap, Handshake, Zap, BadgeCheck, CircleCheck } from "lucide-react";
 import Footer from "@/components/Footer";
-import { CircleCheck } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about MOMENTOR, India's first education journalism and mentorship platform. Shaping global futures through clarity, mindset, and future-ready skills.",
+};
 
 export default function AboutPage() {
   return (

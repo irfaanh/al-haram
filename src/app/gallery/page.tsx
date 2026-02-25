@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Gallery",
+  description: "A visual chronicle of global student journeys, success stories, and university milestones at MOMENTOR.",
+};
 
 const staticGallery = [
   {

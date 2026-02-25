@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "GSRP - Global Student Readiness Program",
+  description: "The Global Student Readiness Program (GSRP) strengthens interpersonal and professional skills for academic, career, and personal success.",
+};
 
 export default function GSRPPage() {
   return (

@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import { CircleCheck } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Learn More",
+  description: "Discover the three pillars of MOMENTOR: Education Journalism, Expert Mentorship, and Strategic Career Guidance. Unlock your future with our vision and mission.",
+};
 
 export default function LearnMorePage() {
   return (

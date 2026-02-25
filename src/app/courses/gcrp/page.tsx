@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "GCRP - Global Career Readiness Program",
+  description: "The Global Career Readiness Program (GCRP) prepares students for international career opportunities with essential workplace skills and communication confidence.",
+};
 
 export default function GCRPPage() {
   return (
