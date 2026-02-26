@@ -295,7 +295,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
               <div className="flex -space-x-3">
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-300 relative">
                   <Image
-                    src="/images/member.jpg"
+                    src="/images/students.jpg"
                     fill
                     className="object-cover"
                     alt="User"
@@ -303,7 +303,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                 </div>
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-300 relative">
                   <Image
-                    src="/images/member1.jpg"
+                    src="/images/studentss.jpg"
                     fill
                     className="object-cover"
                     alt="User"
