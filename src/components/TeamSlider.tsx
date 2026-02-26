@@ -6,24 +6,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Dr. Sarah Mitchell",
-    role: "Head of Career Mentorship",
-    image: "/images/member.jpg",
+    name: "Ms. Mehnaz",
+    role: "Communication Trainer, Speech Therapist, Audiologist, and Founder of KNACK",
+    image: "/images/member1.jpeg",
   },
   {
-    name: "James Anderson",
-    role: "Senior Career Consultant",
-    image: "/images/member1.jpg",
-  },
-  {
-    name: "Emily Chen",
-    role: "Student Success Manager",
-    image: "/images/member.jpg",
-  },
-  {
-    name: "Michael Ross",
-    role: "Global Employment Advisor",
-    image: "/images/member1.jpg",
+    name: "Chayanika Indira",
+    role: "Public Speaking and Communication Skills Trainer",
+    image: "/images/member.jpeg",
   },
 ];
 
