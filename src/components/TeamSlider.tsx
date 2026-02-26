@@ -51,16 +51,15 @@ export default function TeamSlider() {
         </button>
       </div>
 
-      {/* Slider Container */}
       <div
         ref={scrollRef}
-        className="flex md:grid md:grid-cols-4 gap-8 overflow-x-auto md:overflow-visible pb-16 md:pb-0 snap-x snap-mandatory scrollbar-hide px-4 md:px-0"
+        className="flex md:flex-row md:justify-center md:flex-wrap gap-8 overflow-x-auto md:overflow-visible pb-16 md:pb-0 snap-x snap-mandatory scrollbar-hide px-4 md:px-0"
         style={{ scrollBehavior: "smooth" }}
       >
         {teamMembers.map((member, i) => (
           <div
             key={i}
-            className="group text-center min-w-full sm:min-w-[280px] md:min-w-0 snap-center shrink-0"
+            className="group text-center min-w-full sm:min-w-[280px] md:min-w-[250px] md:max-w-[280px] snap-center shrink-0"
           >
             <div
               className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden 
