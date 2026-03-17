@@ -6,14 +6,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Ms. Mehnaz",
-    role: "Communication Trainer, Speech Therapist, Audiologist, and Founder of KNACK",
-    image: "/images/member1.jpeg",
+    name: "Mr. Muhammad Shafeeq",
+    role: "Communication Trainer and Speech Therapist",
+    image: "/images/shafeeq.jpg",
   },
   {
-    name: "Chayanika Indira",
-    role: "Public Speaking and Communication Skills Trainer",
-    image: "/images/member.jpeg",
+    name: "Mr. Twahir",
+    role: "Skills Trainer",
+    image: "/images/twahir.jpg",
   },
 ];
 
@@ -37,14 +37,14 @@ export default function TeamSlider() {
       <div className="md:hidden absolute top-[80px] left-0 right-0 z-20 flex justify-between items-center px-4 pointer-events-none">
         <button
           onClick={() => scroll("left")}
-          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/60 backdrop-blur-md text-white hover:bg-[#BE5103] hover:border-[#BE5103] transition-all pointer-events-auto shadow-2xl cursor-pointer"
+          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/60 backdrop-blur-md text-white hover:bg-[#33744D] hover:border-[#33744D] transition-all pointer-events-auto shadow-2xl cursor-pointer"
           aria-label="Previous member"
         >
           <ChevronLeft size={20} />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/60 backdrop-blur-md text-white hover:bg-[#BE5103] hover:border-[#BE5103] transition-all pointer-events-auto shadow-2xl cursor-pointer"
+          className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/60 backdrop-blur-md text-white hover:bg-[#33744D] hover:border-[#33744D] transition-all pointer-events-auto shadow-2xl cursor-pointer"
           aria-label="Next member"
         >
           <ChevronRight size={20} />
@@ -63,7 +63,7 @@ export default function TeamSlider() {
           >
             <div
               className="relative w-40 h-40 md:w-48 md:h-48 mx-auto mb-6 rounded-full overflow-hidden 
-                         border-2 border-white/10 group-hover:border-[#BE5103] 
+                         border-2 border-gray-200 group-hover:border-[#33744D] 
                          transition-all duration-300 group-hover:scale-105"
             >
               <Image
@@ -73,7 +73,7 @@ export default function TeamSlider() {
                 alt={member.name}
               />
             </div>
-            <h4 className="text-lg md:text-xl font-semibold mb-1 group-hover:text-[#BE5103] transition">
+            <h4 className="text-lg md:text-xl font-semibold mb-1 group-hover:text-[#33744D] transition">
               {member.name}
             </h4>
             <p className="text-gray-400 text-xs md:text-sm">{member.role}</p>

@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
-import { GraduationCap, Handshake, Zap, BadgeCheck, CircleCheck } from "lucide-react";
+import { GraduationCap, Users, ShieldCheck, BookOpen, CircleCheck, Target, Heart } from "lucide-react";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "Learn about MOMENTOR, India's first education journalism and mentorship platform. Shaping global futures through clarity, mindset, and future-ready skills.",
+  title: "About Us - Al Haram Institute",
+  description: "Learn about Al Haram Institute, an educational institute focused on developing knowledge, moral character, and leadership by integrating Islamic values with modern education.",
 };
 
 export default function AboutPage() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-white text-black min-h-screen">
       {/* HEADER */}
       <Header />
 
@@ -20,103 +20,105 @@ export default function AboutPage() {
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 md:px-0 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/images/team-about.webp"
-          alt="About Momentor"
+          src="/images/studentss.jpg"
+          alt="About Al Haram Institute"
           fill
           priority
           className="object-cover object-center"
         />
 
-        {/* Dark Overlay (same intensity as reference) */}
-        <div className="absolute inset-0 bg-black/65" />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl">
-          <div className="inline-block px-6 py-2 mb-6 rounded-full border border-[#BE5103]/40 bg-[#BE5103]/10 backdrop-blur-sm">
-            <p className="text-xs md:text-sm tracking-[0.35em] text-[#BE5103] font-semibold">
+          <div className="inline-block px-6 py-2 mb-6 rounded-full border border-[#33744D]/40 bg-[#33744D]/10 backdrop-blur-sm">
+            <p className="text-xs md:text-sm tracking-[0.35em] text-white font-semibold">
               WHO ARE WE
             </p>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight">
-            About <span className="italic font-serif text-[#BE5103]">Us</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight text-white">
+            About <span className="italic font-serif text-[#33744D]">Us</span>
           </h1>
         </div>
       </section>
 
       <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
-        <h1 className="text-2xl sm:text-3xl md:text-6xl font-semibold leading-tight px-4">
-          Shaping Global <br />
-          Futures Through{" "}
-          <span className="text-[#BE5103] italic font-serif">Education</span>
-        </h1>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight px-4 text-black">
+          Nurturing Minds with <br />
+          <span className="text-[#33744D] italic font-serif font-normal">Knowledge & Values</span>
+        </h2>
 
-        <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed px-6">
-          India's first education journalism and mentorship platform, bridging
-          the gap between student potential and global excellence.
+        <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-sm md:text-lg leading-relaxed px-6">
+          Al Haram Institute is dedicated to providing an integrated educational
+          experience that combines authentic Islamic learning with modern academic
+          development.
         </p>
-        <Link href="/courses">
+        <Link href="/contact">
           <button
             className="
     mt-10 px-8 py-3.5 rounded-full
-    bg-[#BE5103] text-white text-sm md:text-base font-bold
-    hover:bg-[#BE5103]/90
-    hover:shadow-[0_0_30px_rgba(190,81,3,0.4)]
+    bg-[#33744D] text-white text-sm md:text-base font-bold
+    hover:bg-[#33744D]/90
+    hover:shadow-[0_10px_30px_rgba(51,116,77,0.3)]
     transition-all duration-300 
     hover:-translate-y-1.5
     cursor-pointer
   "
           >
-            Explore Opportunities →
+            Join Our Community →
           </button>
         </Link>
       </section>
 
       {/* ================= IMAGE CARD ================= */}
-      <section className="flex justify-center px-6 hover">
-        <div className="relative w-full max-w-5xl rounded-3xl overflow-hidden">
+      <section className="flex justify-center px-6">
+        <div className="relative w-full max-w-5xl rounded-[2.5rem] overflow-hidden shadow-2xl">
           <Image
-            src="/images/team-about.webp"
-            alt="Team"
+            src="/images/aboutimage.jpg"
+            alt="Students at Al Haram Institute"
             width={1200}
             height={600}
             className="object-cover w-full h-auto"
           />
         </div>
       </section>
-      <section className="bg-black text-white py-12 md:py-20 px-6">
+
+      {/* ================= STATS SECTION ================= */}
+      <section className="py-12 md:py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 text-center">
-            {/* Stat 1 */}
-            <div className="group transition-all duration-500 hover:-translate-y-3 bg-white/[0.02] border border-white/5 p-8 rounded-[2rem] md:bg-transparent md:border-none md:p-0">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#BE5103] md:text-white group-hover:text-[#BE5103] transition-colors">
-                28,000+
-              </h2>
-              <p className="mt-4 text-sm md:text-lg text-gray-400 font-medium md:font-normal">
-                Youth Reached <br />
-                across Kerala and beyond
+            {/* Mission Pillar 1 */}
+            <div className="group transition-all duration-500 hover:-translate-y-3 bg-[#33744D]/5 border border-[#33744D]/10 p-8 rounded-[2rem]">
+              <div className="w-12 h-12 bg-[#33744D]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#33744D] group-hover:text-white transition-all">
+                <BookOpen size={24} className="text-[#33744D] group-hover:text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-2">Integrated Learning</h3>
+              <p className="text-sm text-gray-500">
+                A balanced curriculum blending Islamic values with modern academic excellence.
               </p>
             </div>
 
-            {/* Stat 2 */}
-            <div className="group transition-all duration-500 hover:-translate-y-3 bg-white/[0.02] border border-white/5 p-8 rounded-[2rem] md:bg-transparent md:border-none md:p-0">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#BE5103] md:text-white group-hover:text-[#BE5103] transition-colors">
-                35,000+
-              </h2>
-              <p className="mt-4 text-sm md:text-lg text-gray-400 font-medium md:font-normal">
-                Hours of Learning Content <br />
-                skills, mindset & communication
+            {/* Mission Pillar 2 */}
+            <div className="group transition-all duration-500 hover:-translate-y-3 bg-[#33744D]/5 border border-[#33744D]/10 p-8 rounded-[2rem]">
+              <div className="w-12 h-12 bg-[#33744D]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#33744D] group-hover:text-white transition-all">
+                <Target size={24} className="text-[#33744D] group-hover:text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-2">Character Building</h3>
+              <p className="text-sm text-gray-500">
+                Focus on developing moral character, ethics, and strong discipline in every student.
               </p>
             </div>
 
-            {/* Stat 3 */}
-            <div className="group transition-all duration-500 hover:-translate-y-3 bg-white/[0.02] border border-white/5 p-8 rounded-[2rem] md:bg-transparent md:border-none md:p-0">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#BE5103] md:text-white group-hover:text-[#BE5103] transition-colors">
-                120+
-              </h2>
-              <p className="mt-4 text-sm md:text-lg text-gray-400 font-medium md:font-normal">
-                Training & Mentorship Programs <br />
-                designed for real employability
+            {/* Mission Pillar 3 */}
+            <div className="group transition-all duration-500 hover:-translate-y-3 bg-[#33744D]/5 border border-[#33744D]/10 p-8 rounded-[2rem]">
+              <div className="w-12 h-12 bg-[#33744D]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#33744D] group-hover:text-white transition-all">
+                <Users size={24} className="text-[#33744D] group-hover:text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-2">Leadership Growth</h3>
+              <p className="text-sm text-gray-500">
+                Preparing the next generation of leaders with life skills and global awareness.
               </p>
             </div>
           </div>
@@ -124,380 +126,166 @@ export default function AboutPage() {
       </section>
 
       {/* ================= MISSION / VISION ================= */}
-      <section className="bg-black py-12 md:py-20">
+      <section className="py-12 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 space-y-20 md:space-y-32">
-          {/* ================= OUR VISION ================= */}
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          {/* ================= OUR MISSION ================= */}
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Image Side */}
             <div className="md:order-last px-2 md:px-0">
-              <Image
-                src="/images/mission.webp"
-                alt="Vision"
-                width={800}
-                height={600}
-                className="rounded-3xl w-full aspect-[4/3] md:aspect-auto object-cover border border-white/5"
-              />
+              <div className="relative h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                <Image
+                  src="/images/support.jpg"
+                  alt="Mission of Al Haram Institute"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
 
             {/* Text Side */}
-            <div className="md:order-first px-4 md:px-0">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#BE5103] mb-8 text-center md:text-left">
+            <div className="md:order-first">
+              <div className="inline-flex items-center gap-3 px-4 py-2 mb-6 rounded-full border border-[#33744D]/20 bg-[#33744D]/5">
+                <span className="flex h-2 w-2 rounded-full bg-[#33744D]" />
+                <p className="text-[10px] md:text-xs tracking-[0.2em] text-[#33744D] font-bold uppercase">Our Purpose</p>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#33744D] mb-8">
                 Our Mission
               </h2>
 
-              <p className="text-gray-400 leading-relaxed mb-10 text-sm md:text-base text-center md:text-left mx-auto md:mx-0 max-w-2xl font-medium md:font-normal">
-                Our mission is to empower youth with clarity, mindset, and
-                future-ready skills — by exposing the truth about careers,
-                building real awareness, and opening global opportunities that
-                transform confidence, employability, and purpose. We exist to
-                fix the core problem students face today: lack of direction,
-                lack of exposure, and lack of understanding about how the world
-                of work is changing.
+              <p className="text-gray-600 leading-relaxed mb-10 text-sm md:text-lg">
+                Our mission is to nourish the hearts and minds of students through an integrated educational path. We aim to bridge the gap between spiritual growth and intellectual development, ensuring our students are prepared for both the challenges of the modern world and the fulfillment of their moral responsibilities.
               </p>
 
-              <ul className="space-y-5 text-sm md:text-base flex flex-col items-center md:items-start">
-                <li className="flex items-start gap-4 text-gray-300 group">
-                  <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
-                    <CircleCheck size={18} />
-                  </span>
-                  <span className="max-w-md">
-                    Provide clarity and direction by telling the truth about
-                    careers and industries.
-                  </span>
-                </li>
-                <li className="flex items-start gap-4 text-gray-300 group">
-                  <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
-                    <CircleCheck size={18} />
-                  </span>
-                  <span className="max-w-md">
-                    Equip youth with future skills that make them confident and
-                    employable.
-                  </span>
-                </li>
-                <li className="flex items-start gap-4 text-gray-300 group">
-                  <span className="text-[#BE5103] mt-1 bg-[#BE5103]/10 p-1.5 rounded-lg group-hover:bg-[#BE5103] group-hover:text-black transition-all">
-                    <CircleCheck size={18} />
-                  </span>
-                  <span className="max-w-md">
-                    Create pathways for global exposure, mentorship, and real
-                    opportunities.
-                  </span>
-                </li>
+              <ul className="space-y-5">
+                {[
+                  "Developing strong moral character and ethical values.",
+                  "Integrating authentic Islamic teachings with modern education.",
+                  "Nurturing leadership, discipline, and essential life skills.",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4 text-gray-700 group">
+                    <span className="text-[#33744D] mt-1 bg-[#33744D]/10 p-1.5 rounded-lg group-hover:bg-[#33744D] group-hover:text-white transition-all">
+                      <CircleCheck size={18} />
+                    </span>
+                    <span className="max-w-md font-medium">{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
 
-          {/* ================= OUR MISSION ================= */}
-          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          {/* ================= OUR VISION ================= */}
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Image Side */}
-            <div className="order-first">
-              <Image
-                src="/images/team-about.webp"
-                alt="Mission"
-                width={800}
-                height={600}
-                className="rounded-3xl w-full object-cover"
-              />
+            <div className="order-first px-2 md:px-0">
+              <div className="relative h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                <Image
+                  src="/images/ourvision.jpg"
+                  alt="Vision of Al Haram Institute"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
 
             {/* Text Side */}
             <div className="order-last">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#BE5103] mb-6 text-center md:text-left">
+              <div className="inline-flex items-center gap-3 px-4 py-2 mb-6 rounded-full border border-[#33744D]/20 bg-[#33744D]/5">
+                <span className="flex h-2 w-2 rounded-full bg-[#33744D]" />
+                <p className="text-[10px] md:text-xs tracking-[0.2em] text-[#33744D] font-bold uppercase">Our Future</p>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#33744D] mb-8">
                 Our Vision
               </h2>
 
-              <p className="text-gray-300 leading-relaxed mb-8 text-sm md:text-base text-justify md:text-left">
-                Our vision is to build a generation that is confident,
-                aspirational, globally competitive, and deeply aware of their
-                career possibilities. We aim to reshape the education-to-career
-                journey in India — so that every young person knows who they
-                are, what they want, and how to succeed in the world of
-                tomorrow.
+              <p className="text-gray-600 leading-relaxed mb-8 text-sm md:text-lg">
+                We envision Al Haram Institute as a leading center of excellence where students discover their full potential as knowledgeable, ethical, and responsible individuals. Our goal is to shape future leaders who are deeply rooted in their values and equipped with the wisdom and expertise to contribute positively to society.
               </p>
 
-              <ul className="space-y-4 text-sm md:text-base">
-                <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1 min-w-[20px]">
-                    <CircleCheck size={20} />
-                  </span>
-                  Create an India where youth discover careers through awareness
-                  — not guesswork.
-                </li>
-                <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1 min-w-[20px]">
-                    <CircleCheck size={20} />
-                  </span>
-                  Redefine employability with mindset, skill, exposure, and
-                  real-world readiness.
-                </li>
-                <li className="flex items-start gap-3 text-gray-200">
-                  <span className="text-green-500 mt-1 min-w-[20px]">
-                    <CircleCheck size={20} />
-                  </span>
-                  Build the world’s most trusted education journalism and
-                  future-skills platform.
-                </li>
+              <ul className="space-y-5">
+                {[
+                  "Building a generation of confident and globally competitive students.",
+                  "Being the most trusted institute for value-based modern education.",
+                  "Developing individuals with purpose, discipline, and integrity.",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4 text-gray-700 group">
+                    <span className="text-[#33744D] mt-1 bg-[#33744D]/10 p-1.5 rounded-lg group-hover:bg-[#33744D] group-hover:text-white transition-all">
+                      <CircleCheck size={18} />
+                    </span>
+                    <span className="max-w-md font-medium">{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= TEAM SECTION ================= */}
-      <section className="max-w-6xl mx-auto px-6 pb-12 md:pb-20">
-        <h2 className="text-2xl md:text-4xl font-light mb-10 md:mb-16 text-center md:text-left">
-          Let’s get to know{" "}
-          <span className="text-[#BE5103] italic font-serif">each other</span>
+      {/* ================= CORE VALUES ================= */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-light mb-12 text-center">
+          Our Core <span className="text-[#33744D] italic font-serif">Pillars</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-          {/* Card 1 */}
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-red-600/80 to-black h-96 md:h-auto">
-            <Image
-              src="/images/member1.jpg"
-              alt="Team member"
-              width={500}
-              height={600}
-              className="object-cover w-full h-full opacity-60 mix-blend-overlay"
-            />
-            <div className="absolute bottom-6 left-6 z-10">
-              <p className="font-semibold text-xl">Abu Sayeed</p>
-              <p className="text-xs text-gray-200">Founder & CEO</p>
+        <div className="grid md:grid-cols-4 gap-6 md:gap-8">
+          {[
+            {
+              icon: GraduationCap,
+              title: "Academic Excellence",
+              desc: "Structured modern curriculum designed for intellectual growth."
+            },
+            {
+              icon: Heart,
+              title: "Moral Integrity",
+              desc: "Nurturing ethical values and authentic Islamic character."
+            },
+            {
+              icon: ShieldCheck,
+              title: "Discipline",
+              desc: "A safe and respectful environment focused on focused learning."
+            },
+            {
+              icon: Users,
+              title: "Leadership",
+              desc: "Developing confidence and responsibility in every student."
+            }
+          ].map((item, i) => (
+            <div key={i} className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-[#33744D] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+              <item.icon className="w-8 h-8 text-[#33744D] mb-4 group-hover:scale-110 transition-transform" />
+              <h4 className="font-bold mb-2 text-black">{item.title}</h4>
+              <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-600/80 to-black h-96 md:h-auto">
-            <Image
-              src="/images/member1.jpg"
-              alt="Team member"
-              width={500}
-              height={600}
-              className="object-cover w-full h-full opacity-60 mix-blend-overlay"
-            />
-            <div className="absolute bottom-6 left-6 z-10">
-              <p className="font-semibold text-xl">Abu Sayeed</p>
-              <p className="text-xs text-gray-200">Co-Founder & COO</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= OUR APPROACH (REF STYLE) ================= */}
-      <section className="max-w-6xl mx-auto px-6 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium leading-tight text-center md:text-left mb-10">
-            <span className="text-white">
-              Our mentorship approach <br /> ensures students{" "}
-            </span>
-            <span className="text-[#BE5103] italic font-serif">
-              gain career clarity
-            </span>
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8 items-center py-5 md:py-15">
-            {/* LEFT CARD */}
-            <div
-              className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-            >
-              <h3 className="text-lg font-semibold mb-3">
-                Education Journalism
-              </h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                We investigate and expose the truth about industries, courses,
-                and career paths to provide students with unbiased, actionable
-                insights.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-500">
-                <span>Awareness</span>
-                <span>•</span>
-                <span>Industry Truth</span>
-              </div>
-            </div>
-
-            {/* CENTER IMAGE CARD */}
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 aspect-[4/5]">
-              <Image
-                src="/images/globe.webp"
-                alt="Global mentorship"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* RIGHT CARD */}
-            <div
-              className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-            >
-              <h3 className="text-lg font-semibold mb-3">
-                Future-Skills Training
-              </h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Bridging the employability gap by training youth in
-                communication, mindset, and practical skills required for global
-                excellence.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-500">
-                <span>Skill Mastery</span>
-                <span>•</span>
-                <span>Employability</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= TRUST CARDS ================= */}
-      <section className="bg-black pb-5 px-6 ">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-          {/* Card 1 */}
-          <div
-            className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-          >
-            <GraduationCap className="w-6 h-6 text-[#BE5103] mb-4" />
-
-            <h4 className="font-semibold mb-2">Expert Mentorship</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Personalized guidance from experienced mentors across various
-              industries.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div
-            className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-          >
-            <Handshake className="w-6 h-6 text-[#BE5103] mb-4" />
-
-            <h4 className="font-semibold mb-2">Journalistic Integrity</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Reliable career information built on research, transparency, and
-              trust.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div
-            className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-          >
-            <Zap className="w-6 h-6 text-[#BE5103] mb-4" />
-
-            <h4 className="font-semibold mb-2">Skill Acceleration</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Fast-track your personal and professional growth with focused
-              training.
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div
-            className="bg-[#0C0F0E] border border-white/10 rounded-2xl p-6 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2"
-          >
-            <BadgeCheck className="w-6 h-6 text-[#BE5103] mb-4" />
-
-            <h4 className="font-semibold mb-2">Free Discovery Session</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Start your journey with a no-obligation call to discover your
-              potential.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="bg-black pb-12 md:pb-20 px-6">
+      <section className="pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="rounded-3xl bg-gradient-to-br from-[#BE5103] via-[#BE5103]/20 to-black p-8 md:p-16 flex flex-col items-center text-center">
-            <h3 className="text-2xl md:text-4xl font-light max-w-2xl mb-6 text-center">
-              Partner with a reliable mentor who provides solutions for your{" "}
-              <span className="text-[#BE5103] italic font-serif">
-                career growth
-              </span>
+          <div className="rounded-[2.5rem] bg-[#33744D] p-8 md:p-20 flex flex-col items-center text-center text-white relative overflow-hidden shadow-2xl">
+            {/* Decorative background circle */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+
+            <h3 className="text-2xl md:text-5xl font-light max-w-3xl mb-8 relative z-10 leading-tight">
+              Begin your journey of knowledge and <span className="italic font-serif opacity-90">spiritual growth</span> today
             </h3>
             <Link href="/contact">
               <button
                 className="
-    mt-8 px-6 py-3 rounded-full
-    bg-[#BE5103] text-white text-sm font-semibold
-    hover:bg-gradient-to-r from-[#7A3300] to-[#BE5103]
-    transition-transform duration-200 ease-out
-    hover:-translate-y-2
-    cursor-pointer
+    px-10 py-4 rounded-full
+    bg-white text-[#33744D] text-sm md:text-base font-bold
+    hover:bg-gray-100
+    transition-all duration-300
+    hover:-translate-y-1.5 shadow-lg
+    cursor-pointer relative z-10
   "
               >
-                Book Free Mentorship →
+                Inquire About Admissions
               </button>
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-black py-0 px-6 pb-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-20 items-center">
-          {/* LEFT CONTENT */}
-          <div>
-            <p className="text-gray-100 text-sm mb-4 font-semibold">
-              WHY YOUTH CHOOSE US
-            </p>
-
-            <h2 className="text-3xl md:text-5xl font-light leading-tight mb-8">
-              A guidance partner for your
-              <span className="text-[#BE5103] italic font-serif">
-                {" "}
-                professional journey
-              </span>
-            </h2>
-
-            <p className="text-gray-400 max-w-xl leading-relaxed mb-10 text-sm md:text-base">
-              We don’t just offer courses — we mentor youth through
-              life-changing career decisions. Our focus is long-term success,
-              unbiased journalism, and helping students confidently navigate the
-              global professional landscape.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
-              <div
-                className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-2xl p-5 text-gray-400 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2 text-center"
-              >
-                Career Clarity
-              </div>
-
-              <div
-                className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-2xl p-5 text-gray-400 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2 text-center"
-              >
-                Unbiased Journalism
-              </div>
-
-              <div
-                className="bg-[#0C0F0E] border border-[#BE5103]/40 rounded-2xl p-5 text-gray-400 hover:border-[#BE5103]  transition-transform duration-200 ease-out
-    hover:-translate-y-2 text-center"
-              >
-                Global Exposure
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE / VISUAL */}
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 aspect-square">
-            <Image
-              src="/images/graduation.webp"
-              alt="Youth achieving success"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
       <Footer />
     </main>
   );

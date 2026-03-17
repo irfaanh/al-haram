@@ -10,13 +10,13 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "MOMENTOR | Where Guidance Meets the Future",
-    template: "%s | MOMENTOR",
+    default: "Al Haram | Where Knowledge Guides the Future",
+    template: "%s | Al Haram",
   },
   description:
-    "India's first Education Journalism platform and Future-Skills Training Academy. Empowering youth with global internships, career mentorship, and unbiased education insights.",
+    "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
   keywords: [
-    "Momentor",
+    "Al Haram",
     "Education Journalism India",
     "Future Skills Training",
     "Global Internship Gateway",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "Global Career Readiness",
     "Youth Mentorship Ecosystem",
   ],
-  authors: [{ name: "MOMENTOR" }],
-  creator: "MOMENTOR",
-  publisher: "MOMENTOR",
+  authors: [{ name: "Al Haram" }],
+  creator: "Al Haram",
+  publisher: "Al Haram",
   icons: {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
@@ -40,25 +40,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://momentor.in", // Placeholder or actual URL if known
-    siteName: "MOMENTOR",
-    title: "MOMENTOR | Where Guidance Meets the Future",
+    url: "https://alharaminstitute.com", // Placeholder or actual URL if known
+    siteName: "Al Haram",
+    title: "Al Haram | Where Guidance Meets the Future",
     description:
-      "India's first Education Journalism platform and Future-Skills Training Academy. Empowering youth with global internships and career mentorship.",
+      "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
     images: [
       {
         url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "MOMENTOR Logo",
+        alt: "Al Haram Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MOMENTOR | Where Guidance Meets the Future",
+    title: "Al Haram | Where Knowledge Guides the Future",
     description:
-      "India's first Education Journalism platform and Future-Skills Training Academy.",
+      "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
     images: ["/images/logo.png"],
   },
   robots: {

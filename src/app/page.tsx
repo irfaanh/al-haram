@@ -14,64 +14,32 @@ import {
   BrainCircuit,
   Target,
   GraduationCap,
+  ShieldCheck,
 } from "lucide-react";
 import TeamSlider from "@/components/TeamSlider";
 // import PartnersSlider from "@/components/PartnersSlider";
 
-interface Course {
-  id: string;
-  title: string;
-  description: string | null;
-  image: string;
-  modules: any;
-}
-
-export const dynamic = "force-dynamic";
-
 export default async function Home() {
-  const courses = [
-    {
-      id: "gcrp",
-      title: "Global Career Readiness Program (GCRP)",
-      description:
-        "Transform into a globally employable professional through structured career skill training and paid international internship exposure with expert mentor guidance.",
-      image: "/images/graduation.webp",
-    },
-    {
-      id: "gsrp",
-      title: "Global Student Readiness Program (GSRP)",
-      description:
-        "Prepare for the professional world with civic discipline, cultural intelligence, and real-world global behavior training to confidently succeed in any environment.",
-      image: "/images/placement-hero.webp",
-    },
-    {
-      id: "ghrt",
-      title: "Global Hospitality & Readiness Training (GHRT)",
-      description:
-        "Gain practical skills, service confidence, and international exposure to thrive in global hospitality, retail, and customer-focused industries.",
-      image: "/images/students-hospitality.webp",
-    },
-  ];
 
   return (
-    <main className="bg-black text-white">
+    <main className="text-white">
       {/* ================= HERO ================= */}
       <section className="relative min-h-[75vh] md:min-h-[85vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0">
         <Image
-          src="/images/home-hero.webp"
+          src="/images/qur.jpg"
           alt="Momentor Home"
           fill
           priority
-          className="object-cover object-center opacity-55"
+          className="object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 max-w-4xl pt-10 md:pt-20 px-4">
           <h1 className="text-2xl sm:text-3xl md:text-6xl font-semibold leading-tight mb-6">
-            MOMENTOR - <br />
-            Where Guidance Meets the{" "}
-            <span className="italic font-serif text-[#BE5103]">Future</span>
+            Al Haram - <br />
+            Where Knowledge Guides the{" "}
+            <span className="italic font-serif text-[#33744D]">Future</span>
           </h1>
 
           <Link href="/learn-more">
@@ -92,16 +60,16 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
       </section>
 
       {/* ================= NEWS SCROLL ================= */}
-      <section className="bg-[#BE5103] py-6 overflow-hidden relative border-y border-white/10">
+      <section className="bg-[#33744D] py-6 overflow-hidden relative border-y border-white/10">
         <div className="flex w-max animate-scroll hover:[animation-play-state:paused]">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="flex shrink-0 gap-16 px-8">
               {[
-                "INDIAS first Education Journalism platform exposing Myths, Mistakes, and Realities",
-                "A Future-Skills Training Academy",
-                "A Global Internship Gateway",
-                "INDIAS’s First Career & Education Truth Platform",
-                "A Youth Mentorship Ecosystem",
+                "Integrated Islamic & Modern Education",
+                "Qualified Islamic Scholars & Professional Educators",
+                "Language Proficiency & Academic Mentoring",
+                "AI and Technology Awareness Programs",
+                "Leadership & Personality Development Training",
               ].map((news, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
@@ -115,96 +83,95 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
         </div>
       </section>
 
-      {/* ================= EDUCATION JOURNALISM ================= */}
+      {/* ================= Excellence in Education & Values ================= */}
       <section
-        id="journalism"
-        className="py-20 md:py-32 px-6 bg-black relative overflow-hidden"
+        id="excellence"
+        className="py-20 md:py-32 px-6 bg-white relative overflow-hidden"
       >
         {/* Decorative Background Elements */}
-        <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#BE5103] opacity-[0.05] blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2 animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#BE5103] opacity-[0.02] blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" />
+        <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#33744D] opacity-[0.05] blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#33744D] opacity-[0.02] blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" />
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
           {/* Image Side */}
           <div className="hidden md:block relative group order-2 md:order-1 px-4 md:px-0">
-            <div className="relative h-[300px] sm:h-[400px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#BE5103]/30 transition-all duration-700 shadow-2xl">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#33744D]/30 transition-all duration-700 shadow-2xl">
               <Image
-                src="/images/europe.webp"
+                src="/images/pioneerimg.jpg"
                 alt="Education Journalism"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#33744D] via-[#33744D]/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700" />
             </div>
 
             {/* Floating Badge */}
-            <div className="absolute -bottom-6 -right-2 md:-right-8 bg-black/40 backdrop-blur-xl border border-white/10 p-1 rounded-[1.8rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform group-hover:scale-105 transition-transform duration-500">
-              <div className="bg-[#BE5103] px-6 py-4 rounded-[1.5rem] flex flex-col items-center justify-center min-w-[100px] md:min-w-[110px]">
+            <div className="absolute -bottom-6 -right-2 md:-right-8 bg-[#33744D] backdrop-blur-xl border border-white/10 p-1 rounded-[1.8rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform group-hover:scale-105 transition-transform duration-500">
+              <div className="bg-[#33744D] px-6 py-4 rounded-[1.5rem] flex flex-col items-center justify-center min-w-[100px] md:min-w-[110px]">
                 <span className="text-white font-bold text-2xl md:text-4xl leading-none">
-                  1st
+                  2026
                 </span>
                 <span className="text-white/90 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-medium mt-1 text-center">
-                  In India
+                  Admissions Open
                 </span>
               </div>
             </div>
 
             {/* Subtle Glass Card Element */}
             <div className="absolute -top-6 -left-6 hidden lg:block bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl animate-bounce-slow">
-              <Newspaper className="text-[#BE5103]" size={32} />
+              <Newspaper className="text-[#33744D]" size={32} />
             </div>
           </div>
 
           {/* Content Side */}
           <div className="relative z-10 order-1 md:order-2 text-center md:text-left">
-            <div className="inline-flex items-center gap-3 px-4 py-2 mb-8 rounded-full border border-[#BE5103]/20 bg-[#BE5103]/5 backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-[#BE5103] animate-ping" />
-              <p className="text-[10px] md:text-xs tracking-[0.3em] text-[#BE5103] font-bold uppercase">
-                India's First Platform
+            <div className="inline-flex items-center gap-3 px-4 py-2 mb-8 rounded-full border border-[#33744D]/20 bg-[#33744D]/5 backdrop-blur-sm">
+              <span className="flex h-2 w-2 rounded-full bg-[#33744D] animate-ping" />
+              <p className="text-[10px] md:text-xs tracking-[0.3em] text-[#33744D] font-bold uppercase">
+                Integrated Professional Education
               </p>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
-              Pioneering <br />
-              <span className="italic font-serif text-[#BE5103] font-normal">
-                Education Journalism
+            <h2 className="text-3xl text-black sm:text-4xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
+              Excellence in <br />
+              <span className="italic font-serif text-[#33744D] font-normal">
+                Education & Values
               </span>
             </h2>
 
-            <p className="text-gray-400 text-sm md:text-lg leading-relaxed mb-12 max-w-xl mx-auto md:mx-0">
-              Momentor is India's first dedicated education journalism platform,
-              bringing{" "}
-              <span className="text-white font-medium italic underline decoration-[#BE5103]/40 underline-offset-4">
-                truth and clarity
+            <p className="text-black text-sm md:text-lg leading-relaxed mb-12 max-w-xl mx-auto md:mx-0">
+              Al Haram Institute provides a balanced education that combines{" "}
+              <span className="text-black font-medium italic underline decoration-[#33744D]/40 underline-offset-4">
+                authentic Islamic learning
               </span>{" "}
-              to the complex world of global careers. We expose industry trends
-              and provide raw, honest insights.
+              with modern academic development, helping students grow intellectually,
+              spiritually, and professionally.
             </p>
 
             <div className="space-y-6 md:space-y-8 mb-12 text-left">
               {[
                 {
                   icon: Search,
-                  title: "Unbiased Reporting",
-                  desc: "No marketing agendas, just raw reporting.",
+                  title: "Qualified Scholars & Educators",
+                  desc: "Learn under the guidance of experienced Islamic scholars and professional educators.",
                 },
                 {
                   icon: FileText,
-                  title: "Deep-dive Guides",
-                  desc: "Complex systems broken down for students.",
+                  title: "Language & Academic Development",
+                  desc: "Strong focus on language proficiency, academic guidance, and mentoring for students.",
                 },
                 {
                   icon: CheckCircle,
-                  title: "Data-driven Mentorship",
-                  desc: "Based on real-world professional metrics.",
+                  title: "Technology & Leadership Training",
+                  desc: "Programs include AI awareness, technology exposure, personality and leadership development.",
                 },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4 group/item">
-                  <div className="mt-1 flex-shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#BE5103] group-hover/item:bg-[#BE5103] group-hover/item:text-white transition-all duration-300">
+                  <div className="mt-1 flex-shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#33744D] group-hover/item:bg-[#33744D] group-hover/item:text-white transition-all duration-300">
                     <item.icon size={22} />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-base md:text-lg mb-1 group-hover/item:text-[#BE5103] transition-colors">
+                    <h4 className="text-black font-bold text-base md:text-lg mb-1 group-hover/item:text-[#33744D] transition-colors">
                       {item.title}
                     </h4>
                     <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
@@ -219,54 +186,50 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
       </section>
 
       {/* ================= ABOUT US ================= */}
-      <section className="py-12 md:py-20 px-6">
+      <section className="py-12 md:py-20 px-6 bg-white">
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
             ABOUT US
           </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
         </div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-light mb-6 md:mb-8 text-center md:text-left">
-              A Trusted Partner in{" "}
-              <span className="italic font-serif text-[#BE5103]">
-                Professional Excellence
+            <h2 className="text-2xl text-black sm:text-3xl md:text-5xl font-light mb-6 md:mb-8 text-center md:text-left">
+              Nurturing Knowledge with{" "}
+              <span className="italic font-serif text-[#33744D]">
+                Character & Leadership
               </span>
             </h2>
 
-            {/* CONTENT */}
             <div className="text-left text-sm md:text-base space-y-4 text-gray-300">
-              <p>
-                We are a dedicated mentorship and career consultancy committed to helping
-                ambitious students access world-class education opportunities.
-                From career discovery to professional placement, we provide
-                structured, transparent, and personalized guidance at every step
-                of the journey.
+              <p className="text-black">
+                Al Haram Institute is dedicated to providing an integrated educational
+                experience that combines authentic Islamic learning with modern academic
+                development. Our mission is to nurture students with strong knowledge,
+                discipline, and values that prepare them for success in both life and
+                career.
               </p>
 
-              <p>
-                Our team works closely with students to understand their
-                academic background, career aspirations, and financial
-                considerations — ensuring that every application is strategic,
-                well-prepared, and aligned with long-term goals.
+              <p className="text-black">
+                With guidance from qualified Islamic scholars and professional educators,
+                we focus on developing language proficiency, intellectual growth, and
+                critical thinking skills. Our approach ensures that students receive
+                personalized attention and structured academic mentoring.
               </p>
 
-              <p>
-                Beyond admissions, we focus on global readiness — preparing
-                students for international academic environments, cultural
-                transitions, and professional success in competitive global
-                markets.
+              <p className="text-black">
+                In addition to traditional learning, we introduce students to modern
+                knowledge areas such as technology awareness, leadership training, and
+                personality development, helping them adapt confidently to the evolving
+                world.
               </p>
 
-              <p>
-                With strong industry partnerships and a student-first
-                approach, we don’t just help you find a path —
-                <span className="text-[#B08D55] font-medium">
-                  {" "}
-                  we prepare you to succeed globally.
-                </span>
+              <p className="text-black">
+                Through a safe, disciplined, and value-based environment, we aim to shape
+                individuals who are not only academically capable but also morally strong
+                and socially responsible.
               </p>
             </div>
           </div>
@@ -275,7 +238,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-8 md:mb-0">
               <div className="relative h-80 sm:h-96 md:h-96 rounded-2xl md:rounded-3xl overflow-hidden md:translate-y-12 shadow-2xl">
                 <Image
-                  src="/images/graduation.webp"
+                  src="/images/graduationimg.jpg"
                   alt="Student"
                   fill
                   className="object-cover"
@@ -283,7 +246,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
               </div>
               <div className="hidden md:block relative h-48 sm:h-64 md:h-80 rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/counseling.webp"
+                  src="/images/lensimg.jpg"
                   alt="Counseling"
                   fill
                   className="object-cover"
@@ -295,7 +258,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
               <div className="flex -space-x-3">
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-300 relative">
                   <Image
-                    src="/images/students.jpg"
+                    src="/images/studentss.jpg"
                     fill
                     className="object-cover"
                     alt="User"
@@ -303,7 +266,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                 </div>
                 <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-gray-300 relative">
                   <Image
-                    src="/images/studentss.jpg"
+                    src="/images/support.jpg"
                     fill
                     className="object-cover"
                     alt="User"
@@ -312,301 +275,304 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
               </div>
               <div>
                 <p className="text-black font-bold text-lg leading-tight">
-                  10K+
+                  Quality
                 </p>
-                <p className="text-gray-500 text-xs font-medium">Job Seekers</p>
+                <p className="text-gray-500 text-xs font-medium">Education</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= COURSES ================= */}
-      <section className="py-12 md:py-20 px-6 bg-[#0f0f0f]">
+      {/* ================= CAMPUS FACILITIES ================= */}
+      <section className="py-12 md:py-20 px-6 bg-white">
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-5">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
-            OUR COURSES
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
+            CAMPUS FACILITIES
           </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
         </div>
+
         <div>
-          <p className="text-gray-400 text-sm md:text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-10 md:mb-15">
-            Our courses prepare students for international education and global
-            careers. We focus on academic excellence and professional readiness.
-            Every program builds confidence and competitive advantage. Step
-            forward with clarity. Study globally.
+          <p className="text-gray-500 text-sm md:text-[16px] leading-relaxed max-w-2xl mx-auto text-center mb-10 md:mb-15">
+            Our campus provides a supportive learning environment with modern
+            facilities designed to enhance education, creativity, and student
+            development. From smart classrooms to technology labs, every space is
+            built to support academic excellence and personal growth.
           </p>
         </div>
+
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-10">
-          {courses.slice(0, 3).map((course, i) => (
+          {[
+            {
+              title: "Smart Classrooms",
+              description:
+                "Modern classrooms equipped with advanced learning tools to enhance interactive and effective education.",
+              image: "/images/smroom.jpg",
+            },
+            {
+              title: "Media & Technology Lab",
+              description:
+                "Dedicated lab facilities where students can explore technology, digital media, and practical learning experiences.",
+              image: "/images/technologylab.jpg",
+            },
+            {
+              title: "Library & Study Hall",
+              description:
+                "A well-equipped library and peaceful study environment that encourages focused learning and research.",
+              image: "/images/library.jpg",
+            },
+          ].map((facility, i) => (
             <div
-              key={course.id}
-              className="relative group bg-[#111] rounded-3xl overflow-hidden border border-white/10 
-  hover:border-[#BE5103] transition-all duration-500 
-  hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(190,81,3,0.25)] flex flex-col"
+              key={i}
+              className="relative group bg-white rounded-3xl overflow-hidden border border-gray-200 
+        hover:border-[#33744D] transition-all duration-500 
+        hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(51,116,77,0.2)] flex flex-col"
             >
-              {/* Top Image */}
+              {/* Image */}
               <div className="h-48 md:h-64 overflow-hidden relative">
                 <Image
-                  src={course.image}
-                  alt={course.title}
+                  src={facility.image}
+                  alt={facility.title}
                   fill
-                  className="w-full h-full object-cover 
-                     group-hover:scale-110 transition duration-700"
+                  className="object-cover group-hover:scale-110 transition duration-700"
                 />
               </div>
 
-              {/* Bottom Content */}
-              <div className="p-6 md:p-8 flex-1 flex flex-col pb-20 md:pb-8">
-                <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 group-hover:text-[#BE5103] transition">
-                  {course.title}
+              {/* Content */}
+              <div className="p-6 md:p-8 flex-1 flex flex-col">
+                <h3 className="text-lg md:text-xl text-black font-semibold mb-3 md:mb-4 group-hover:text-[#33744D] transition">
+                  {facility.title}
                 </h3>
 
-                <p className="text-gray-400 text-xs md:text-sm leading-relaxed line-clamp-3">
-                  {course.description}
+                <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
+                  {facility.description}
                 </p>
-              </div>
-              {/* Arrow Button */}
-              <div className="absolute bottom-6 right-6">
-                <Link href={`/courses/${course.id}`}>
-                  <button className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-[#BE5103] hover:scale-110 transition duration-300 shadow-lg cursor-pointer">
-                    <ArrowUpRight size={18} className="md:size-[18px] size-4" />
-                  </button>
-                </Link>
               </div>
             </div>
           ))}
-        </div>
-        {/* View More Button */}
-        <div className="max-w-6xl mx-auto mt-10 md:mt-12 flex justify-center md:justify-center">
-          <Link href="/courses">
-            <button
-              className="px-8 py-3 rounded-full border border-[#BE5103] text-[#BE5103] 
-                 hover:bg-[#BE5103] hover:text-white
-                 transition-all duration-300 hover:-translate-y-2 font-medium cursor-pointer"
-            >
-              View More →
-            </button>
-          </Link>
         </div>
       </section>
 
       <section className="py-12 md:py-20 px-6">
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-5">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
             WHY CHOOSE US
           </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
           {/* Card 1 */}
           <div
-            className="group bg-white/5 backdrop-blur-xl border border-white/10 
-rounded-2xl p-6 
-transition-all duration-300 ease-out
-hover:-translate-y-2 
-hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
-hover:border-[#BE5103]"
+            className="group bg-white/5 backdrop-blur-xl border border-gray-200
+        rounded-2xl p-6 
+        transition-all duration-300 ease-out
+        hover:-translate-y-2 
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:border-[#33744D]"
           >
             <div className="flex items-start gap-3 mb-3">
-              <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
-                <BookOpen size={20} />
+              <span className="bg-[#33744D]/10 text-[#33744D] p-2 rounded-lg">
+                <Users size={20} />
               </span>
-              <h3 className="font-semibold text-white text-lg">
-                Industry-Driven Curriculum
+              <h3 className="font-semibold text-[#33744D] text-lg">
+                Individual Attention
               </h3>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Designed with employers and based on real workforce needs to
-              ensure practical relevance and strong career readiness.
+              Every student receives personal guidance and mentoring to help them
+              understand lessons clearly and grow with confidence.
             </p>
           </div>
 
           {/* Card 2 */}
           <div
-            className="group bg-white/5 backdrop-blur-xl border border-white/10 
-rounded-2xl p-6 
-transition-all duration-300 ease-out
-hover:-translate-y-2 
-hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
-hover:border-[#BE5103]"
+            className="group bg-white/5 backdrop-blur-xl border border-gray-200
+        rounded-2xl p-6 
+        transition-all duration-300 ease-out
+        hover:-translate-y-2 
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:border-[#33744D]"
           >
             <div className="flex items-start gap-3 mb-3">
-              <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
-                <Users size={20} />
+              <span className="bg-[#33744D]/10 text-[#33744D] p-2 rounded-lg">
+                <BookOpen size={20} />
               </span>
-              <h3 className="font-semibold text-white text-lg">
-                Mentorship That Matters
+              <h3 className="font-semibold text-[#33744D] text-lg">
+                Experienced Mentors
               </h3>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              We don’t lecture — we mentor, guide, support, and transform
-              individuals through personalised attention and real-world insight.
+              Our dedicated teachers combine knowledge, experience, and compassion to
+              guide students academically, spiritually, and personally.
             </p>
           </div>
 
           {/* Card 3 */}
           <div
-            className="group bg-white/5 backdrop-blur-xl border border-white/10 
-rounded-2xl p-6 
-transition-all duration-300 ease-out
-hover:-translate-y-2 
-hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
-hover:border-[#BE5103]"
+            className="group bg-white/5 backdrop-blur-xl border border-gray-200
+        rounded-2xl p-6 
+        transition-all duration-300 ease-out
+        hover:-translate-y-2 
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:border-[#33744D]"
           >
             <div className="flex items-start gap-3 mb-3">
-              <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
+              <span className="bg-[#33744D]/10 text-[#33744D] p-2 rounded-lg">
                 <Globe size={20} />
               </span>
-              <h3 className="font-semibold text-white text-lg">
-                Real Opportunities
+              <h3 className="font-semibold text-[#33744D] text-lg">
+                Integrated Curriculum
               </h3>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Access to internships, global exposure, and structured career
-              pathways that go beyond traditional education.
+              A balanced program that blends Islamic studies with modern education to
+              prepare students for both worldly success and spiritual growth.
             </p>
           </div>
 
           {/* Row for last two cards */}
           <div className="md:col-span-3 flex justify-center gap-6 flex-wrap">
+
             {/* Card 4 */}
             <div
-              className="w-full md:w-[31%] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-300 ease-out
-hover:-translate-y-2 
-hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
-hover:border-[#BE5103]"
+              className="w-full md:w-[31%] bg-white/5 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 transition-all duration-300 ease-out
+        hover:-translate-y-2 
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:border-[#33744D]"
             >
               <div className="flex items-start gap-3 mb-3">
-                <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
-                  <BrainCircuit size={20} />
+                <span className="bg-[#33744D]/10 text-[#33744D] p-2 rounded-lg">
+                  <ShieldCheck size={20} />
                 </span>
-                <h3 className="font-semibold text-white text-lg">
-                  Training for the Future
+                <h3 className="font-semibold text-[#33744D] text-lg">
+                  Safe & Value-Based Environment
                 </h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                AI-era readiness, international etiquette, communication
-                mastery, and modern workplace competencies.
+                A disciplined and respectful learning atmosphere that nurtures moral
+                values, responsibility, and Islamic character.
               </p>
             </div>
 
             {/* Card 5 */}
             <div
-              className="w-full md:w-[31%] bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-300 ease-out
-hover:-translate-y-2 
-hover:shadow-[0_20px_40px_rgba(190,81,3,0.25)]
-hover:border-[#BE5103]"
+              className="w-full md:w-[31%] bg-white/5 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 transition-all duration-300 ease-out
+        hover:-translate-y-2 
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:border-[#33744D]"
             >
               <div className="flex items-start gap-3 mb-3">
-                <span className="bg-[#BE5103]/10 text-[#BE5103] p-2 rounded-lg">
+                <span className="bg-[#33744D]/10 text-[#33744D] p-2 rounded-lg">
                   <Target size={20} />
                 </span>
-                <h3 className="font-semibold text-white text-lg">
-                  Youth-Focused Approach
+                <h3 className="font-semibold text-[#33744D] text-lg">
+                  Leadership & Personality Development
                 </h3>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Designed specifically for ages 18–30 with flexible, practical,
-                hands-on learning experiences.
+                Students develop communication skills, leadership qualities, and
+                confidence to face life’s challenges with strong character.
               </p>
             </div>
+
           </div>
         </div>
 
         {/* WHAT WE DO */}
         <div className="mt-20 px-6 md:px-12 lg:px-24">
-          <h2 className="text-4xl md:text-4xl font-serif italic font-bold text-[#BE5103] mb-12 text-left">
+          <h2 className="text-4xl md:text-4xl font-serif italic font-bold text-[#33744D] mb-12 text-left">
             What We Do
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
+
             {/* Card 1 */}
             <div
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
-                    hover:border-[#BE5103] transition duration-300 
-                    hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
+              className="bg-white/5 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 
+              hover:border-[#33744D] transition duration-300 
+              hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(51,116,77,0.25)]"
             >
               <div className="flex items-center gap-3 mb-4">
-                <GraduationCap className="text-[#BE5103]" size={26} />
+                <GraduationCap className="text-[#33744D]" size={26} />
                 <h3 className="text-xl md:text-2xl font-semibold text-white">
-                  Future Skills Training
+                  Islamic & Academic Education
                 </h3>
               </div>
 
               <ul className="space-y-2 text-gray-400 font-semibold text-sm md:text-base">
-                <li>• Global student readiness program</li>
-                <li>• Communication & Etiquette</li>
-                <li>• Sales & Business Development</li>
-                <li>• Digital & AI Literacy</li>
-                <li>• Workplace Behaviour</li>
-                <li>• Leadership & Mindset</li>
+                <li>• Quran & Islamic studies</li>
+                <li>• Moral and character education</li>
+                <li>• Balanced religious and modern learning</li>
+                <li>• Discipline and ethical values</li>
+                <li>• Knowledge for both deen and dunya</li>
               </ul>
             </div>
 
             {/* Card 2 */}
             <div
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
-                    hover:border-[#BE5103] transition duration-300 
-                    hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
+              className="bg-white/5 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 
+              hover:border-[#33744D] transition duration-300 
+              hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(51,116,77,0.25)]"
             >
               <div className="flex items-center gap-3 mb-4">
-                <Users className="text-[#BE5103]" size={26} />
+                <Users className="text-[#33744D]" size={26} />
                 <h3 className="text-xl md:text-2xl font-semibold text-white">
-                  Career Mentorship
+                  Student Mentorship
                 </h3>
               </div>
 
               <p className="text-gray-400 font-semibold text-sm md:text-base leading-relaxed">
-                Direction, clarity, and personalised guidance that help youth
-                make confident career decisions and long-term plans.
+                Our mentors guide students personally in their studies, character
+                development, and life decisions to help them grow into responsible
+                and confident individuals.
               </p>
             </div>
 
             {/* Card 3 */}
             <div
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
-                    hover:border-[#BE5103] transition duration-300 
-                    hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
+              className="bg-white/5 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 
+              hover:border-[#33744D] transition duration-300 
+              hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(51,116,77,0.25)]"
             >
               <div className="flex items-center gap-3 mb-4">
-                <Globe className="text-[#BE5103]" size={26} />
+                <BookOpen className="text-[#33744D]" size={26} />
                 <h3 className="text-xl md:text-2xl font-semibold text-white">
-                  Global Internship Programs
+                  Skill & Personality Development
                 </h3>
               </div>
 
               <p className="text-gray-400 font-semibold text-sm md:text-base leading-relaxed">
-                Our flagship programs combine industry readiness with
-                international internship opportunities in destinations such as
-                Dubai and Vietnam, providing real global exposure.
+                We focus on building communication skills, leadership qualities,
+                discipline, and confidence so students can succeed in education,
+                career, and life.
               </p>
             </div>
 
             {/* Card 4 */}
             <div
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 
-                    hover:border-[#BE5103] transition duration-300 
-                    hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(190,81,3,0.25)]"
+              className="bg-white/5 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 
+              hover:border-[#33744D] transition duration-300 
+              hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(51,116,77,0.25)]"
             >
               <div className="flex items-center gap-3 mb-4">
-                <Newspaper className="text-[#BE5103]" size={26} />
+                <ShieldCheck className="text-[#33744D]" size={26} />
                 <h3 className="text-xl md:text-2xl font-semibold text-white">
-                  Youth Awareness & Journalism
+                  Value-Based Environment
                 </h3>
               </div>
 
               <ul className="space-y-2 text-gray-400 font-semibold text-sm md:text-base">
-                <li>• Video stories</li>
-                <li>• Research-based articles</li>
-                <li>• Industry interviews</li>
-                <li>• Student case studies</li>
-                <li>• Investigation into hidden career challenges</li>
-                <li>• Career crisis analysis</li>
+                <li>• Safe and respectful campus</li>
+                <li>• Islamic values and discipline</li>
+                <li>• Character building activities</li>
+                <li>• Leadership and teamwork training</li>
+                <li>• Positive student community</li>
               </ul>
             </div>
+
           </div>
         </div>
       </section>
@@ -614,11 +580,11 @@ hover:border-[#BE5103]"
       {/* ================= OUR TEAM ================= */}
       <section className="py-12 md:py-20 px-6">
         <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-white to-white/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#BE5103] uppercase font-bold text-center">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
             OUR TEAM
           </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-white to-white/15" />
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -626,28 +592,8 @@ hover:border-[#BE5103]"
         </div>
       </section>
 
-      {/* ================= TRUSTED PARTNERS ================= */}
-      {/* <section className="py-12 md:py-20 px-6 bg-[#0f0f0f]">
-        <div className="max-w-6xl mx-auto text-center mb-10 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-light">
-            Our{" "}
-            <span className="italic font-serif text-[#BE5103]">
-              Trusted Partners
-            </span>
-          </h2>
-
-          <p className="text-gray-400 max-w-2xl mx-auto mt-6 text-sm md:text-[15px] leading-relaxed">
-            We collaborate with international academic institutions and global
-            industry networks to ensure structured academic and professional
-            pathways.
-          </p>
-        </div>
-
-        <PartnersSlider />
-      </section> */}
-
       {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-black py-12 md:py-24 px-6 relative overflow-hidden">
+      {/* <section className="bg-white py-12 md:py-24 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-white leading-relaxed">
           <h2 className="text-3xl md:text-5xl text-center font-light mb-12 md:mb-20">
             Our students find countless <br />
@@ -656,7 +602,7 @@ hover:border-[#BE5103]"
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-            {/* CARD 1 */}
+           
             <div
               className="bg-[#111] border border-[#BE5103]/30 rounded-[2.5rem] p-8 md:p-10 hover:border-[#BE5103] transition-all duration-300 group
     hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,81,3,0.1)] "
@@ -687,7 +633,6 @@ hover:border-[#BE5103]"
               </div>
             </div>
 
-            {/* CARD 2 */}
             <div
               className="bg-[#111] border border-[#BE5103]/30 rounded-[2.5rem] p-8 md:p-10 hover:border-[#BE5103] transition-all duration-300 group
     hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(190,81,3,0.1)] "
@@ -719,51 +664,52 @@ hover:border-[#BE5103]"
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================= FAQ ================= */}
-      <section className="bg-black py-20 md:py-32 px-6">
+      <section className="bg-white py-20 md:py-32 px-6">
         <div className="max-w-4xl mx-auto text-white leading-relaxed">
-          <h2 className="text-3xl md:text-5xl text-center font-light mb-12 md:mb-16">
+
+          <h2 className="text-3xl md:text-5xl text-center font-light mb-12 md:mb-16 text-black">
             Got questions? We’ve got{" "}
-            <span className="text-[#BE5103] italic font-serif">answers!</span>
+            <span className="text-[#33744D] italic font-serif">answers!</span>
           </h2>
 
           <div className="space-y-4">
             {[
               {
-                q: "What is Education Journalism?",
-                a: "It's our unique approach to career guidance. We investigate and expose the realities of various industries and courses, providing you with unbiased information to make informed decisions.",
+                q: "What programs does Al Haram Institute offer?",
+                a: "Al Haram Institute provides a balanced education that combines Islamic studies with modern academic learning, helping students grow spiritually, intellectually, and morally.",
               },
               {
-                q: "How does the mentorship program work?",
-                a: "We work one-on-one with you to understand your strengths and goals, then provide a structured roadmap including skill training and industry exposure to ensure you're ready for the professional world.",
+                q: "Who can enroll in the institute?",
+                a: "Our programs are designed for students who wish to gain strong Islamic knowledge while also developing essential life skills, character, and leadership qualities.",
               },
               {
-                q: "What are Future-Skills?",
-                a: "These are the competencies required in the modern workplace, including AI literacy, professional etiquette, emotional intelligence, and cross-cultural communication.",
+                q: "Do students receive individual attention?",
+                a: "Yes. We believe every student is unique, so our mentors provide personal guidance, ensuring that each learner receives the attention and support needed for growth.",
               },
               {
-                q: "Who can benefit from Momentor?",
-                a: "Any young professional or student (typically ages 18-30) looking for clarity in their career, seeking to upgrade their professional skills, or wanting global career exposure.",
+                q: "What makes Al Haram Institute different?",
+                a: "Our institute focuses on moral character, discipline, and leadership alongside education. We aim to nurture students who are knowledgeable, responsible, and confident in their faith and future.",
               },
               {
-                q: "Do you offer internship opportunities?",
-                a: "Yes, our GCRP program includes exposure to international internship opportunities, providing real-world experience in global business hubs.",
+                q: "Does the institute focus on personality development?",
+                a: "Absolutely. We help students develop communication skills, leadership qualities, and strong values so they can succeed both in their personal lives and professional journeys.",
               },
             ].map((item, i) => (
               <details
                 key={i}
-                className="group bg-[#111] border border-white/5 rounded-2xl p-6 md:p-8 cursor-pointer hover:border-[#BE5103]/50 transition-all duration-300"
+                className="group bg-[#33744D] border border-white/5 rounded-2xl p-6 md:p-8 cursor-pointer hover:border-[#33744D]/50 transition-all duration-300"
               >
                 <summary className="flex justify-between items-center text-white font-bold text-lg">
                   {item.q}
-                  <span className="text-[#BE5103] group-open:rotate-45 transition-transform duration-300 text-2xl font-light">
+                  <span className="text-white group-open:rotate-45 transition-transform duration-300 text-2xl font-light">
                     +
                   </span>
                 </summary>
 
-                <p className="text-gray-500 text-sm md:text-base mt-4 leading-relaxed max-w-3xl">
+                <p className="text-gray-200 text-sm md:text-base mt-4 leading-relaxed max-w-3xl">
                   {item.a}
                 </p>
               </details>

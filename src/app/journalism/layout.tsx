@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Education Journalism",
-    description: "INDIA's First Career & Education Truth Platform. Momentor provides unbiased, honest, and data-driven reporting on career realities and the future of work.",
+    description: "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
 };
 
 export default function JournalismLayout({

@@ -1,243 +1,218 @@
 "use client";
 
-import { Check, Mail, Phone, MapPin } from "lucide-react";
+import { Check, Mail, Phone, MapPin, Send } from "lucide-react";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Header from "@/components/Header";
 
 export default function ContactPage() {
   return (
-    <>
+    <main className="bg-white text-black min-h-screen">
+      <Header />
       {/* ================= HERO BANNER ================= */}
       <section className="relative min-h-[40vh] md:min-h-[55vh] h-auto flex items-center justify-center text-center px-4 py-16 md:py-0 overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/images/contact-hero.webp"
-          alt="Contact Momentor"
+          src="/images/contactusimg.jpg"
+          alt="Contact Al Haram Institute"
           fill
           priority
           className="object-cover object-center"
         />
 
-        {/* Dark Overlay (same intensity as reference) */}
-        <div className="absolute inset-0 bg-black/65" />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl">
-          <div className="inline-block px-6 py-2 mb-6 rounded-full border border-[#BE5103]/40 bg-[#BE5103]/10 backdrop-blur-sm">
-            <p className="text-xs md:text-sm tracking-[0.35em] text-[#BE5103] font-semibold">
+          <div className="inline-block px-6 py-2 mb-6 rounded-full border border-[#33744D]/40 bg-[#33744D]/10 backdrop-blur-sm">
+            <p className="text-xs md:text-sm tracking-[0.35em] text-white font-semibold">
               GET IN TOUCH
             </p>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
-            Contact <span className="italic font-serif text-[#BE5103]">Us</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-white">
+            Contact <span className="italic font-serif text-[#33744D]">Us</span>
           </h1>
         </div>
       </section>
+
       <section className="pt-20 md:pt-28 pb-12 md:pb-20 text-center px-6">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-light mb-4 px-4 text-center">
-          Let’s Start Your{" "}
-          <span className="italic font-serif text-[#BE5103]">
-            Mentorship Journey
-          </span>
-        </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-center text-sm md:text-lg leading-relaxed px-4">
-          Connect with our expert mentors for personalised guidance on career
-          clarity, future-skills, and unbiased education journalism. Your professional
-          growth starts with the right mentorship.
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4 text-center text-black">
+          Connect with <span className="italic font-serif text-[#33744D] font-normal">Our Institute</span>
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto text-center text-sm md:text-lg leading-relaxed px-4">
+          We are here to answer your questions and provide more information about our programs. We welcome parents and students to reach out and learn how we can support your educational journey.
         </p>
+
         <div className="max-w-7xl mx-auto py-12 md:py-20">
           {/* MAIN CARD */}
-          <div className="relative bg-[#111] rounded-3xl md:rounded-[2.5rem] p-6 md:p-16 border border-white/10 overflow-hidden">
-            {/* LEFT GLOW EFFECT (Theme Color) */}
-            <div className="absolute -bottom-32 -left-32 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#BE5103] opacity-30 blur-[100px] md:blur-[160px] rounded-full"></div>
+          <div className="relative bg-white rounded-[2.5rem] p-6 md:p-16 border border-gray-200 shadow-2xl overflow-hidden">
+            {/* Soft Glow Effect */}
+            <div className="absolute -bottom-32 -left-32 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#33744D]/5 blur-[100px] rounded-full"></div>
 
-            <div className="grid md:grid-cols-2 gap-10 md:gap-16 relative z-10">
+            <div className="grid md:grid-cols-2 gap-12 md:gap-20 relative z-10">
               {/* ================= LEFT SIDE ================= */}
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
-                  Plan Your <br className="hidden md:block" />{" "}
-                  <span className="text-[#BE5103] italic font-serif">
-                    Future Career
+                <h3 className="text-3xl md:text-5xl font-bold leading-tight mb-8 text-black">
+                  Start Your <br className="hidden md:block" />{" "}
+                  <span className="text-[#33744D] italic font-serif font-normal">
+                    Excellence Journey
                   </span>
-                </h1>
+                </h3>
 
-                <div className="space-y-4 text-gray-300 mb-10 text-sm md:text-base w-full">
+                <div className="space-y-6 text-gray-600 mb-10 text-sm md:text-base w-full">
                   <div className="flex items-center gap-4 justify-center md:justify-start group">
-                    <span className="bg-[#BE5103]/10 p-1.5 rounded-lg text-[#BE5103]">
+                    <span className="bg-[#33744D]/10 p-2 rounded-lg text-[#33744D] group-hover:bg-[#33744D] group-hover:text-white transition-all">
                       <Check size={18} />
                     </span>
-                    <p>India's 1st Education Journalism Platform</p>
+                    <p className="font-medium">Integrated Islamic & Modern Education</p>
                   </div>
 
                   <div className="flex items-center gap-4 justify-center md:justify-start group">
-                    <span className="bg-[#BE5103]/10 p-1.5 rounded-lg text-[#BE5103]">
+                    <span className="bg-[#33744D]/10 p-2 rounded-lg text-[#33744D] group-hover:bg-[#33744D] group-hover:text-white transition-all">
                       <Check size={18} />
                     </span>
-                    <p>Access to dedicated career mentors</p>
+                    <p className="font-medium">Experienced Mentors & Scholars</p>
                   </div>
                 </div>
 
-                <div className="text-gray-400 mb-8 w-full">
-                  <a href="mailto:hello@momentor.in" className="text-[#BE5103] font-bold mb-2 block hover:underline">
-                    hello@momentor.in
-                  </a>
-                  <p className="text-xs uppercase tracking-widest">
-                    Want to book a quick mentorship call?
+                <div className="w-full mb-8 pt-6 border-t border-gray-100">
+                  <p className="text-xs uppercase tracking-[0.2em] font-bold text-gray-400 mb-4 text-center md:text-left">
+                    Direct Inquiry
                   </p>
+                  <div className="flex flex-col gap-4">
+                    <a href="mailto:alharam@gmail.com" className="text-[#33744D] font-bold text-xl md:text-2xl hover:underline tracking-tight">
+                      alharam@gmail.com
+                    </a>
+                    <a href="tel:+919645467077" className="text-black font-bold text-lg hover:text-[#33744D] transition-colors">
+                      +91 96454 67077
+                    </a>
+                  </div>
                 </div>
-
-                <a
-                  href="tel:+919876543210"
-                  className="
-    mt-4 md:mt-8 px-10 py-4 rounded-full
-    bg-[#BE5103] text-white text-sm font-bold
-    hover:bg-[#BE5103]/90
-    hover:shadow-[0_0_30px_rgba(190,81,3,0.4)]
-    transition-all duration-300
-    hover:-translate-y-2
-    w-full md:w-auto
-    inline-block
-  "
-                >
-                  Book a Free Session Now
-                </a>
               </div>
 
               {/* ================= RIGHT SIDE (FORM) ================= */}
-              <div className="space-y-8 bg-white/[0.002] p-6 md:p-0 rounded-[2rem] border border-white/5 md:border-none">
-                <h3 className="text-xl font-bold md:hidden text-center mb-6 text-[#BE5103]">
-                  Enquiry Form
-                </h3>
-                {/* Inputs */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="relative group">
-                    <input
-                      type="text"
-                      placeholder="First name*"
-                      className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600"
-                    />
+              <div className="bg-gray-50/50 p-8 md:p-10 rounded-[2rem] border border-gray-100">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-10 h-10 rounded-full bg-[#33744D] flex items-center justify-center text-white">
+                    <Send size={18} />
                   </div>
-                  <div className="relative group">
-                    <input
-                      type="text"
-                      placeholder="Last Name*"
-                      className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600"
-                    />
-                  </div>
+                  <h3 className="text-xl font-bold text-black">
+                    Send a Message
+                  </h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="relative group">
+
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase ml-1">First Name</label>
+                      <input
+                        type="text"
+                        placeholder="John"
+                        className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#33744D] transition-colors"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase ml-1">Last Name</label>
+                      <input
+                        type="text"
+                        placeholder="Doe"
+                        className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#33744D] transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-gray-500 uppercase ml-1">Email Address</label>
                     <input
                       type="email"
-                      placeholder="Email*"
-                      className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600"
+                      placeholder="john@example.com"
+                      className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#33744D] transition-colors"
                     />
                   </div>
-                  <div className="relative group">
-                    <input
-                      type="tel"
-                      placeholder="Phone number*"
-                      className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600"
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold text-gray-500 uppercase ml-1">Message</label>
+                    <textarea
+                      placeholder="How can we help you?"
+                      rows={4}
+                      className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#33744D] transition-colors resize-none"
                     />
                   </div>
-                </div>
 
-                <div className="relative group">
-                  <textarea
-                    placeholder="Tell us about your career goals*"
-                    rows={4}
-                    className="w-full bg-transparent border-b border-white/10 pb-3 outline-none focus:border-[#BE5103] text-sm md:text-base transition-colors placeholder:text-gray-600 resize-none"
-                  />
-                </div>
-
-                {/* Submit */}
-                <button
-                  className="
+                  <button
+                    type="submit"
+                    className="
     w-full
-    bg-[#BE5103]
+    bg-[#33744D]
     text-white
     py-4
-    rounded-full
+    rounded-xl
     font-bold
     tracking-wide
     transition-all duration-300
-    hover:bg-[#BE5103]/90
-    hover:shadow-[0_0_40px_rgba(190,81,3,0.3)]
-    hover:-translate-y-2
-    text-sm md:text-base
+    hover:bg-[#33744D]/90
+    hover:shadow-lg
+    hover:-translate-y-1
     cursor-pointer
   "
-                >
-                  Get Mentorship Guidance
-                </button>
+                  >
+                    Send Inquiry
+                  </button>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* BOTTOM CONTACT CARDS */}
-      <section className="bg-black py-10 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 md:gap-8">
-          {/* CARD 1 */}
-          <div
-            className="bg-[#111] border border-[#BE5103]/40 p-8 md:p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
-    hover:-translate-y-3 text-center"
-          >
-            <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#BE5103]/10">
-              <Phone className="text-[#BE5103] w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">Call Us</h3>
-            <p className="text-gray-400 text-sm">
-              Speak directly with our career mentorship team.
-            </p>
-            <a href="tel:+919876543210" className="text-[#BE5103] font-medium mt-4 block hover:underline">+91 98765 43210</a>
-          </div>
-
-          {/* CARD 2 */}
-          <div
-            className="bg-[#111] border border-[#BE5103]/40 p-8 md:p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
-    hover:-translate-y-3 text-center"
-          >
-            <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#BE5103]/10">
-              <Mail className="text-[#BE5103] w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">Email Us</h3>
-            <p className="text-gray-400 text-sm">
-              Send us your career queries or journalism tips.
-            </p>
-            <a href="mailto:hello@momentor.in" className="text-[#BE5103] font-medium mt-4 block hover:underline">
-              hello@momentor.in
-            </a>
-          </div>
-
-          {/* CARD 3 */}
-          <div
-            className="bg-[#111] border border-[#BE5103]/40 p-8 md:p-10 rounded-3xl hover:border-[#BE5103] transition-transform duration-200 ease-out
-    hover:-translate-y-3 text-center"
-          >
-            <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#BE5103]/10">
-              <MapPin className="text-[#BE5103] w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">
-              Visit Our Office
-            </h3>
-            <p className="text-gray-400 text-sm">
-              Meet our mentors for personalised career sessions.
-            </p>
-            <a
-              href="https://google.com/maps/place/HiLITE+Mall/data=!4m2!3m1!1s0x0:0xc17c381f72b87e02?sa=X&ved=1t:2428&ictx=111"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#BE5103] font-medium mt-4 block hover:underline"
+      <section className="pb-20 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+          {[
+            {
+              icon: Phone,
+              title: "Call Us",
+              desc: "Talk to our admissions office for guidance.",
+              link: "tel:+919645467077",
+              label: "+91 96454 67077"
+            },
+            {
+              icon: Mail,
+              title: "Email Us",
+              desc: "Send us your queries anytime.",
+              link: "mailto:alharam@gmail.com",
+              label: "ialharam@gmail.com"
+            },
+            {
+              icon: MapPin,
+              title: "Visit Us",
+              desc: "Come visit our campus and meet our team.",
+              link: "#",
+              label: "Badriya Purayil, Calicut, Kerala"
+            }
+          ].map((card, i) => (
+            <div
+              key={i}
+              className="bg-white border border-gray-100 p-8 rounded-3xl shadow-lg hover:border-[#33744D] transition-all duration-300 hover:-translate-y-2 text-center group"
             >
-              Hilite business Park, Calicut, Kerala
-            </a>
-          </div>
+              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#33744D]/5 text-[#33744D] group-hover:bg-[#33744D] group-hover:text-white transition-all">
+                <card.icon size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">{card.title}</h3>
+              <p className="text-gray-500 text-sm mb-6">
+                {card.desc}
+              </p>
+              <a href={card.link} className="text-[#33744D] font-bold hover:underline">
+                {card.label}
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 
       <Footer />
-    </>
+    </main>
   );
 }
