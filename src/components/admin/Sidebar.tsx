@@ -59,7 +59,7 @@ const Sidebar = () => {
                         </div>
                         <div className="flex flex-col">
                             <span className="text-lg font-bold tracking-tight leading-none">Admin Panel</span>
-                            <span className="text-xs text-gray-500 font-medium mt-1">Momentor</span>
+                            <span className="text-xs text-gray-500 font-medium mt-1">Al Haram</span>
                         </div>
                     </Link>
                     <button

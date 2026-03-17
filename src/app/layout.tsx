@@ -45,10 +45,10 @@ export const metadata: Metadata = {
       "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Al Haram Logo",
+        alt: "Al Haram Institute",
       },
     ],
   },
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Al Haram | Where Knowledge Guides the Future",
     description:
       "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
-    images: ["/images/logo.png"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,

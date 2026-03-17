@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
         return new Promise<NextResponse>((resolve) => {
             cloudinary.uploader.upload_stream(
-                { resource_type: 'auto', folder: 'momentor' },
+                { resource_type: 'auto', folder: 'al-haram' },
                 (error, result) => {
                     if (error) {
                         console.error('Cloudinary upload error:', error);

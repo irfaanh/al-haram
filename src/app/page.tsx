@@ -27,7 +27,7 @@ export default async function Home() {
       <section className="relative min-h-[75vh] md:min-h-[85vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0">
         <Image
           src="/images/qur.jpg"
-          alt="Momentor Home"
+          alt="Al Haram Home"
           fill
           priority
           className="object-cover object-center"
@@ -272,12 +272,12 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                     alt="User"
                   />
                 </div>
-              </div>
-              <div>
-                <p className="text-black font-bold text-lg leading-tight">
-                  Quality
-                </p>
-                <p className="text-gray-500 text-xs font-medium">Education</p>
+                <div>
+                  <p className="text-black font-bold text-lg leading-tight">
+                    Quality
+                    <span className="text-xs text-gray-500 font-medium mt-1">Al Haram</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -618,7 +618,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
               </div>
 
               <p className="text-gray-400 text-base leading-relaxed italic">
-                "Momentor guided me through career selection, skill building,
+                "Al Haram guided me through career selection, skill building,
                 and professional development smoothly. Their support made my dream of
                 a global career a reality."
               </p>
@@ -649,7 +649,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
 
               <p className="text-gray-400 text-base leading-relaxed italic">
                 "From counselling to career readiness, everything was transparent
-                and well-organised. I highly recommend Momentor to anyone
+                and well-organised. I highly recommend Al Haram to anyone
                 planning their professional future."
               </p>
 
