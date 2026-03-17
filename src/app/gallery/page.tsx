@@ -105,7 +105,7 @@ export default function GalleryPage() {
           {staticGallery.map((item) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-[2.5rem] border border-gray-100 aspect-[4/5] shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="group relative overflow-hidden rounded-[1rem] border border-gray-100 aspect-[4/5] shadow-lg hover:shadow-2xl transition-all duration-500"
             >
               <Image
                 src={item.image}

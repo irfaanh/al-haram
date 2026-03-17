@@ -10,6 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alharaminstitute.com"),
   title: {
     default: "Al Haram | Where Knowledge Guides the Future",
     template: "%s | Al Haram",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
       "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/images/og-image.png?v=2",
         width: 1200,
         height: 630,
         alt: "Al Haram Institute",
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     title: "Al Haram | Where Knowledge Guides the Future",
     description:
       "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og-image.png?v=2"],
   },
   robots: {
     index: true,
