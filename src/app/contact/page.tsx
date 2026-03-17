@@ -82,8 +82,8 @@ export default function ContactPage() {
                     Direct Inquiry
                   </p>
                   <div className="flex flex-col gap-4">
-                    <a href="mailto:alharam@gmail.com" className="text-[#33744D] font-bold text-xl md:text-2xl hover:underline tracking-tight">
-                      alharam@gmail.com
+                    <a href="mailto:alharamiipie@gmail.com" className="text-[#33744D] font-bold text-xl md:text-2xl hover:underline tracking-tight">
+                      alharamiipie@gmail.com
                     </a>
                     <a href="tel:+917025818313" className="text-black font-bold text-lg hover:text-[#33744D] transition-colors">
                       +91 70258 18313
@@ -109,7 +109,6 @@ export default function ContactPage() {
                       <label className="text-xs font-bold text-gray-500 uppercase ml-1">First Name</label>
                       <input
                         type="text"
-                        placeholder="John"
                         className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#33744D] transition-colors"
                       />
                     </div>
@@ -117,7 +116,6 @@ export default function ContactPage() {
                       <label className="text-xs font-bold text-gray-500 uppercase ml-1">Last Name</label>
                       <input
                         type="text"
-                        placeholder="Doe"
                         className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#33744D] transition-colors"
                       />
                     </div>
@@ -127,7 +125,6 @@ export default function ContactPage() {
                     <label className="text-xs font-bold text-gray-500 uppercase ml-1">Email Address</label>
                     <input
                       type="email"
-                      placeholder="john@example.com"
                       className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#33744D] transition-colors"
                     />
                   </div>
@@ -135,7 +132,6 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-gray-500 uppercase ml-1">Message</label>
                     <textarea
-                      placeholder="How can we help you?"
                       rows={4}
                       className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#33744D] transition-colors resize-none"
                     />

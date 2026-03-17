@@ -22,7 +22,7 @@ import TeamSlider from "@/components/TeamSlider";
 export default async function Home() {
 
   return (
-    <main className="text-white">
+    <main className="bg-white text-black">
       {/* ================= HERO ================= */}
       <section className="relative min-h-[75vh] md:min-h-[85vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0">
         <Image
@@ -35,9 +35,9 @@ export default async function Home() {
 
         <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-10 max-w-4xl pt-10 md:pt-20 px-4">
+        <div className="relative z-10 max-w-4xl pt-10 md:pt-20 px-4 text-white">
           <h1 className="text-2xl sm:text-3xl md:text-6xl font-semibold leading-tight mb-6">
-            Al Haram - <br />
+            Al HARAM Institute<br />
             Where Knowledge Guides the{" "}
             <span className="italic font-serif text-[#33744D]">Future</span>
           </h1>
@@ -94,7 +94,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
           {/* Image Side */}
-          <div className="hidden md:block relative group order-2 md:order-1 px-4 md:px-0">
+          <div className="block relative group order-2 md:order-1 px-4 md:px-0">
             <div className="relative h-[300px] sm:h-[400px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#33744D]/30 transition-all duration-700 shadow-2xl">
               <Image
                 src="/images/pioneerimg.jpg"
@@ -111,8 +111,8 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                 <span className="text-white font-bold text-2xl md:text-4xl leading-none">
                   2026
                 </span>
-                <span className="text-white/90 text-[8px] md:text-[10px] uppercase tracking-[0.2em] font-medium mt-1 text-center">
-                  Admissions Open
+                <span className="text-white/90 text-[8px] md:text-[10px] uppercase tracking-wider font-medium mt-1 text-center whitespace-nowrap px-1">
+                  Admissions Open for 8th std
                 </span>
               </div>
             </div>
@@ -181,19 +181,30 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                 </div>
               ))}
             </div>
+
+            <div className="flex justify-center md:justify-center">
+              <Link
+                href="#"
+                target="_blank"
+                className="inline-flex items-center gap-2 bg-[#33744D] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#2a5f3f] transition-all transform hover:scale-105 shadow-lg hover:shadow-[#33744D]/25"
+              >
+                Apply Now
+                <ArrowUpRight size={20} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ================= ABOUT US ================= */}
       <section className="py-12 md:py-20 px-6 bg-white">
-        <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
+        {/* <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
           <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
           <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
             ABOUT US
           </p>
           <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
-        </div>
+        </div> */}
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <h2 className="text-2xl text-black sm:text-3xl md:text-5xl font-light mb-6 md:mb-8 text-center md:text-left">
@@ -272,12 +283,14 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                     alt="User"
                   />
                 </div>
-                <div>
-                  <p className="text-black font-bold text-lg leading-tight">
-                    Quality
-                    <span className="text-xs text-gray-500 font-medium mt-1">Al Haram</span>
-                  </p>
-                </div>
+              </div>
+              <div className="flex flex-col">
+                <p className="text-black font-bold text-sm md:text-base leading-none">
+                  Value-Based Education
+                </p>
+                <p className="text-[10px] text-gray-500 font-medium mt-1">
+                  at Al Haram Institute
+                </p>
               </div>
             </div>
           </div>
@@ -366,11 +379,11 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
           {/* Card 1 */}
           <div
-            className="group bg-white/5 backdrop-blur-xl border border-gray-200
+            className="group bg-white border border-gray-100
         rounded-2xl p-6 
         transition-all duration-300 ease-out
         hover:-translate-y-2 
-        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.15)]
         hover:border-[#33744D]"
           >
             <div className="flex items-start gap-3 mb-3">
@@ -389,11 +402,11 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
 
           {/* Card 2 */}
           <div
-            className="group bg-white/5 backdrop-blur-xl border border-gray-200
+            className="group bg-white border border-gray-100
         rounded-2xl p-6 
         transition-all duration-300 ease-out
         hover:-translate-y-2 
-        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.15)]
         hover:border-[#33744D]"
           >
             <div className="flex items-start gap-3 mb-3">
@@ -412,11 +425,11 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
 
           {/* Card 3 */}
           <div
-            className="group bg-white/5 backdrop-blur-xl border border-gray-200
+            className="group bg-white border border-gray-100
         rounded-2xl p-6 
         transition-all duration-300 ease-out
         hover:-translate-y-2 
-        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.15)]
         hover:border-[#33744D]"
           >
             <div className="flex items-start gap-3 mb-3">
@@ -427,7 +440,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                 Integrated Curriculum
               </h3>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-500 text-sm leading-relaxed">
               A balanced program that blends Islamic studies with modern education to
               prepare students for both worldly success and spiritual growth.
             </p>
@@ -438,9 +451,9 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
 
             {/* Card 4 */}
             <div
-              className="w-full md:w-[31%] bg-white/5 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 transition-all duration-300 ease-out
+              className="w-full md:w-[31%] bg-white border border-gray-100 rounded-2xl p-6 transition-all duration-300 ease-out
         hover:-translate-y-2 
-        hover:shadow-[0_20px_40px_rgba(51,116,77,0.25)]
+        hover:shadow-[0_20px_40px_rgba(51,116,77,0.15)]
         hover:border-[#33744D]"
             >
               <div className="flex items-start gap-3 mb-3">
@@ -472,7 +485,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                   Leadership & Personality Development
                 </h3>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-500 text-sm leading-relaxed">
                 Students develop communication skills, leadership qualities, and
                 confidence to face life’s challenges with strong character.
               </p>
@@ -491,18 +504,18 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
 
             {/* Card 1 */}
             <div
-              className="bg-white/5 backdrop-blur-xl border border-gray-200 rounded-2xl p-8 
+              className="bg-white border border-gray-100 rounded-2xl p-8 
               hover:border-[#33744D] transition duration-300 
-              hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(51,116,77,0.25)]"
+              hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(51,116,77,0.15)]"
             >
               <div className="flex items-center gap-3 mb-4">
                 <GraduationCap className="text-[#33744D]" size={26} />
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black">
                   Islamic & Academic Education
                 </h3>
               </div>
 
-              <ul className="space-y-2 text-gray-400 font-semibold text-sm md:text-base">
+              <ul className="space-y-2 text-gray-500 font-semibold text-sm md:text-base">
                 <li>• Quran & Islamic studies</li>
                 <li>• Moral and character education</li>
                 <li>• Balanced religious and modern learning</li>
@@ -519,12 +532,12 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-4">
                 <Users className="text-[#33744D]" size={26} />
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black">
                   Student Mentorship
                 </h3>
               </div>
 
-              <p className="text-gray-400 font-semibold text-sm md:text-base leading-relaxed">
+              <p className="text-gray-500 font-semibold text-sm md:text-base leading-relaxed">
                 Our mentors guide students personally in their studies, character
                 development, and life decisions to help them grow into responsible
                 and confident individuals.
@@ -539,12 +552,12 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen className="text-[#33744D]" size={26} />
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black">
                   Skill & Personality Development
                 </h3>
               </div>
 
-              <p className="text-gray-400 font-semibold text-sm md:text-base leading-relaxed">
+              <p className="text-gray-500 font-semibold text-sm md:text-base leading-relaxed">
                 We focus on building communication skills, leadership qualities,
                 discipline, and confidence so students can succeed in education,
                 career, and life.
@@ -559,12 +572,12 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             >
               <div className="flex items-center gap-3 mb-4">
                 <ShieldCheck className="text-[#33744D]" size={26} />
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black">
                   Value-Based Environment
                 </h3>
               </div>
 
-              <ul className="space-y-2 text-gray-400 font-semibold text-sm md:text-base">
+              <ul className="space-y-2 text-gray-500 font-semibold text-sm md:text-base">
                 <li>• Safe and respectful campus</li>
                 <li>• Islamic values and discipline</li>
                 <li>• Character building activities</li>
@@ -577,20 +590,6 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
         </div>
       </section>
 
-      {/* ================= OUR TEAM ================= */}
-      <section className="py-12 md:py-20 px-6">
-        <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
-            OUR TEAM
-          </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
-        </div>
-
-        <div className="max-w-6xl mx-auto">
-          <TeamSlider />
-        </div>
-      </section>
 
       {/* ================= TESTIMONIALS ================= */}
       {/* <section className="bg-white py-12 md:py-24 px-6 relative overflow-hidden">
@@ -665,6 +664,94 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
           </div>
         </div>
       </section> */}
+
+      {/* ================= PROGRAMS & EVENTS ================= */}
+      <section className="py-20 md:py-32 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-20">
+            <span className="w-12 md:w-48 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
+            <p className="text-sm md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
+              PROGRAMS & EVENTS
+            </p>
+            <span className="w-12 md:w-48 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Abacus Card */}
+            <div className="group relative overflow-hidden rounded-[1.5rem] border border-gray-100 aspect-[16/10] shadow-lg hover:shadow-2xl transition-all duration-500">
+              <Image
+                src="/images/abacus.jpg"
+                alt="Abacus Program"
+                fill
+                className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+              />
+              <div className="absolute top-4 left-4 z-20">
+                <span className="px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-100 text-[9px] uppercase tracking-widest font-bold text-[#33744D] shadow-sm">
+                  Skill Development
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-white group-hover:text-[#33744D] transition-colors duration-300">
+                  Abacus
+                </h3>
+                <p className="text-gray-200 text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 font-medium line-clamp-2">
+                  Enhance mental arithmetic skills, concentration, and cognitive development through our comprehensive Abacus program.
+                </p>
+                <div className="w-0 group-hover:w-12 h-1 bg-[#33744D] mt-4 transition-all duration-700 delay-200" />
+              </div>
+            </div>
+
+            {/* AI Robotics Card */}
+            <div className="group relative overflow-hidden rounded-[1.5rem] border border-gray-100 aspect-[16/10] shadow-lg hover:shadow-2xl transition-all duration-500">
+              <Image
+                src="/images/airobo.jpg"
+                alt="AI Robotics Program"
+                fill
+                className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+              />
+              <div className="absolute top-4 left-4 z-20">
+                <span className="px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-100 text-[9px] uppercase tracking-widest font-bold text-[#33744D] shadow-sm">
+                  Technology
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-white group-hover:text-[#33744D] transition-colors duration-300">
+                  AI Robotics
+                </h3>
+                <p className="text-gray-200 text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 font-medium line-clamp-2">
+                  Dive into the world of artificial intelligence and robotics, learning to build and program modern technology.
+                </p>
+                <div className="w-0 group-hover:w-12 h-1 bg-[#33744D] mt-4 transition-all duration-700 delay-200" />
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-[1.5rem] border border-gray-100 aspect-[16/10] shadow-lg hover:shadow-2xl transition-all duration-500">
+              <Image
+                src="/images/airobo.jpg"
+                alt="AI Robotics Program"
+                fill
+                className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+              />
+              <div className="absolute top-4 left-4 z-20">
+                <span className="px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-100 text-[9px] uppercase tracking-widest font-bold text-[#33744D] shadow-sm">
+                  Technology
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-white group-hover:text-[#33744D] transition-colors duration-300">
+                  AI Robotics
+                </h3>
+                <p className="text-gray-200 text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 font-medium line-clamp-2">
+                  Dive into the world of artificial intelligence and robotics, learning to build and program modern technology.
+                </p>
+                <div className="w-0 group-hover:w-12 h-1 bg-[#33744D] mt-4 transition-all duration-700 delay-200" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ================= FAQ ================= */}
       <section className="bg-white py-20 md:py-32 px-6">

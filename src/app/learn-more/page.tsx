@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
-import { CircleCheck, BookOpen, Heart, Users } from "lucide-react";
+import { CircleCheck, BookOpen, Heart, Users, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Learn More - Al Haram Institute",
@@ -34,7 +35,6 @@ export default function LearnMorePage() {
                      rounded-[2rem] px-8 py-8 md:px-12 md:py-10 shadow-2xl"
         >
           <h1 className="text-3xl md:text-5xl font-light text-white">
-            Unlock Your Potential with{" "}
             <span className="italic font-serif text-[#33744D]">Al Haram Institute</span>
           </h1>
         </div>
@@ -164,6 +164,22 @@ export default function LearnMorePage() {
               </ul>
             </div>
           </div>
+        </div>
+        <div className="mt-20 flex flex-col items-center text-center bg-[#33744D]/5 p-8 md:p-16 rounded-[3rem] border border-[#33744D]/10">
+          <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
+            Ready to Start Your Journey?
+          </h2>
+          <p className="text-gray-600 mb-10 max-w-2xl text-lg">
+            Join Al Haram Institute today and experience a transformative education that balances modern learning with timeless values.
+          </p>
+          <Link
+            href="#"
+            target="_blank"
+            className="inline-flex items-center gap-2 bg-[#33744D] text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-[#2a5f3f] transition-all transform hover:scale-105 shadow-xl hover:shadow-[#33744D]/25"
+          >
+            Apply Now
+            <ArrowUpRight size={24} />
+          </Link>
         </div>
       </section>
 

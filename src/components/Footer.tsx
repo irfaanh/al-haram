@@ -26,7 +26,7 @@ export default function Footer() {
         {/* LOGO + ABOUT */}
         <div className="col-span-2 md:col-span-2 lg:col-span-1 flex flex-col items-start text-left">
           <Link href="/" className="mb-2">
-            <p className="text-white font-semibold uppercase tracking-widest text-xs">Al Haram Institute</p>
+            <p className="text-white font-semibold uppercase tracking-widest text-xs">Al HARAM Institute</p>
           </Link>
 
           <p className="text-sm leading-relaxed max-w-xs text-gray-200 mt-5">
@@ -86,11 +86,11 @@ export default function Footer() {
             </li>
 
             <li className="flex items-center gap-4 justify-start group cursor-pointer hover:text-white transition-colors">
-              <a href="mailto:alharam@gmail.com" className="flex items-center gap-4 group-hover:text-white transition-colors">
+              <a href="mailto:alharamiipie@gmail.com" className="flex items-center gap-4 group-hover:text-white transition-colors">
                 <span className="p-2.5 text-white rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-white hover:text-black  transition-all">
                   <Mail size={16} />
                 </span>
-                alharam@gmail.com
+                alharamiipie@gmail.com
               </a>
             </li>
 

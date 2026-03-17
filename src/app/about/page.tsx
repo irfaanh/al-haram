@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { GraduationCap, Users, ShieldCheck, BookOpen, CircleCheck, Target, Heart } from "lucide-react";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import TeamSlider from "@/components/TeamSlider";
 
 export const metadata: Metadata = {
   title: "About Us - Al Haram Institute",
@@ -219,6 +220,22 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* ================= OUR TEAM ================= */}
+      <section className="py-12 md:py-20 px-6 bg-white text-black">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
+            OUR TEAM
+          </p>
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          <TeamSlider />
+        </div>
+      </section>
+
 
       {/* ================= CORE VALUES ================= */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
