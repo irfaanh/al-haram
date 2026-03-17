@@ -10,6 +10,7 @@ import {
   Phone,
   Mail,
   MapPin,
+  Youtube,
 } from "lucide-react";
 
 export default function Footer() {
@@ -83,11 +84,11 @@ export default function Footer() {
 
           <ul className="space-y-5 text-sm">
             <li className="flex items-center gap-4 justify-start group cursor-pointer hover:text-white transition-colors">
-              <a href="tel:+919645467077" className="flex items-center gap-4">
+              <a href="tel:+917025818313" className="flex items-center gap-4">
                 <span className="p-2.5 text-white rounded-full min-w-[36px] flex items-center justify-center group-hover:bg-white hover:text-black  transition-all">
                   <Phone size={16} />
                 </span>
-                +91 96454 67077
+                +91 70258 18313
               </a>
             </li>
 
@@ -134,16 +135,14 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-white">
-            <Link href="#" className="hover:opacity-70 transition-all transform hover:-translate-y-2">
-              <Twitter size={20} />
-            </Link>
-            <Link href="#" className="hover:opacity-70 transition-all transform hover:-translate-y-2">
-              <Linkedin size={20} />
-            </Link>
-            <Link href="#" className="hover:opacity-70 transition-all transform hover:-translate-y-2">
+            <Link href="https://www.instagram.com/al_haram_institute/" className="hover:opacity-70 transition-all transform hover:-translate-y-2">
               <Instagram size={20} />
             </Link>
-            <Link href="#" className="hover:opacity-70 transition-all transform hover:-translate-y-2">
+            <Link href="https://www.youtube.com/@ALHARAM_INSTITUTE" className="hover:opacity-70 transition-all transform hover:-translate-y-2">
+              <Youtube size={20} />
+            </Link>
+
+            <Link href="https://www.facebook.com/people/AL-Haram-Iipie/pfbid02jtfbhZK8fxjdpixngKP9FfQu6wRNnnCD4deXyAEW8njDr3CdDRpJg9o4ygdyjtp6l/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" className="hover:opacity-70 transition-all transform hover:-translate-y-2">
               <Facebook size={20} />
             </Link>
           </div>

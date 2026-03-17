@@ -85,8 +85,8 @@ export default function ContactPage() {
                     <a href="mailto:alharam@gmail.com" className="text-[#33744D] font-bold text-xl md:text-2xl hover:underline tracking-tight">
                       alharam@gmail.com
                     </a>
-                    <a href="tel:+919645467077" className="text-black font-bold text-lg hover:text-[#33744D] transition-colors">
-                      +91 96454 67077
+                    <a href="tel:+917025818313" className="text-black font-bold text-lg hover:text-[#33744D] transition-colors">
+                      +91 70258 18313
                     </a>
                   </div>
                 </div>

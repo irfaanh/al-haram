@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
@@ -28,10 +29,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Al Haram" }],
   creator: "Al Haram",
   publisher: "Al Haram",
-  icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
-  },
+
   formatDetection: {
     email: false,
     address: false,
@@ -84,6 +82,7 @@ export default function RootLayout({
       <body className={`${montserrat.className} relative`}>
         <Header />
         {children}
+        <WhatsAppIcon />
       </body>
     </html>
   );
