@@ -22,21 +22,14 @@ export default function Footer() {
       </h1>
 
       {/* FOOTER CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-y-12 gap-x-6 lg:gap-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 lg:gap-8">
         {/* LOGO + ABOUT */}
         <div className="col-span-2 md:col-span-2 lg:col-span-1 flex flex-col items-start text-left">
-          <Link href="/" className="mb-6 -ml-5">
-            <p className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Al Haram Institute</p>
-            {/* <Image
-              src="/images/log.png"
-              alt="Al Haram Institute logo"
-              width={180}
-              height={90}
-              className="object-contain"
-            /> */}
+          <Link href="/" className="mb-2">
+            <p className="text-white font-semibold uppercase tracking-widest text-xs">Al Haram Institute</p>
           </Link>
 
-          <p className="text-sm leading-relaxed max-w-xs text-gray-200">
+          <p className="text-sm leading-relaxed max-w-xs text-gray-200 mt-5">
             Al Haram Institute is a values-based educational center dedicated to nurturing knowledge, character, and leadership by integrating Islamic teachings with contemporary learning.
           </p>
         </div>
@@ -57,21 +50,21 @@ export default function Footer() {
         <div className="text-left col-span-1">
           <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Social</h4>
           <ul className="space-y-4 text-sm">
-            <li className="hover:text-black cursor-pointer transition">Twitter</li>
-            <li className="hover:text-black cursor-pointer transition">LinkedIn</li>
-            <li className="hover:text-black cursor-pointer transition">Facebook</li>
-            <li className="hover:text-black cursor-pointer transition">Instagram</li>
-          </ul>
-        </div>
-
-        {/* LEGAL */}
-        <div className="text-left col-span-1">
-          <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Legal</h4>
-          <ul className="space-y-4 text-sm">
-            <li className="hover:text-black cursor-pointer transition">Terms</li>
-            <li className="hover:text-black cursor-pointer transition">Privacy</li>
-            <li className="hover:text-black cursor-pointer transition">Cookies</li>
-            <li className="hover:text-black cursor-pointer transition">Contact</li>
+            <li>
+              <Link href="https://www.instagram.com/al_haram_institute/" target="_blank" className="hover:text-black transition-colors">
+                Instagram
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.youtube.com/@ALHARAM_INSTITUTE" target="_blank" className="hover:text-black transition-colors">
+                YouTube
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.facebook.com/people/AL-Haram-Iipie/pfbid02jtfbhZK8fxjdpixngKP9FfQu6wRNnnCD4deXyAEW8njDr3CdDRpJg9o4ygdyjtp6l/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" className="hover:text-black transition-colors">
+                Facebook
+              </Link>
+            </li>
           </ul>
         </div>
 
