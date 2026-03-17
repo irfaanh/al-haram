@@ -67,7 +67,7 @@ export default function AboutPage() {
     cursor-pointer
   "
           >
-            Join Our Community →
+            Contact Us →
           </button>
         </Link>
       </section>

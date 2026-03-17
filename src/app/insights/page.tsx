@@ -89,8 +89,8 @@ export default function JournalismPage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-white">
-            Al Haram Education <br />
-            <span className="italic font-serif text-[#33744D]">Insights & Journalism</span>
+            Al Haram <br />
+            <span className="italic font-serif text-[#33744D]">Educational Insights</span>
           </h1>
           <p className="mt-6 text-base md:text-lg text-gray-200 font-medium tracking-wide">
             Promoting Truth and Values in Career & Education

@@ -98,7 +98,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             <div className="relative h-[300px] sm:h-[400px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#33744D]/30 transition-all duration-700 shadow-2xl">
               <Image
                 src="/images/pioneerimg.jpg"
-                alt="Education Journalism"
+                alt="Education Insights"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
               />
