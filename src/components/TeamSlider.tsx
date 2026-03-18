@@ -1,18 +1,16 @@
 "use client";
 
-import React, { useRef } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Mr. Muhammad Shafeeq Al Ahsani",
+    name: "Mr. Muhammad Shafeeque Al Ahsani",
     role: "Chief Executive Officer (CEO)",
     image: "/images/shafeeq.jpg",
   },
   {
     name: "Mr. Twahir Nizami",
-    role: "Chief Operating Officer (COO)",
+    role: "Chief Operation Officer (COO)",
     image: "/images/twahir.jpg",
   },
   {
@@ -37,12 +35,12 @@ const teamMembers = [
   },
   {
     name: "Mr. Ajmal Ahmed Al Ahsani",
-    role: "Mudarris",
+    role: "Academic Developers",
     image: "/images/twahir.jpg",
   },
   {
     name: "Mr. Muhammed Nadeer Al Adani",
-    role: "Mudarris",
+    role: "Academic Developers",
     image: "/images/twahir.jpg",
   },
 ];
@@ -63,14 +61,14 @@ export default function TeamSlider() {
               <Image
                 src={member.image}
                 fill
-                className="object-cover transition-transform duration-700"
+                className="object-cover transition-transform  duration-700"
                 alt={member.name}
               />
             </div>
-            <h4 className="text-[10px] sm:text-base md:text-2xl font-bold mb-0.5 md:mb-2 group-hover:text-[#33744D] transition line-clamp-2 px-1">
+            <h4 className="text-[10px] sm:text-base md:text-2xl font-bold mb-0.5 md:mb-2 uppercase group-hover:text-[#33744D] transition line-clamp-2 px-1">
               {member.name}
             </h4>
-            <p className="text-[8px] sm:text-xs md:text-base text-[#33744D] font-medium uppercase tracking-wider line-clamp-1">{member.role}</p>
+            <p className="text-[8px] sm:text-xs md:text-base text-[#33744D] font-medium uppercase tracking-wider line-clamp-1 uppercase">{member.role}</p>
           </div>
         ))}
       </div>
@@ -89,10 +87,10 @@ export default function TeamSlider() {
                 alt={member.name}
               />
             </div>
-            <h4 className="text-[10px] sm:text-xs md:text-lg font-semibold mb-0.5 md:mb-1 group-hover:text-[#33744D] transition line-clamp-2 px-1">
+            <h4 className="text-[10px] sm:text-xs md:text-lg font-semibold uppercase mb-0.5 md:mb-1 group-hover:text-[#33744D] transition line-clamp-2 px-1">
               {member.name}
             </h4>
-            <p className="text-[8px] sm:text-[10px] md:text-sm text-gray-500">{member.role}</p>
+            <p className="text-[8px] sm:text-[10px] md:text-sm text-gray-500 uppercase">{member.role}</p>
           </div>
         ))}
       </div>

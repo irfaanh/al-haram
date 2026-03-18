@@ -92,7 +92,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
       >
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#33744D] opacity-[0.05] blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2 animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#33744D] opacity-[0.02] blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" />
+        <div className="absolute bottom-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-white opacity-[0.02] blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" />
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 md:gap-x-24 gap-y-10 md:gap-y-0 items-start md:items-center">
           {/* Content Side - Text Part */}

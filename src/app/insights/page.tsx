@@ -13,54 +13,58 @@ import {
 } from "lucide-react";
 
 export default function JournalismPage() {
-  const sections = [
-    {
-      id: 1,
-      title: "Career Reality Stories",
-      icon: <Search className="w-5 h-5" />,
-      items: [
-        "Why students fail",
-        "Where youth get stuck",
-        "Misguided decisions",
-      ],
-    },
-    {
-      id: 2,
-      title: "Educational Insights",
-      icon: <Info className="w-5 h-5" />,
-      items: [
-        "What employers really want",
-        "Job market gaps",
-        "Hidden opportunities",
-      ],
-    },
-    {
-      id: 3,
-      title: "Future of Work",
-      icon: <TrendingUp className="w-5 h-5" />,
-      items: [
-        "AI & automation impact",
-        "Future skills",
-        "Global job trends",
-      ],
-    },
-    {
-      id: 4,
-      title: "International Exposure Content",
-      icon: <Globe className="w-5 h-5" />,
-      items: ["Global culture", "Work ethics and expectations"],
-    },
-    {
-      id: 5,
-      title: "The awareness Series",
-      icon: <Users className="w-5 h-5" />,
-      items: [
-        "The mistakes commonly make",
-        "What colleges never teach",
-        "How youth can reinvent future",
-      ],
-    },
-  ];
+const sections = [
+  {
+    id: 1,
+    title: "Student Guidance",
+    icon: <Search className="w-5 h-5" />,
+    items: [
+      "Common student challenges",
+      "Guidance for better choices",
+      "Building the right mindset",
+    ],
+  },
+  {
+    id: 2,
+    title: "Holistic Education",
+    icon: <Info className="w-5 h-5" />,
+    items: [
+      "Balanced learning approach",
+      "Academic and moral growth",
+      "Practical learning methods",
+    ],
+  },
+  {
+    id: 3,
+    title: "Skills for Life",
+    icon: <TrendingUp className="w-5 h-5" />,
+    items: [
+      "Communication skills",
+      "Leadership development",
+      "Discipline and focus",
+    ],
+  },
+  {
+    id: 4,
+    title: "Global Understanding",
+    icon: <Globe className="w-5 h-5" />,
+    items: [
+      "Understanding cultures",
+      "Ethics in modern society",
+      "Global awareness skill",
+    ],
+  },
+  {
+    id: 5,
+    title: "Character Development",
+    icon: <Users className="w-5 h-5" />,
+    items: [
+      "Islamic values and morals",
+      "What education should teach",
+      "Responsible individuals",
+    ],
+  },
+];
 
   const institutionalPrograms = [
     {
@@ -86,6 +90,12 @@ export default function JournalismPage() {
       category: "Innovation",
       description: "Empowering students with practical exposure to artificial intelligence, automation, and emerging technologies.",
       image: "/images/airobo.jpg",
+    },
+    {
+      title: "Creative Horizons",
+      category: "Art Fest",
+      description: "A celebration of creativity, imagination, and artistic expression.",
+      image: "/images/artfest.jpg",
     },
     
     {
@@ -175,7 +185,7 @@ export default function JournalismPage() {
       </section>
 
       {/* ================= WHAT WE COVER SECTION ================= */}
-      <section className="py-20 md:py-32 px-6 relative bg-gray-50/50 border-y border-gray-100">
+      <section className="py-20 md:py-32 px-6 relative bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="max-w-2xl text-center md:text-left">

@@ -142,7 +142,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= MISSION / VISION ================= */}
-      <section className="py-12 md:py-24 bg-gray-50">
+      <section className="py-12 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-20 md:space-y-32">
           {/* ================= OUR MISSION ================= */}
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
