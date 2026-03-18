@@ -6,72 +6,93 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Mr. Muhammad Shafeeq",
-    role: "Communication Trainer and Speech Therapist",
+    name: "Mr. Muhammad Shafeeq Al Ahsani",
+    role: "Chief Executive Officer (CEO)",
     image: "/images/shafeeq.jpg",
   },
   {
-    name: "Mr. Twahir",
-    role: "Skills Trainer",
+    name: "Mr. Twahir Nizami",
+    role: "Chief Operating Officer (COO)",
     image: "/images/twahir.jpg",
   },
   {
-    name: "Mr. Twahir",
-    role: "Skills Trainer",
+    name: "Mr. Muhammed Ashique Nizami",
+    role: "Principal & Sharia Head",
     image: "/images/twahir.jpg",
   },
   {
-    name: "Mr. Twahir",
-    role: "Skills Trainer",
+    name: "Mr. Muhammed Saeed Al Ahsani",
+    role: "Vice Principal",
     image: "/images/twahir.jpg",
   },
   {
-    name: "Mr. Twahir",
-    role: "Skills Trainer",
+    name: "Mr. Muhammed Ashique Al Ahsani",
+    role: "Mudarris",
+    image: "/images/twahir.jpg",
+  },
+  {
+    name: "Mr. Muhammed Saniyy Al Ahsani",
+    role: "Mudarris",
+    image: "/images/twahir.jpg",
+  },
+  {
+    name: "Mr. Ajmal Ahmed Al Ahsani",
+    role: "Mudarris",
+    image: "/images/twahir.jpg",
+  },
+  {
+    name: "Mr. Muhammed Nadeer Al Adani",
+    role: "Mudarris",
     image: "/images/twahir.jpg",
   },
 ];
 
 export default function TeamSlider() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollTo =
-        direction === "left"
-          ? scrollLeft - clientWidth
-          : scrollLeft + clientWidth;
-      scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
-    }
-  };
+  const topThree = teamMembers.slice(0, 3);
+  const others = teamMembers.slice(3);
 
   return (
     <div className="relative group overflow-hidden">
-      <div
-        className="grid grid-cols-4 md:flex md:flex-wrap md:justify-center gap-2 sm:gap-4 md:gap-8 px-2 md:px-0"
-      >
-        {teamMembers.map((member, i) => (
-          <div
-            key={i}
-            className="group text-center min-w-0"
-          >
-            <div
-              className="relative w-16 h-16 sm:w-24 sm:h-24 md:w-48 md:h-48 mx-auto mb-2 md:mb-6 rounded-full overflow-hidden 
-                         border-[1px] md:border-2 border-gray-200 group-hover:border-[#33744D] 
-                         transition-all duration-300 group-hover:scale-105"
-            >
+      {/* Top Leadership Row */}
+      <div className="grid grid-cols-3 gap-2 sm:gap-6 md:gap-12 mb-12 md:mb-16 px-2 md:px-4">
+        {topThree.map((member, i) => (
+          <div key={i} className="group text-center min-w-0">
+            <div className="relative w-16 h-16 sm:w-32 sm:h-32 md:w-56 md:h-56 mx-auto mb-2 md:mb-8 rounded-full overflow-hidden 
+                         border-2 md:border-4 border-gray-100 group-hover:border-[#33744D] 
+                         transition-all duration-500 group-hover:scale-105 shadow-xl">
               <Image
                 src={member.image}
                 fill
-                className="object-cover grayscale-0 group-hover:grayscale transition-all duration-500"
+                className="object-cover transition-transform duration-700"
                 alt={member.name}
               />
             </div>
-            <h4 className="text-[10px] sm:text-xs md:text-xl font-semibold mb-0.5 md:mb-1 group-hover:text-[#33744D] transition line-clamp-2 px-1">
+            <h4 className="text-[10px] sm:text-base md:text-2xl font-bold mb-0.5 md:mb-2 group-hover:text-[#33744D] transition line-clamp-2 px-1">
               {member.name}
             </h4>
-            <p className="text-[8px] sm:text-[10px] md:text-sm text-gray-400 line-clamp-1">{member.role}</p>
+            <p className="text-[8px] sm:text-xs md:text-base text-[#33744D] font-medium uppercase tracking-wider line-clamp-1">{member.role}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Others Row */}
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 px-4">
+        {others.map((member, i) => (
+          <div key={i} className="group text-center min-w-[100px] md:min-w-[200px]">
+            <div className="relative w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 mx-auto mb-3 md:mb-6 rounded-full overflow-hidden 
+                         border-[1px] md:border-2 border-gray-100 group-hover:border-[#33744D] 
+                         transition-all duration-300 group-hover:scale-105 shadow-md">
+              <Image
+                src={member.image}
+                fill
+                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                alt={member.name}
+              />
+            </div>
+            <h4 className="text-[10px] sm:text-xs md:text-lg font-semibold mb-0.5 md:mb-1 group-hover:text-[#33744D] transition line-clamp-2 px-1">
+              {member.name}
+            </h4>
+            <p className="text-[8px] sm:text-[10px] md:text-sm text-gray-500">{member.role}</p>
           </div>
         ))}
       </div>

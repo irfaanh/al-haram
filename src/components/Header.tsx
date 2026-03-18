@@ -24,7 +24,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-12 h-16 md:h-14 flex items-center justify-between bg-[#33744D] backdrop-blur-md shadow-lg rounded-b-2xl md:rounded-full mt-0 md:mt-2 relative border-b md:border-none border-white/10">
         {/* LOGO */}
         <Link href="/" className="flex items-center">
-          <p className="text-white text-2xl font-bold tracking-tight">Al HARAM</p>
+          <p className="text-white text-2xl font-bold tracking-tight">AL HARAM</p>
         </Link>
 
         {/* Desktop Nav */}

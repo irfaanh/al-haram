@@ -62,6 +62,58 @@ export default function JournalismPage() {
     },
   ];
 
+  const institutionalPrograms = [
+    {
+      title: "Makhdoomi Syllabus",
+      category: "Islamic Excellence",
+      description: "A structured Islamic curriculum combining deep religious knowledge with analytical thinking and scientific perspective.",
+      image: "/images/makdoobi.jpg",
+    },
+    {
+      title: "Genius Program",
+      category: "Life Mastery",
+      description: "Cultivating discipline, emotional intelligence, and real-world life skills for confident individuals.",
+      image: "/images/lifeskillimg.jpg",
+    },
+    {
+      title: "Abacus Program",
+      category: "Cognitive Training",
+      description: "Sharpening mental speed, focus, and problem-solving through advanced brain development techniques.",
+      image: "/images/abacusimg.jpg",
+    },
+    {
+      title: "AI & Robotics",
+      category: "Innovation",
+      description: "Empowering students with practical exposure to artificial intelligence, automation, and emerging technologies.",
+      image: "/images/airobo.jpg",
+    },
+    
+    {
+      title: "Convisio",
+      category: "Intellectual Hub",
+      description: "A platform for collective thinking, research, and intellectual exploration.",
+      image: "/images/technologylab.jpg",
+    },
+    {
+      title: "Language Proficiency Programs",
+      category: "Language Mastery",
+      description: "Building fluency, articulation, and confident expression in a multilingual environment.",
+      image: "/images/library.jpg",
+    },
+    {
+      title: "Community Build-Up",
+      category: "Community",
+      description: "Encouraging social responsibility, teamwork, and active community participation.",
+      image: "/images/studentss.jpg",
+    },
+    {
+      title: "Creative Team",
+      category: "Creativity",
+      description: "A collaborative platform where students explore creativity, teamwork, and basic entrepreneurial thinking.",
+      image: "/images/charecter.jpg",
+    },
+  ];
+
   return (
     <main className="bg-white text-black min-h-screen">
       <Header />
@@ -89,7 +141,7 @@ export default function JournalismPage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-white">
-            Al Haram <br />
+            AL HARAM <br />
             <span className="italic font-serif text-[#33744D]">Educational Insights</span>
           </h1>
           <p className="mt-6 text-base md:text-lg text-gray-200 font-medium tracking-wide">
@@ -187,6 +239,51 @@ export default function JournalismPage() {
         </div>
       </section>
 
+      {/* ================= SIGNATURE PROGRAMS ================= */}
+      <section id="programs" className="py-20 md:py-32 px-6 bg-white scroll-mt-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 md:mb-24">
+            <h2 className="text-3xl md:text-6xl font-bold mb-6 text-black tracking-tight">
+              Our Signature <span className="text-[#33744D] italic font-serif font-normal">Programs</span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-lg">
+              Explore our diverse range of educational initiatives designed to foster excellence in character, cognitive ability, and modern technology.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            {institutionalPrograms.map((program, idx) => (
+              <div
+                key={idx}
+                className="group relative overflow-hidden rounded-[1.5rem] border border-gray-100 aspect-[16/10] shadow-lg hover:shadow-2xl transition-all duration-500 bg-white"
+              >
+                <Image
+                  src={program.image}
+                  alt={program.title}
+                  fill
+                  className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+                />
+                <div className="absolute top-6 left-6 z-20">
+                  <span className="px-5 py-2 rounded-full bg-white/95 backdrop-blur-md border border-gray-100 text-[10px] uppercase tracking-widest font-bold text-[#33744D] shadow-sm">
+                    {program.category}
+                  </span>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
+                <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end transform translate-y-6 group-hover:translate-y-0 transition-transform duration-700 ease-out">
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 text-white group-hover:text-[#33744D] transition-colors duration-300">
+                    {program.title}
+                  </h3>
+                  <p className="text-gray-200 text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 font-medium line-clamp-3">
+                    {program.description}
+                  </p>
+                  <div className="w-0 group-hover:w-16 h-1 bg-[#33744D] mt-6 transition-all duration-700 delay-200" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ================= STYLE SECTION ================= */}
       <section className="py-20 md:py-40 px-6 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
@@ -247,7 +344,7 @@ export default function JournalismPage() {
               <div className="absolute bottom-12 left-12 right-12 z-20">
                 <div className="w-16 h-1 bg-[#33744D] mb-8" />
                 <p className="text-2xl md:text-4xl font-light italic leading-relaxed text-white">
-                  "At Al Haram, we believe that <span className="text-[#33744D]">truth</span> is the foundation of growth and character development."
+                  "At AL HARAM, we believe that <span className="text-black">truth</span> is the foundation of growth and character development."
                 </p>
               </div>
             </div>

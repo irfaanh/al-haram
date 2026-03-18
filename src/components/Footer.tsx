@@ -26,11 +26,11 @@ export default function Footer() {
         {/* LOGO + ABOUT */}
         <div className="col-span-2 md:col-span-2 lg:col-span-1 flex flex-col items-start text-left">
           <Link href="/" className="mb-2">
-            <p className="text-white font-semibold uppercase tracking-widest text-xs">Al HARAM Institute</p>
+            <p className="text-white font-semibold uppercase tracking-widest text-xs">AL HARAM Institute</p>
           </Link>
 
           <p className="text-sm leading-relaxed max-w-xs text-gray-200 mt-5">
-            Al Haram Institute is a values-based educational center dedicated to nurturing knowledge, character, and leadership by integrating Islamic teachings with contemporary learning.
+            AL HARAM Institute is a values-based educational center dedicated to nurturing knowledge, character, and leadership by integrating Islamic teachings with contemporary learning.
           </p>
         </div>
 

@@ -7,8 +7,8 @@ import Link from "next/link";
 import TeamSlider from "@/components/TeamSlider";
 
 export const metadata: Metadata = {
-  title: "About Us - Al Haram Institute",
-  description: "Learn about Al Haram Institute, an educational institute focused on developing knowledge, moral character, and leadership by integrating Islamic values with modern education.",
+  title: "About Us - AL HARAM Institute",
+  description: "Learn about AL HARAM Institute, an educational institute focused on developing knowledge, moral character, and leadership by integrating Islamic values with modern education.",
 };
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
         {/* Background Image */}
         <Image
           src="/images/studentss.jpg"
-          alt="About Al Haram Institute"
+          alt="About AL HARAM Institute"
           fill
           priority
           className="object-cover object-center"
@@ -52,7 +52,7 @@ export default function AboutPage() {
         </h2>
 
         <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-sm md:text-lg leading-relaxed px-6">
-          Al Haram Institute is dedicated to providing an integrated educational
+          AL HARAM Institute is dedicated to providing an integrated educational
           experience that combines authentic Islamic learning with modern academic
           development.
         </p>
@@ -123,6 +123,21 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ================= OUR TEAM ================= */}
+      <section className="py-12 md:py-20 px-6 bg-white text-black">
+        <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
+          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
+          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
+            OUR TEAM
+          </p>
+          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          <TeamSlider />
         </div>
       </section>
 
@@ -199,7 +214,7 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-gray-600 leading-relaxed mb-8 text-sm md:text-lg">
-                We envision Al Haram Institute as a leading center of excellence where students discover their full potential as knowledgeable, ethical, and responsible individuals. Our goal is to shape future leaders who are deeply rooted in their values and equipped with the wisdom and expertise to contribute positively to society.
+                We envision AL HARAM Institute as a leading center of excellence where students discover their full potential as knowledgeable, ethical, and responsible individuals. Our goal is to shape future leaders who are deeply rooted in their values and equipped with the wisdom and expertise to contribute positively to society.
               </p>
 
               <ul className="space-y-5">
@@ -221,20 +236,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ================= OUR TEAM ================= */}
-      <section className="py-12 md:py-20 px-6 bg-white text-black">
-        <div className="flex items-center justify-center gap-4 md:gap-6 mb-12 md:mb-16">
-          <span className="w-20 md:w-70 h-px bg-gradient-to-l from-[#33744D] to-[#33744D]/15" />
-          <p className="text-lg md:text-xl tracking-[0.2em] md:tracking-[0.35em] text-[#33744D] uppercase font-bold text-center">
-            OUR TEAM
-          </p>
-          <span className="w-20 md:w-70 h-px bg-gradient-to-r from-[#33744D] to-[#33744D]/15" />
-        </div>
-
-        <div className="max-w-6xl mx-auto">
-          <TeamSlider />
-        </div>
-      </section>
+      
 
 
       {/* ================= CORE VALUES ================= */}

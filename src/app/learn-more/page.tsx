@@ -6,9 +6,9 @@ import Header from "@/components/Header";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Learn More - Al Haram Institute",
+  title: "Learn More - AL HARAM Institute",
   description:
-    "Discover the three pillars of Al Haram Institute: Integrated Knowledge, Character Development, and Leadership Training. Unlock your potential with our values-based education.",
+    "Discover the three pillars of AL HARAM Institute: Integrated Knowledge, Character Development, and Leadership Training. Unlock your potential with our values-based education.",
 };
 
 export default function LearnMorePage() {
@@ -34,8 +34,8 @@ export default function LearnMorePage() {
           className="relative z-10 bg-[#33744D]/10 backdrop-blur-xl border border-white/20 
                      rounded-[2rem] px-8 py-8 md:px-12 md:py-10 shadow-2xl"
         >
-          <h1 className="text-3xl md:text-5xl font-light text-white">
-            <span className="italic font-serif text-[#33744D]">Al Haram Institute</span>
+          <h1 className="text-2xl  md:text-5xl font-light text-[#33744D] font-serif">
+              AL HARAM <span className=" uppercase">Institute</span>
           </h1>
         </div>
       </section>
@@ -54,7 +54,7 @@ export default function LearnMorePage() {
                 Integrated Knowledge
               </h2>
               <p className="text-gray-600 leading-relaxed text-sm md:text-lg text-justify md:text-left">
-                At Al Haram Institute, we provide a balanced curriculum that seamlessly integrates authentic Islamic teachings with modern academic excellence. We believe that true education nourishes both the soul and the mind, preparing students to excel in their studies while remaining deeply rooted in their values.
+                At AL HARAM Institute, we provide a balanced curriculum that seamlessly integrates authentic Islamic teachings with modern academic excellence. We believe that true education nourishes both the soul and the mind, preparing students to excel in their studies while remaining deeply rooted in their values.
               </p>
             </div>
             <div className="order-first md:order-last relative h-64 md:h-[450px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100">
@@ -170,7 +170,7 @@ export default function LearnMorePage() {
             Ready to Start Your Journey?
           </h2>
           <p className="text-gray-600 mb-10 max-w-2xl text-lg">
-            Join Al Haram Institute today and experience a transformative education that balances modern learning with timeless values.
+            Join AL HARAM Institute today and experience a transformative education that balances modern learning with timeless values.
           </p>
           <Link
             href="#"

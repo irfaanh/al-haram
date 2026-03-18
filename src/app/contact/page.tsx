@@ -171,22 +171,22 @@ export default function ContactPage() {
               icon: Phone,
               title: "Call Us",
               desc: "Talk to our admissions office for guidance.",
-              link: "tel:+919645467077",
-              label: "+91 96454 67077"
+              link: "tel:+917025818313",
+              label: "+91 70258 18313"
             },
             {
               icon: Mail,
               title: "Email Us",
               desc: "Send us your queries anytime.",
-              link: "mailto:alharam@gmail.com",
-              label: "ialharam@gmail.com"
+              link: "mailto:alharamiipie@gmail.com",
+              label: "alharamiipie@gmail.com"
             },
             {
               icon: MapPin,
               title: "Visit Us",
               desc: "Come visit our campus and meet our team.",
               link: "#",
-              label: "Badriya Purayil, Calicut, Kerala"
+              label: "Badriya Masjid Purayil , Calicut, Kerala"
             }
           ].map((card, i) => (
             <div

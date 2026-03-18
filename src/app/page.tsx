@@ -27,7 +27,7 @@ export default async function Home() {
       <section className="relative min-h-[75vh] md:min-h-[85vh] h-auto flex items-center justify-center text-center px-6 py-20 md:py-0">
         <Image
           src="/images/qur.jpg"
-          alt="Al Haram Home"
+          alt="AL Haram Home"
           fill
           priority
           className="object-cover object-center"
@@ -36,10 +36,12 @@ export default async function Home() {
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 max-w-4xl pt-10 md:pt-20 px-4 text-white">
-          <h1 className="text-2xl sm:text-3xl md:text-6xl font-semibold leading-tight mb-6">
-            Al HARAM Institute<br />
-            Where Knowledge Guides the{" "}
-            <span className="italic font-serif text-[#33744D]">Future</span>
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold leading-[0.8] mb-6 tracking-tight">
+            AL HARAM<br />
+            <span className="text-[22px] md:text-4xl font-semibold opacity-90 block mt-2">Institute</span>
+            <div className="mt-4">
+              <span className="text-[14px] md:text-[20px] italic font-serif text-[#33744D] tracking-normal">Where Knowledge Guides the Future</span>
+            </div>
           </h1>
 
           <Link href="/learn-more">
@@ -92,10 +94,72 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
         <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-[#33744D] opacity-[0.05] blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2 animate-pulse" />
         <div className="absolute bottom-0 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#33744D] opacity-[0.02] blur-[120px] rounded-full translate-y-1/2 -translate-x-1/4" />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 md:gap-x-24 gap-y-10 md:gap-y-0 items-start md:items-center">
+          {/* Content Side - Text Part */}
+          <div className="relative z-10 order-1 md:order-2 md:col-start-2 md:row-start-1 md:pt-12">
+            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+              <div className="inline-flex items-center gap-3 px-4 py-2 mb-8 rounded-full border border-[#33744D]/20 bg-[#33744D]/5 backdrop-blur-sm">
+                <span className="flex h-2 w-2 rounded-full bg-[#33744D] animate-ping" />
+                <p className="text-[10px] md:text-xs tracking-[0.3em] text-[#33744D] font-bold uppercase">
+                  Integrated Professional Education
+                </p>
+              </div>
+
+              <h2 className="text-3xl text-black sm:text-4xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
+                Excellence in <br />
+                <span className="italic font-serif text-[#33744D] font-normal">
+                  Education & Values
+                </span>
+              </h2>
+
+              <p className="text-black text-sm md:text-lg leading-relaxed mb-12 max-w-xl mx-auto md:mx-0">
+                AL HARAM Institute provides a balanced education that combines{" "}
+                <span className="text-black font-medium italic underline decoration-[#33744D]/40 underline-offset-4">
+                  authentic Islamic learning
+                </span>{" "}
+                with modern academic development, helping students grow intellectually,
+                spiritually, and professionally.
+              </p>
+
+              <div className="space-y-6 md:space-y-8 mb-12 w-full">
+                {[
+                  {
+                    icon: Search,
+                    title: "Qualified Scholars & Educators",
+                    desc: "Learn under the guidance of experienced Islamic scholars and professional educators.",
+                  },
+                  {
+                    icon: FileText,
+                    title: "Language & Academic Development",
+                    desc: "Strong focus on language proficiency, academic guidance, and mentoring for students.",
+                  },
+                  {
+                    icon: CheckCircle,
+                    title: "Technology & Leadership Training",
+                    desc: "Programs include AI awareness, technology exposure, personality and leadership development.",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 group/item">
+                    <div className="mt-1 flex-shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#33744D] group-hover/item:bg-[#33744D] group-hover/item:text-white transition-all duration-300">
+                      <item.icon size={22} />
+                    </div>
+                    <div>
+                      <h4 className="text-black font-bold text-base md:text-lg mb-1 group-hover/item:text-[#33744D] transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Image Side */}
-          <div className="block relative group order-2 md:order-1 px-4 md:px-0">
-            <div className="relative h-[300px] sm:h-[400px] md:h-[550px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#33744D]/30 transition-all duration-700 shadow-2xl">
+          <div className="relative group order-2 md:order-1 md:col-start-1 md:row-start-1 md:row-span-2 px-4 md:px-0">
+            <div className="relative h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px] rounded-[2.5rem] overflow-hidden border border-white/5 group-hover:border-[#33744D]/30 transition-all duration-700 shadow-2xl">
               <Image
                 src="/images/pioneerimg.jpg"
                 alt="Education Insights"
@@ -123,66 +187,9 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
             </div>
           </div>
 
-          {/* Content Side */}
-          <div className="relative z-10 order-1 md:order-2 text-center md:text-left">
-            <div className="inline-flex items-center gap-3 px-4 py-2 mb-8 rounded-full border border-[#33744D]/20 bg-[#33744D]/5 backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-[#33744D] animate-ping" />
-              <p className="text-[10px] md:text-xs tracking-[0.3em] text-[#33744D] font-bold uppercase">
-                Integrated Professional Education
-              </p>
-            </div>
-
-            <h2 className="text-3xl text-black sm:text-4xl md:text-6xl font-bold leading-[1.1] mb-8 tracking-tight">
-              Excellence in <br />
-              <span className="italic font-serif text-[#33744D] font-normal">
-                Education & Values
-              </span>
-            </h2>
-
-            <p className="text-black text-sm md:text-lg leading-relaxed mb-12 max-w-xl mx-auto md:mx-0">
-              Al Haram Institute provides a balanced education that combines{" "}
-              <span className="text-black font-medium italic underline decoration-[#33744D]/40 underline-offset-4">
-                authentic Islamic learning
-              </span>{" "}
-              with modern academic development, helping students grow intellectually,
-              spiritually, and professionally.
-            </p>
-
-            <div className="space-y-6 md:space-y-8 mb-12 text-left">
-              {[
-                {
-                  icon: Search,
-                  title: "Qualified Scholars & Educators",
-                  desc: "Learn under the guidance of experienced Islamic scholars and professional educators.",
-                },
-                {
-                  icon: FileText,
-                  title: "Language & Academic Development",
-                  desc: "Strong focus on language proficiency, academic guidance, and mentoring for students.",
-                },
-                {
-                  icon: CheckCircle,
-                  title: "Technology & Leadership Training",
-                  desc: "Programs include AI awareness, technology exposure, personality and leadership development.",
-                },
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 group/item">
-                  <div className="mt-1 flex-shrink-0 w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#33744D] group-hover/item:bg-[#33744D] group-hover/item:text-white transition-all duration-300">
-                    <item.icon size={22} />
-                  </div>
-                  <div>
-                    <h4 className="text-black font-bold text-base md:text-lg mb-1 group-hover/item:text-[#33744D] transition-colors">
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-500 text-xs md:text-sm leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex justify-center md:justify-center">
+          {/* Content Side - Button Part */}
+          <div className="relative z-10 order-3 md:order-3 md:col-start-2 md:row-start-2 mt-4 md:mt-10 pb-4">
+            <div className="flex justify-center md:justify-start">
               <Link
                 href="#"
                 target="_blank"
@@ -192,6 +199,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                 <ArrowUpRight size={20} />
               </Link>
             </div>
+
           </div>
         </div>
       </section>
@@ -216,7 +224,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
 
             <div className="text-left text-sm md:text-base space-y-4 text-gray-300">
               <p className="text-black">
-                Al Haram Institute is dedicated to providing an integrated educational
+                AL HARAM Institute is dedicated to providing an integrated educational
                 experience that combines authentic Islamic learning with modern academic
                 development. Our mission is to nurture students with strong knowledge,
                 discipline, and values that prepare them for success in both life and
@@ -289,7 +297,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                   Value-Based Education
                 </p>
                 <p className="text-[10px] text-gray-500 font-medium mt-1">
-                  at Al Haram Institute
+                  at AL HARAM Institute
                 </p>
               </div>
             </div>
@@ -677,78 +685,90 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Abacus Card */}
+            {/* Life Mastery Development */}
             <div className="group relative overflow-hidden rounded-[1.5rem] border border-gray-100 aspect-[16/10] shadow-lg hover:shadow-2xl transition-all duration-500">
               <Image
-                src="/images/abacus.jpg"
+                src="/images/makdoobi.jpg"
+                alt="Makhdoomi Syllabus"
+                fill
+                className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+              />
+              <div className="absolute top-4 left-4 z-20">
+                <span className="px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-100 text-[9px] uppercase tracking-widest font-bold text-[#33744D] shadow-sm">
+                  Islamic Excellence
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
+              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-white group-hover:text-[#33744D] transition-colors duration-300">
+                  Makhdoomi Syllabus
+                </h3>
+                <p className="text-gray-200 text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 font-medium line-clamp-2">
+                  A structured Islamic curriculum combining deep religious knowledge with analytical thinking and scientific perspective.
+                </p>
+                <div className="w-0 group-hover:w-12 h-1 bg-[#33744D] mt-4 transition-all duration-700 delay-200" />
+              </div>
+            </div>
+
+            {/* Cognitive Intelligence Training */}
+            <div className="group relative overflow-hidden rounded-[1.5rem] border border-gray-100 aspect-[16/10] shadow-lg hover:shadow-2xl transition-all duration-500">
+              <Image
+                src="/images/abacusimg.jpg"
                 alt="Abacus Program"
                 fill
                 className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
               />
               <div className="absolute top-4 left-4 z-20">
                 <span className="px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-100 text-[9px] uppercase tracking-widest font-bold text-[#33744D] shadow-sm">
-                  Skill Development
+                  Cognitive Training
                 </span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-white group-hover:text-[#33744D] transition-colors duration-300">
-                  Abacus
+                  Abacus Program
                 </h3>
                 <p className="text-gray-200 text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 font-medium line-clamp-2">
-                  Enhance mental arithmetic skills, concentration, and cognitive development through our comprehensive Abacus program.
+                  Sharpening mental speed, focus, and problem-solving through advanced brain development techniques.
                 </p>
                 <div className="w-0 group-hover:w-12 h-1 bg-[#33744D] mt-4 transition-all duration-700 delay-200" />
               </div>
             </div>
 
-            {/* AI Robotics Card */}
+            {/* AI & Robotics */}
             <div className="group relative overflow-hidden rounded-[1.5rem] border border-gray-100 aspect-[16/10] shadow-lg hover:shadow-2xl transition-all duration-500">
               <Image
                 src="/images/airobo.jpg"
-                alt="AI Robotics Program"
+                alt="AI & Robotics"
                 fill
                 className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
               />
               <div className="absolute top-4 left-4 z-20">
                 <span className="px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-100 text-[9px] uppercase tracking-widest font-bold text-[#33744D] shadow-sm">
-                  Technology
+                  Innovation
                 </span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
               <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-white group-hover:text-[#33744D] transition-colors duration-300">
-                  AI Robotics
+                  AI & Robotics
                 </h3>
                 <p className="text-gray-200 text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 font-medium line-clamp-2">
-                  Dive into the world of artificial intelligence and robotics, learning to build and program modern technology.
+                  Empowering students with practical exposure to artificial intelligence, automation, and emerging technologies.
                 </p>
                 <div className="w-0 group-hover:w-12 h-1 bg-[#33744D] mt-4 transition-all duration-700 delay-200" />
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-[1.5rem] border border-gray-100 aspect-[16/10] shadow-lg hover:shadow-2xl transition-all duration-500">
-              <Image
-                src="/images/airobo.jpg"
-                alt="AI Robotics Program"
-                fill
-                className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
-              />
-              <div className="absolute top-4 left-4 z-20">
-                <span className="px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-gray-100 text-[9px] uppercase tracking-widest font-bold text-[#33744D] shadow-sm">
-                  Technology
-                </span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
-              <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 ease-out">
-                <h3 className="text-xl md:text-2xl font-bold mb-2 text-white group-hover:text-[#33744D] transition-colors duration-300">
-                  AI Robotics
-                </h3>
-                <p className="text-gray-200 text-xs md:text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 font-medium line-clamp-2">
-                  Dive into the world of artificial intelligence and robotics, learning to build and program modern technology.
-                </p>
-                <div className="w-0 group-hover:w-12 h-1 bg-[#33744D] mt-4 transition-all duration-700 delay-200" />
-              </div>
-            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link
+              href="/insights#programs"
+              className="inline-flex items-center gap-2 px-10 py-4 rounded-full border-2 border-[#33744D] text-[#33744D] font-bold hover:bg-[#33744D] hover:text-white transition-all duration-500 group/btn"
+            >
+              View More Programs
+              <ArrowUpRight size={22} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
@@ -765,8 +785,8 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
           <div className="space-y-4">
             {[
               {
-                q: "What programs does Al Haram Institute offer?",
-                a: "Al Haram Institute provides a balanced education that combines Islamic studies with modern academic learning, helping students grow spiritually, intellectually, and morally.",
+                q: "What programs does AL HARAM Institute offer?",
+                a: "AL HARAM Institute provides a balanced education that combines Islamic studies with modern academic learning, helping students grow spiritually, intellectually, and morally.",
               },
               {
                 q: "Who can enroll in the institute?",
@@ -777,7 +797,7 @@ text-sm md:text-base font-medium shadow-lg -mt-5 cursor-pointer"
                 a: "Yes. We believe every student is unique, so our mentors provide personal guidance, ensuring that each learner receives the attention and support needed for growth.",
               },
               {
-                q: "What makes Al Haram Institute different?",
+                q: "What makes AL HARAM Institute different?",
                 a: "Our institute focuses on moral character, discipline, and leadership alongside education. We aim to nurture students who are knowledgeable, responsible, and confident in their faith and future.",
               },
               {
