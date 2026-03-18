@@ -343,7 +343,7 @@ export default function JournalismPage() {
 
               <div className="absolute bottom-12 left-12 right-12 z-20">
                 <div className="w-16 h-1 bg-[#33744D] mb-8" />
-                <p className="text-2xl md:text-4xl font-light italic leading-relaxed text-white">
+                <p className="text-2xl md:text-4xl font-light  leading-relaxed text-white">
                   "At AL HARAM, we believe that <span className="text-black">truth</span> is the foundation of growth and character development."
                 </p>
               </div>
