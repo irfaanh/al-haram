@@ -50,7 +50,7 @@ export default function TeamSlider() {
   const others = teamMembers.slice(3);
 
   return (
-    <div className="relative group overflow-hidden">
+    <div className="relative overflow-hidden">
       {/* Top Leadership Row */}
       <div className="grid grid-cols-3 gap-2 sm:gap-6 md:gap-12 mb-12 md:mb-16 px-2 md:px-4">
         {topThree.map((member, i) => (
