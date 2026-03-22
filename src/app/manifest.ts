@@ -2,13 +2,11 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: 'AL HARAM',
-        short_name: 'AL HARAM',
         description: "AL HARAM - Where Guidance Meets the Future",
         start_url: '/',
         display: 'standalone',
-        background_color: '#33744D',
-        theme_color: '#33744D',
+        background_color: '#23643A',
+        theme_color: '#23643A',
         icons: [
             {
                 src: '/images/applogo.png?v=3',
