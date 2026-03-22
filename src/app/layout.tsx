@@ -12,13 +12,13 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://alharaminstitute.com"),
   title: {
-    default: "Al Haram | Where Knowledge Guides the Future",
-    template: "%s | Al Haram",
+    default: "AL Haram | Where Knowledge Guides the Future",
+    template: "%s | AL Haram",
   },
   description:
-    "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
+    "AL Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
   keywords: [
-    "Al Haram",
+    "AL Haram",
     "Education Journalism India",
     "Future Skills Training",
     "Global Internship Gateway",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "Global Career Readiness",
     "Youth Mentorship Ecosystem",
   ],
-  authors: [{ name: "Al Haram" }],
-  creator: "Al Haram",
-  publisher: "Al Haram",
+  authors: [{ name: "AL Haram" }],
+  creator: "AL Haram",
+  publisher: "AL Haram",
 
   formatDetection: {
     email: false,
@@ -40,25 +40,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://alharaminstitute.com", // Placeholder or actual URL if known
-    siteName: "Al Haram",
-    title: "Al Haram | Where Guidance Meets the Future",
+    siteName: "AL HARAM",
+    title: "AL HARAM | Where Guidance Meets the Future",
     description:
-      "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
+      "AL HARAM Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
     images: [
       {
-        url: "/images/og-image.png?v=2",
+        url: "/images/applogo.png?v=2",
         width: 1200,
         height: 630,
-        alt: "Al Haram Institute",
+        alt: "AL HARAM Institute",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Al Haram | Where Knowledge Guides the Future",
+    title: "AL HARAM | Where Knowledge Guides the Future",
     description:
-      "Al Haram Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
-    images: ["/images/og-image.png?v=2"],
+      "AL HARAM Institute is a values-based educational center focused on nurturing knowledge, moral character, and leadership through the integration of Islamic teachings and modern learning.",
+    images: ["/images/applogo.png?v=2"],
   },
   robots: {
     index: true,
