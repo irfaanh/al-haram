@@ -7,18 +7,20 @@ export default function manifest(): MetadataRoute.Manifest {
         description: "AL HARAM - Where Guidance Meets the Future",
         start_url: '/',
         display: 'standalone',
-        background_color: '#ffff',
+        background_color: '#33744D',
         theme_color: '#33744D',
         icons: [
             {
-                src: '/images/applogo.png?v=2',
+                src: '/images/applogo.png?v=3',
                 sizes: 'any',
                 type: 'image/png',
+                purpose: 'maskable',
             },
             {
-                src: '/images/applogo.png?v=2',
+                src: '/images/applogo.png?v=3',
                 sizes: '512x512',
                 type: 'image/png',
+                purpose: 'maskable',
             },
         ],
     }
