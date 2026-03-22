@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
+        name: 'AL HARAM',
+        short_name: 'AL HARAM',
         description: "AL HARAM - Where Guidance Meets the Future",
         start_url: '/',
         display: 'standalone',
