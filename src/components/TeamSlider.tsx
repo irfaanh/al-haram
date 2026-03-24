@@ -4,44 +4,44 @@ import Image from "next/image";
 
 const teamMembers = [
   {
-    name: "Mr. Muhammad Shafeeque Al Ahsani",
+    name: "Muhammad Shafeeque Al Ahsani",
     role: "Chief Executive Officer (CEO)",
-    image: "/images/shafeeq.jpg",
+    image: "/images/members/memb5.jpeg",
   },
   {
-    name: "Mr. Thwahir Nizami",
+    name: "Thwahir Nizami",
     role: "Chief Operation Officer (COO)",
-    image: "/images/twahir.jpg",
+    image: "/images/members/twahir.jpg",
   },
   {
-    name: "Mr. Muhammed Ashique Nizami",
+    name: "Muhammed Ashique Nizami",
     role: "Principal & Sharia Head",
-    image: "/images/twahir.jpg",
+    image: "/images/members/memb2.jpg",
   },
   {
-    name: "Mr. Muhammed Saeed Al Ahsani",
+    name: "Muhammed Saeed Al Ahsani",
     role: "Vice Principal",
-    image: "/images/twahir.jpg",
+    image: "/images/members/memb7.JPG",
   },
   {
-    name: "Mr. Muhammed Ashique Al Ahsani",
+    name: "Muhammed Ashique Al Ahsani",
     role: "Mudarris",
-    image: "/images/twahir.jpg",
+    image: "/images/members/memb4.jpg",
   },
   {
-    name: "Mr. Muhammed Saniyy Al Ahsani",
+    name: "Muhammed Saniyy Al Ahsani",
     role: "Mudarris",
-    image: "/images/twahir.jpg",
+    image: "/images/members/memb3.png",
   },
   {
-    name: "Mr. Ajmal Ahmed Al Ahsani",
+    name: "Ajmal Ahmed Al Ahsani",
     role: "Academic Developers",
-    image: "/images/twahir.jpg",
+    image: "/images/members/twahir.jpg",
   },
   {
-    name: "Mr. Muhammed Nadeer Al Adani",
+    name: "Muhammed Nadeer Al Adani",
     role: "Academic Developers",
-    image: "/images/twahir.jpg",
+    image: "/images/members/memb6.jpeg",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function TeamSlider() {
                 alt={member.name}
               />
             </div>
-            <h4 className="text-[10px] sm:text-base md:text-2xl font-bold mb-0.5 md:mb-2 uppercase group-hover:text-[#33744D] transition px-1">
+            <h4 className="text-[9px] sm:text-base md:text-2xl font-bold mb-0.5 md:mb-2 uppercase group-hover:text-[#33744D] transition leading-tight tracking-tighter px-1">
               {member.name}
             </h4>
             <p className="text-[8px] sm:text-xs md:text-base text-[#33744D] font-medium uppercase tracking-wider">{member.role}</p>
@@ -84,11 +84,11 @@ export default function TeamSlider() {
               <Image
                 src={member.image}
                 fill
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="object-cover transition-all duration-500"
                 alt={member.name}
               />
             </div>
-            <h4 className="text-[10px] sm:text-xs md:text-lg font-semibold uppercase mb-0.5 md:mb-1 group-hover:text-[#33744D] transition px-1">
+            <h4 className="text-[9px] sm:text-xs md:text-lg font-semibold uppercase mb-0.5 md:mb-1 group-hover:text-[#33744D] transition leading-tight tracking-tighter px-1">
               {member.name}
             </h4>
             <p className="text-[8px] sm:text-[10px] md:text-sm text-gray-500 uppercase">{member.role}</p>
@@ -101,16 +101,16 @@ export default function TeamSlider() {
         {row3.map((member, i) => (
           <div key={i} className="group text-center min-w-0">
             <div className="relative w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 mx-auto mb-3 md:mb-6 rounded-full overflow-hidden 
-                         border-[1px] md:border-2 border-gray-100 group-hover:border-[#33744D] 
+                         border-[1px] md:border-2 border-gray-100  
                          transition-all duration-300 group-hover:scale-105 shadow-md">
               <Image
                 src={member.image}
                 fill
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="object-cover transition-all duration-500"
                 alt={member.name}
               />
             </div>
-            <h4 className="text-[10px] sm:text-xs md:text-lg font-semibold uppercase mb-0.5 md:mb-1 group-hover:text-[#33744D] transition px-1">
+            <h4 className="text-[9px] sm:text-xs md:text-lg font-semibold uppercase mb-0.5 md:mb-1 group-hover:text-[#33744D] transition leading-tight tracking-tighter px-1">
               {member.name}
             </h4>
             <p className="text-[8px] sm:text-[10px] md:text-sm text-gray-500 uppercase">{member.role}</p>
