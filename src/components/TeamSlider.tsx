@@ -6,12 +6,12 @@ const teamMembers = [
   {
     name: "Muhammad Shafeeque Al Ahsani",
     role: "Chief Executive Officer (CEO)",
-    image: "/images/members/memb5.jpeg",
+    image: "/images/members/memb8.jpeg",
   },
   {
     name: "Thwahir Nizami",
     role: "Chief Operation Officer (COO)",
-    image: "/images/members/twahir.jpg",
+    image: "/images/members/memb9.jpeg",
   },
   {
     name: "Muhammed Ashique Nizami",
@@ -35,12 +35,12 @@ const teamMembers = [
   },
   {
     name: "Ajmal Ahmed Al Ahsani",
-    role: "Academic Developers",
+    role: "Academic Developer",
     image: "/images/members/twahir.jpg",
   },
   {
     name: "Muhammed Nadeer Al Adani",
-    role: "Academic Developers",
+    role: "Academic Developer",
     image: "/images/members/memb6.jpeg",
   },
 ];
