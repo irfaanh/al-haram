@@ -35,7 +35,7 @@ export default function LearnMorePage() {
                      rounded-[2rem] px-8 py-8 md:px-12 md:py-10 shadow-2xl"
         >
           <h1 className="text-2xl  md:text-5xl font-light text-[#33744D] font-serif">
-              AL HARAM <span className=" uppercase">Institute</span>
+            AL HARAM <span className=" uppercase">Institute</span>
           </h1>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function LearnMorePage() {
             Join AL HARAM Institute today and experience a transformative education that balances modern learning with timeless values.
           </p>
           <Link
-            href="#"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScj74c4net_96ya7q092TRrEuYBADe8Lma5x-O1X-rDGIEdlw/viewform"
             target="_blank"
             className="inline-flex items-center gap-2 bg-[#33744D] text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-[#2a5f3f] transition-all transform hover:scale-105 shadow-xl hover:shadow-[#33744D]/25"
           >
